@@ -3,6 +3,11 @@
     src: url(../font/BlackPearl.ttf);
 }
 
+@font-face{
+    font-family: Tw Cen MT;
+    src: url(../font/TCM_____.TTF)
+}
+
 #navbarText {
     font-family: blackPearl;
     font-size: 25pt;
@@ -22,4 +27,14 @@ body {
 #container{
     position: relative;
     top:75px;
+}
+
+#titleCatalog{
+    font-family: Tw Cen MT;
+    font-size: 40px;
+    text-align: center;
+}
+
+#card{
+    margin: auto;
 }
