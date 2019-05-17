@@ -1,0 +1,25 @@
+@font-face {
+    font-family: blackPearl;
+    src: url(../font/BlackPearl.ttf);
+}
+
+#navbarText {
+    font-family: blackPearl;
+    font-size: 25pt;
+    margin: auto;
+    position: relative;
+    align-content: center;
+}
+
+#navbarOrange {
+    background-color: #FE9221;
+}
+
+body {
+    background-color: #F9D19F;
+}
+
+#container{
+    position: relative;
+    top:75px;
+}
