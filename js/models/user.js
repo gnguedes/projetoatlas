@@ -4,8 +4,7 @@
 */ 
 
 export default class User {
-    constructor(id,username, password, email, xp, genre, name, birthday){
-        this.id = id
+    constructor(username, password, email, xp, genre, name, birthday){
         this.username = username
         this.password = password
         this.email = email
