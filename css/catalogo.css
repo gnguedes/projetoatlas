@@ -1,40 +1,113 @@
+/*Fonte usada nas navbar, assim como, fonte do logótipo*/
 @font-face {
     font-family: blackPearl;
     src: url(../font/BlackPearl.ttf);
 }
 
-@font-face{
-    font-family: Tw Cen MT;
-    src: url(../font/TCM_____.TTF)
+/*Fonte usada em vários títulos*/
+@font-face {
+    font-family: Tw Cen MT B;
+    src: url(../font/TCB_____.TTF)
 }
 
+/*Configuração do texto presente na navbar*/
 #navbarText {
     font-family: blackPearl;
-    font-size: 25pt;
+    font-size: 40px;
     margin: auto;
     position: relative;
     align-content: center;
 }
 
+/*Mudança da cor da navbar*/
 #navbarOrange {
     background-color: #FE9221;
 }
 
+/*Configurações do body*/
 body {
     background-color: #F9D19F;
+    /*Impedir que a página se expanda para os lados*/
+    overflow-x: hidden;
 }
 
-#container{
+/*Mover o container principal um pouco para baixo*/
+#container {
     position: relative;
-    top:75px;
+    top: 50px;
 }
 
-#titleCatalog{
-    font-family: Tw Cen MT;
+/*Configração da fonte usada nos títulos*/
+#titleCatalog {
+    font-family: Tw Cen MT B;
     font-size: 40px;
     text-align: center;
 }
 
-#card{
+/*Ajustes nos cards para igualar o design pretendido*/
+#card {
     margin: auto;
+    border-radius: 30px;
+    width: 324px;
+    height: 340px;
+}
+
+/*Configuração do texto presente nos cards*/
+#cardText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #707070;
+    margin-top: 5%;
+}
+
+/*Configuração das imagens presentes nos cards*/
+#imgContinent {
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    margin-top: 10%;
+    align-items: center;
+}
+
+/*Alteração da cor de fundo do card e da cor do texto quando o cursor passa por cima (hover)*/
+#card:hover {
+    background-color: #FE9221;
+    color: white;
+}
+
+/*Remover o sublinhado característico dos links nos cards*/
+a.aCard:link {
+    text-decoration: none;
+}
+
+/*Configuração do footer*/
+#footer {
+    width: 100%;
+    position: absolute;
+    margin-top: 10%;
+    background-color: #FE9221;
+}
+
+/*Configuração do texto presente no footer*/
+#footerText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+/*Mudar posicionamento do logo da ESMAD para condizer com a grelha*/
+#logoESMAD {
+    display: block;
+    margin: auto;
+    align-content: center;
+}
+
+/*Mudar posicionamento do logo da aplicação para estar dentro da grelha*/
+#logoAtlas {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    align-content: center;
 }
