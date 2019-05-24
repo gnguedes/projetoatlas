@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,19 +13,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light" style="background-color: #FE9221">
-        <a class="navbar-brand" href="#">
-            <img src="../images/menu hambuger branco.png" width="50" height="50" alt="">
-        </a>
-        <p id="navbarText">Todos os Países</p>
-        <a href="#"><img src="../images/pirata_rapaz.png" width="50" height="50"></a>
-    </nav>
-    <div class="container" id="container">
-        <h1 id="titleCatalog">ESCOLHE O CONTINENTE QUE QUERES EXPLORAR!!</h1><br><br>
+    <div class="container">
+        <nav class="navbar navbar-light fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="../images/menu hambuger branco.png" width="40" height="40" class="d-inline-block align-top"
+                    alt="">
+            </a>
+            <p id="navBarText">Vê todos os Países</p>
+            <a class="navbar-brand" href="#">
+                <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            </a>
+        </nav>
+        <h1 id="titleCatalog">ESCOLHE O CONTINENTE QUE QUERES EXPLORAR!!</h1>
         <div class="row">
             <div class="col-lg-4">
                 <a class="aCard" href="#">
-                    <div class="card shadow" id="card">
+                    <div class="card" id="card">
                         <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
                         <div class="card-body">
                             <p class="card-text" id="cardText">Europa</p>
@@ -36,7 +38,7 @@
             </div>
             <div class="col-lg-4">
                 <a class="aCard" href="#">
-                    <div class="card shadow" id="card">
+                    <div class="card" id="card">
                         <img src="../images/continents/asian-continent-hi.png" id="imgContinent">
                         <div class="card-body">
                             <p class="card-text" id="cardText">Ásia</p>
@@ -46,7 +48,7 @@
             </div>
             <div class="col-lg-4">
                 <a class="aCard" href="#">
-                    <div class="card shadow" id="card">
+                    <div class="card" id="card">
                         <img src="../images/continents/african-continent-hi.png" id="imgContinent">
                         <div class="card-body">
                             <p class="card-text" id="cardText">África</p>
@@ -58,7 +60,7 @@
         <div class="row" style="margin-top: 5%">
             <div class="col-lg-4">
                 <a class="aCard" href="#">
-                    <div class="card shadow" id="card">
+                    <div class="card" id="card">
                         <img src="../images/continents/continent-of-north-america-hi.png" id="imgContinent">
                         <div class="card-body">
                             <p class="card-text" id="cardText">América do Norte</p>
@@ -68,7 +70,7 @@
             </div>
             <div class="col-lg-4">
                 <a class="aCard" href="#">
-                    <div class="card shadow" id="card">
+                    <div class="card" id="card">
                         <img src="../images/continents/continent-of-south-america-hi.png" id="imgContinent">
                         <div class="card-body">
                             <p class="card-text" id="cardText">América do Sul</p>
@@ -78,7 +80,7 @@
             </div>
             <div class="col-lg-4">
                 <a class="aCard" href="#">
-                    <div class="card shadow" id="card">
+                    <div class="card" id="card">
                         <img src="../images/continents/continent-of-oceania-hi.png" id="imgContinent">
                         <div class="card-body">
                             <p class="card-text" id="cardText">Oceania</p>
@@ -88,10 +90,10 @@
             </div>
         </div>
     </div>
-    <footer id="footer">
-        <div class="row">
+    <div class="container-fluid">
+        <div id="footer" class="row">
             <div class="col-lg-3">
-                <img src="../images/logo_esmad.png" width="200px;" height="130px;" id="logoESMAD">
+                <img src="../images/logo_esmad.png" id="logoESMAD" width="200px;" height="130px;">
             </div>
             <div class="col-lg-3">´
                 <p id="footerText">Contacto:<br>atlas@esmad.ipp.pt</p>
@@ -103,10 +105,7 @@
                 <img src="../images/logo_sem_mar-08.png" width="100px;" height="100px;" id="logoAtlas">
             </div>
         </div>
-    </footer>
-
-
-
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
