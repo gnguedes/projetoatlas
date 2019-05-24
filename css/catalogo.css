@@ -10,6 +10,12 @@
     src: url(../font/TCB_____.TTF)
 }
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #F9D19F;
     width: 100%;
@@ -30,9 +36,9 @@ body {
     text-align: center;
 }
 
-.container {
+#container {
     position: relative;
-    top: 100px;
+    top: 120px;
 }
 
 #titleCatalog{
@@ -47,6 +53,7 @@ body {
 #card {
     top: 10%;
     margin: auto;
+    margin-top: 5%;
     border-radius: 30px;
     width: 324px;
     height: 340px;
@@ -89,13 +96,6 @@ a.aCard:link {
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
-
-#logoESMAD{
-    display: block;
-    margin: auto;
-    align-content: center;
-}
-
 /*Mudar posicionamento do logo da aplicação para estar dentro da grelha*/
 #logoAtlas {
     display: block;
