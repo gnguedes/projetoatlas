@@ -19,13 +19,17 @@
     <!--Login-->
     <div class="container">
         <h1>Login</h1>
-        <div id="frmLogin" class="form-group">
-            <label for="txtLoginUsername">Username</label>
-            <input type="text" id="txtLoginUsername"><br>
+        <div id="frmLogin">
+            <div class="form-group">
+                <label for="txtLoginUsername">Username</label>
+                <input type="text" id="txtLoginUsername"><br>
 
-            <label for="txtLoginPassword">Password</label>
-            <input type="password" id="txtLoginPassword">
-        
+                <label for="txtLoginPassword">Password</label>
+                <input type="password" id="txtLoginPassword">
+            </div>
+        </div>
+    </div>
+
 
     <!--Registo-->
     <div class="container">
@@ -63,6 +67,7 @@
         </form>
     </div>
     <script type="module" src="js/controllers/index.js"></script>
+    <script type="module" src="js/controllers/controllerUser.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

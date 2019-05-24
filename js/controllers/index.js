@@ -13,7 +13,9 @@ frmRegister.addEventListener("submit",function (event) {
         alert("esta fixe")
     }
 
-
-
     event.preventDefault();
 })
+
+
+
+
