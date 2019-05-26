@@ -10,25 +10,28 @@
     src: url(../font/TCB_____.TTF)
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+/*Definição da cor de fundo da página, assim como, a largura e altura da página para ocupar 100% da página*/
 body {
     background-color: #F9D19F;
     width: 100%;
     height: 100%;
 }
 
+/*Personalização da navbar definindo a sua cor e colocação de uma sombra*/
 .navbar {
     background-color: #FE9221;
     width: 100%;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
-#navBarText{
+/*Configuração do texto presente na navbar*/
+#navBarText {
     font-family: blackPearl;
     font-size: 30px;
     margin: auto;
@@ -36,12 +39,14 @@ body {
     text-align: center;
 }
 
+/*Colocar o container principal mais para baixo na página para não ficar por trás da navbar*/
 #container {
     position: relative;
     top: 120px;
 }
 
-#titleCatalog{
+/*Definição das características do título presente no topo da página*/
+#titleCatalog {
     font-family: Tw Cen MT B;
     font-size: 30px;
     margin: auto;
@@ -81,7 +86,6 @@ body {
 /*Alteração da cor de fundo do card e da cor do texto quando o cursor passa por cima (hover)*/
 #card:hover {
     background-color: #FE9221;
-    color: white;
 }
 
 /*Remover o sublinhado característico dos links nos cards*/
@@ -89,13 +93,14 @@ a.aCard:link {
     text-decoration: none;
 }
 
-#footer{
+#footer {
     width: 100%;
     background-color: #FE9221;
     margin-top: 16%;
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
+
 /*Mudar posicionamento do logo da aplicação para estar dentro da grelha*/
 #logoAtlas {
     display: block;
@@ -110,4 +115,17 @@ a.aCard:link {
     font-size: 20px;
     color: black;
     text-align: center;
+    position: relative;
+    margin-top: 5%;
+}
+
+hr{
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    border-width: 1px;
+    border-color: #1BA8BE;
+    width: 250px;
+    position: relative;
+    align-self: center;
 }
