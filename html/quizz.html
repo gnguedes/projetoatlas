@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Quizz</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/quizz.css"
+  </head>
+  <body>
+      <!--Container para manter a grelha pela página toda-->
+    <div class="container" id="container">
+        <!--Criação da navbar-->
+        <nav class="navbar navbar-light fixed-top">
+            <div class="container">
+                <!--Ícone do perfil-->
+                <a class="navbar-brand" href="#">
+                    <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
+                        alt="">
+                </a>
+                <!--Texto no centro da navbar-->
+                <p id="navBarText">Joga um Quizz</p>
+                <!--Menu hamburguer-->
+                <a class="navbar-brand" href="#">
+                    <!--Botão caracteristico de um menu hamburguer-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
+                        aria-expanded="false" aria-label="Toggle navigation"><span><img
+                                src="../images/menu hambuger branco.png" width="40px" height="40px"></span></button>
+                    <!--Espaço onde se encontra os itens do menu-->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Página Inicial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Joga um Quizz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Vê Todos os Países</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sugere um País</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Os teus Favoritos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <!--Título da página-->
+        <h1 id="titleCatalog">ESCOLHE O CONTINENTE EM QUE QUERES JOGAR!!!</h1>
+        <!--Introdução dos cards dos continentes-->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a class="aCard" href="#" id="europe">
+                    <div class="card" id="card">
+                        <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
+                        <hr />
+                        <div class="card-body">
+                            <p class="card-text" id="cardText">Europa</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a class="aCard" href="#">
+                    <div class="card" id="card">
+                        <img src="../images/continents/asian-continent-hi.png" id="imgContinent">
+                        <hr />
+                        <div class="card-body">
+                            <p class="card-text" id="cardText">Ásia</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a class="aCard" href="#">
+                    <div class="card" id="card">
+                        <img src="../images/continents/african-continent-hi.png" id="imgContinent">
+                        <hr />
+                        <div class="card-body">
+                            <p class="card-text" id="cardText">África</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 5%">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a class="aCard" href="#">
+                    <div class="card" id="card">
+                        <img src="../images/continents/continent-of-north-america-hi.png" id="imgContinent">
+                        <hr />
+                        <div class="card-body">
+                            <p class="card-text" id="cardText">América do Norte</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a class="aCard" href="#">
+                    <div class="card" id="card">
+                        <img src="../images/continents/continent-of-south-america-hi.png" id="imgContinent">
+                        <hr />
+                        <div class="card-body">
+                            <p class="card-text" id="cardText">América do Sul</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a class="aCard" href="#">
+                    <div class="card" id="card">
+                        <img src="../images/continents/continent-of-oceania-hi.png" id="imgContinent">
+                        <hr />
+                        <div class="card-body">
+                            <p class="card-text" id="cardText">Oceania</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Introdução do footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <!--Logo da ESMAD-->
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <img src="../images/logo_esmad.png" id="logoESMAD" width="200px;" height="130px;">
+                </div>
+                <!--Textos no meio do footer-->
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p id="footerText">Contacto:<br>atlas@esmad.ipp.pt</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p id="footerText">Desenvolvida no âmbito da<br>disciplina de Projeto I<br>TSIW ESMAD © 2019</p>
+                </div>
+                <!--Logo do projeto Atlas-->
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <img src="../images/logo_sem_mar-08.png" width="100px;" height="100px;" id="logoAtlas">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

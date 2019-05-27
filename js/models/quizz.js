@@ -16,4 +16,5 @@ export default class Quizz{
         this.video = video
 
     }
+    
 }
