@@ -2,7 +2,7 @@ import {addUser} from "../models/main.js"
 
 const formRegister = document.querySelector("#frmRegisterUser")
 
-formRegister.addEventListener("submite", function (event) {
+formRegister.addEventListener("submit", function (event) {
     const txtUsername = document.querySelector("#txtUsername").value
     const txtPassword = document.querySelector("#txtPassword").value
     const txtEmail = document.querySelector("#txtEmail").value
