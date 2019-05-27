@@ -119,12 +119,20 @@ a.aCard:link {
     margin-top: 5%;
 }
 
+<<<<<<< HEAD
 hr {
+=======
+hr{
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
     display: block;
     margin: auto;
     margin-top: 10%;
     border-width: 1px;
+<<<<<<< HEAD
     border-color: black;
+=======
+    border-color:black;
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
     width: 250px;
     position: relative;
     align-self: center;

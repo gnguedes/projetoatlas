@@ -9,7 +9,10 @@
     font-family: Tw Cen MT B;
     src: url(../font/TCB_____.TTF)
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
 /*Definição da cor de fundo da página, assim como, a largura e altura da página para ocupar 100% da página*/
 body {
     background-color: #FCE7AF;
@@ -38,14 +41,20 @@ body {
     position: relative;
     top: 120px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
 /*Configuração da imagem de perfil*/
 #imgPerfil {
     width: 200px;
     height: 200px;
     align-items: left;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
 #footer {
     width: 100%;
     background-color: #FEC321;
@@ -72,12 +81,20 @@ body {
     margin-top: 5%;
 }
 
+<<<<<<< HEAD
 hr {
+=======
+hr{
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
     display: block;
     margin: auto;
     margin-top: 10%;
     border-width: 1px;
+<<<<<<< HEAD
     border-color: black;
+=======
+    border-color:black;
+>>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
     width: 250px;
     position: relative;
     align-self: center;
