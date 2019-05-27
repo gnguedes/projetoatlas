@@ -1,5 +1,9 @@
-import { User } from "./user.js"
-import { Country } from "./country.js"
+import {
+    User
+} from "./user.js"
+import {
+    Country
+} from "./country.js"
 
 
 
@@ -19,5 +23,5 @@ if (localStorage.getItem("users")) {
 
 // funcao que adiciona utilizadores 
 export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday) {
-    
+
 }

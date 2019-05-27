@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-    <title>Catálogo</title>
+    <title>Página de Perfil</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/catalogo.css">
-</head>
-
-<body>
+    <link rel="stylesheet" href="../css/paginaperfil.css" </head> <body>
     <!--Container para manter a grelha pela página toda-->
     <div class="container" id="container">
         <!--Criação da navbar-->
@@ -24,7 +22,7 @@
                         alt="">
                 </a>
                 <!--Texto no centro da navbar-->
-                <p id="navBarText">Vê todos os Países</p>
+                <p id="navBarText">O teu perfil</p>
                 <!--Menu hamburguer-->
                 <a class="navbar-brand" href="#">
                     <!--Botão caracteristico de um menu hamburguer-->
@@ -55,85 +53,13 @@
                 </a>
             </div>
         </nav>
-        <!--Título da página-->
-        <h1 id="titleCatalog">ESCOLHE O CONTINENTE QUE QUERES EXPLORAR!!</h1>
-        <!--Introdução dos cards dos continentes-->
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="europe">
-                    <div class="card europe" id="card">
-                        <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Europa</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="asia">
-                    <div class="card asia" id="card">
-                        <img src="../images/continents/asian-continent-hi.png" class="imgAsia" id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Ásia</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="africa">
-                    <div class="card africa" id="card">
-                        <img src="../images/continents/african-continent-hi.png" class="imgAfrica" id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">África</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <img src="../images/Grupo 119.png" id="imgPerfil">
         </div>
-        <div class="row" style="margin-top: 20px">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="northAmerica">
-                    <div class="card northAmerica" id="card">
-                        <img src="../images/continents/continent-of-north-america-hi.png" class="imgNorthAmerica"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">América do Norte</p>
-                        </div>
-                        <img src="../images/lock-6.png" id="lock">
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="southAmerica">
-                    <div class="card southAmerica" id="card">
-                        <img src="../images/continents/continent-of-south-america-hi.png" class="imgSouthAmerica"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">América do Sul</p>
-                        </div>
-                        <img src="../images/lock-6.png" id="lock">
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="oceania">
-                    <div class="card oceania" id="card">
-                        <img src="../images/continents/continent-of-oceania-hi.png" class="imgOceania"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Oceania</p>
-                        </div>
-                        <img src="../images/lock-6.png" id="lock">
-                    </div>
-                </a>
-            </div>
-        </div>
+        <label for="username">Username: BLA BLA BLA</label><br>
+        <label for="nome">Nome :BLA BLA BLA</label><br>
+        <label for="e-mail">E-mail: BLA BLA BLA</label><br>
+        <label for="datanascimento"> Data de nascimento: BLA BLA BLA</label><br>
     </div>
     <!--Introdução do footer-->
     <footer id="footer">
@@ -158,8 +84,6 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
-    <script src="../js/views/countryView.js"></script>
-    <script src="../js/controllers/countryController.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -170,6 +94,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-</body>
+    </body>
 
 </html>

@@ -4,8 +4,8 @@
  */
 
 
-export default class Quizz{
-    constructor(question, answerOptionA,answerOptionB,answerOptionC,answerOptionD, answerRight, image, video){
+export default class Quizz {
+    constructor(question, answerOptionA, answerOptionB, answerOptionC, answerOptionD, answerRight, image, video) {
         this.question = question
         this.answerOptionA = answerOptionA
         this.answerOptionB = answerOptionB
@@ -16,4 +16,5 @@ export default class Quizz{
         this.video = video
 
     }
+
 }

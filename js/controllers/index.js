@@ -2,20 +2,15 @@
 
 
 const frmRegister = document.getElementById("frmRegisterUser")
-frmRegister.addEventListener("submit",function (event) {
+frmRegister.addEventListener("submit", function (event) {
     const newPassword = document.querySelector("#txtPassword").value
     const newCheckPassword = document.querySelector("#checkPassword").value
 
-    if( newPassword !== newCheckPassword){
+    if (newPassword !== newCheckPassword) {
         alert("As palavras-passe têm de ser iguais")
-    }
-    else{
+    } else {
         alert("esta fixe")
     }
 
     event.preventDefault();
 })
-
-
-
-

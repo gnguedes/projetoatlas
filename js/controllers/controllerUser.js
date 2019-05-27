@@ -8,7 +8,7 @@ formRegister.addEventListener("submit", function (event) {
     const txtPassword = document.querySelector("#txtPassword").value
     const txtEmail = document.querySelector("#txtEmail").value
     const sltGenre = document.querySelector("#sltGenre").value
-    
+
     const txtName = ""
     const valueXp = "0"
     const dateBirthday = "00-00-0000"
@@ -55,14 +55,14 @@ function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName,
     else {
         alert(`Utilizador ${txtUsername} já existe!`)
     }
- 
+
 }
 //login de utilizador
 
-export function loginUser(txtLoginUsername,txtLoginPassword) {
+export function loginUser(txtLoginUsername, txtLoginPassword) {
     let existUser = false
-    for (const User of users){
-        if(User.username == txtLoginUsername && User.password == txtLoginPassword){
+    for (const User of users) {
+        if (User.username == txtLoginUsername && User.password == txtLoginPassword) {
             existUser = true
             sessionStorage.setItem("loggedUser", txtLoginUsername)
         }
@@ -70,6 +70,6 @@ export function loginUser(txtLoginUsername,txtLoginPassword) {
     return existUser
 }
 
-export function logoutUser(){
+export function logoutUser() {
     sessionStorage.removeItem("loggedUser")
 }
