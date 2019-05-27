@@ -80,7 +80,7 @@ body {
     height: 200px;
     margin: auto;
     margin-top: 10%;
-    align-items: center;
+    align-items: center; 
 }
 
 /*Alteração da cor de fundo do card e da cor do texto quando o cursor passa por cima (hover)*/
@@ -128,4 +128,11 @@ hr{
     width: 250px;
     position: relative;
     align-self: center;
+}
+
+#lock{
+    position: absolute;
+    margin: 10%;
+    align-content: center;
+    justify-content: center;
 }
