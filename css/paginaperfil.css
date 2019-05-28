@@ -9,10 +9,6 @@
     font-family: Tw Cen MT B;
     src: url(../font/TCB_____.TTF)
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
 /*Definição da cor de fundo da página, assim como, a largura e altura da página para ocupar 100% da página*/
 body {
     background-color: #FCE7AF;
@@ -41,24 +37,18 @@ body {
     position: relative;
     top: 120px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
 /*Configuração da imagem de perfil*/
 #imgPerfil {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     align-items: left;
+    position: relative;
+    left: -20px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
 #footer {
     width: 100%;
     background-color: #FEC321;
-    margin-top: 16%;
+    margin-top: 10%;
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
@@ -80,21 +70,98 @@ body {
     position: relative;
     margin-top: 5%;
 }
-
-<<<<<<< HEAD
+/* Configuração do username do utilizador*/
+#info1 {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 15px;
+    position: relative;
+}
+/* Configuração do nome do utilizador*/
+#info2 {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 15px;
+    position: relative;
+}
+/* Configuração do e-mail do utilizador*/
+#info3 {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 15px;
+    position: relative;
+}
+/* Configuração do data de nascimento do utilizador*/
+#info4 {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 15px;
+    position: relative;
+}
+/* Configuração do rating do utilizador*/
+#rating {
+    font-family: Tw Cen MT B;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+}
+/* Configuração do button editar o perfil do utilizador*/
+#editarperfil {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+}
+/* Configuração do button log out*/
+#logout {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 40px;
+    position: relative;
+}
+/* Configuração do bau*/
+#bau {
+    width: 160px;
+    height: 160px;
+    align-items: left;
+    position: relative;
+    margin-left: -40px;
+    margin-top: -30px;
+}
 hr {
-=======
-hr{
->>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
     display: block;
     margin: auto;
     margin-top: 10%;
     border-width: 1px;
-<<<<<<< HEAD
     border-color: black;
-=======
-    border-color:black;
->>>>>>> 6b6e3f0e7f84faad8fcbdd63f65373fbf989ef3c
     width: 250px;
     position: relative;
     align-self: center;
