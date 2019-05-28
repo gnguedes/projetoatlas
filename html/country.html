@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Catálogo</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,17 +17,21 @@
     <div class="container" id="container">
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
+                <!--Ícone do perfil-->
                 <a class="navbar-brand" href="#">
                     <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
                         alt="">
                 </a>
+                <!--Texto no centro da navbar-->
                 <p id="navBarText">Vê todos os Países</p>
+                <!--Menu hamburguer-->
                 <a class="navbar-brand" href="#">
-                    <!-- Collapse button -->
+                    <!--Botão caracteristico de um menu hamburguer-->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
                         aria-expanded="false" aria-label="Toggle navigation"><span><img
                                 src="../images/menu hambuger branco.png" width="40px" height="40px"></span></button>
+                    <!--Espaço onde se encontra os itens do menu-->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent15">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
@@ -50,20 +54,43 @@
                 </a>
             </div>
         </nav>
-        <h1 id="titleCatalog"></h1>
     </div>
-    <footer id="footer">
+    <div class="row" id="rowDetails">
+        <div class="col-lg-5">
+            <img src="../images/flags/Portugal.png" id="imgCountryDetails">
+        </div>
+        <div class="col-lg-7">
+            <div class="card" id="cardDetails">
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <p id="txtCardDetails">nfkjanfla</p>
+                <div class="row">
+                    <button type="button" id="buttonDetails" class="btn btn-outline-primary">Ver outro País</button>
+                    <button type="button" id="buttonDetails" class="btn btn-outline-primary">Comenta este País</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" style="margin-top: 50px;">
         <div class="container">
             <div class="row">
+                <!--Logo da ESMAD-->
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <img src="../images/logo_esmad.png" id="logoESMAD" width="200px;" height="130px;">
                 </div>
+                <!--Textos no meio do footer-->
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <p id="footerText">Contacto:<br>atlas@esmad.ipp.pt</p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <p id="footerText">Desenvolvida no âmbito da<br>disciplina de Projeto I<br>TSIW ESMAD © 2019</p>
                 </div>
+                <!--Logo do projeto Atlas-->
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <img src="../images/logo_sem_mar-08.png" width="100px;" height="100px;" id="logoAtlas">
                 </div>
@@ -71,8 +98,6 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
-    <script src="../js/views/catalogView.js"></script>
-    <script type="module" src="../js/controllers/catalogController.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

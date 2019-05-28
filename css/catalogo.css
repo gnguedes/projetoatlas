@@ -65,6 +65,13 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+#cardDetails{
+    float: left;
+    border-radius: 30px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+    width: 500px;
+}
+
 #cardCountry {
     top: 20px;
     margin: auto;
@@ -100,6 +107,28 @@ body {
     align-items: center;
     border-radius: 30px;
     border: 1px solid #707070;
+}
+
+#imgCountryDetails{
+    width: 250px;
+    height: 160px;
+    border-radius: 30px;
+    border: 1px solid #707070;
+    position: relative;
+    margin: auto;
+    float: right;
+    top: 50%;
+    margin-top: -80px;
+}
+
+#txtCardDetails{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 21px;
+}
+
+#rowDetails{
+    margin-top: 120px;
 }
 
 /*Alteração da cor de fundo do card e da cor do texto quando o cursor passa por cima (hover)*/
@@ -154,4 +183,8 @@ hr {
     margin: 10%;
     align-content: center;
     justify-content: center;
+}
+
+#buttonDetails{
+    width: 150px;
 }
