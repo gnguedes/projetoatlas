@@ -53,10 +53,11 @@ body {
     position: relative;
     text-align: center;
 }
+
 #footer {
     width: 100%;
     background-color: #3384A2;
-    margin-top: 16%;
+    margin-top: 5.5%;
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
@@ -97,6 +98,46 @@ hr {
     justify-content: center;
 }
 
-#cardQuestion{
-    margin-top:100px;
+/* Configuração do texto presente */
+#cardQuestion {
+    font-family: Tw Cen MT;
+    color: black;
+    font-size: 30px;
+    margin-left: 15%;
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
 }
+
+/* Estilização do card */
+#question {
+    top: 10%;
+    background-color: #26A3B9;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 30px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+
+#imgLeft {
+    position: relative;
+    float: right;
+    left: -30px;
+    margin-top: 5%;
+    border-radius: 30px;
+    width: 200px;
+    height: 130px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+
+#imgRight {
+    position: relative;
+    float: left;
+    right: -30px;
+    margin-top: 5%;
+    border-radius: 30px;
+    width: 200px;
+    height: 130px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+
