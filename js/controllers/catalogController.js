@@ -31,8 +31,7 @@ for (const country of countries) {
         result += `<div class="col-lg-4 col-md-6 col-sm-12">
         <a class="aCard" href="../../html/country.html" id="${country.name}">
             <div class="card" id="cardCountry">
-                <img src="../images/flags/${country.name}.png" class="imgSouthAmerica"
-                    id="imgCountry">
+                <img src="../images/flags/${country.name}.png" id="imgCountry">
                 <hr />
                 <div class="card-body">
                     <p class="card-text" id="cardText">${country.name}</p>
@@ -41,7 +40,7 @@ for (const country of countries) {
         </a>
     </div>`
         i++
-        if (i % 3 == 0){
+        if (i % 3 == 0) {
             result += `</div>`
         }
     }

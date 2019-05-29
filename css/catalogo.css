@@ -65,11 +65,12 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
-#cardDetails{
+#cardDetails {
     float: left;
     border-radius: 30px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
     width: 500px;
+    height: 500px;
 }
 
 #cardCountry {
@@ -78,8 +79,12 @@ body {
     margin-top: 5%;
     border-radius: 30px;
     width: 324px;
-    height: 300px;
+    height: 290px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+
+#divCardDetails {
+    margin-top: 40px;
 }
 
 /*Configuração do texto presente nos cards*/
@@ -109,30 +114,31 @@ body {
     border: 1px solid #707070;
 }
 
-#imgCountryDetails{
-    width: 250px;
-    height: 160px;
+#imgCountryDetails {
+    width: 300px;
+    height: 200px;
     border-radius: 30px;
     border: 1px solid #707070;
     position: relative;
     margin: auto;
     float: right;
     top: 50%;
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
-#txtCardDetails{
+#txtCardDetails {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 21px;
 }
 
-#rowDetails{
+#rowDetails {
     margin-top: 120px;
 }
 
 /*Alteração da cor de fundo do card e da cor do texto quando o cursor passa por cima (hover)*/
-#card:hover, #cardCountry:hover {
+#card:hover,
+#cardCountry:hover {
     background-color: #FE9221;
 }
 
@@ -185,6 +191,18 @@ hr {
     justify-content: center;
 }
 
-#buttonDetails{
+#btnOtherCountry {
     width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    margin: auto;
+    margin-left: 20%;
+}
+
+#btnCommentCountry{
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    margin: auto;
+    margin-right: 20%;
 }
