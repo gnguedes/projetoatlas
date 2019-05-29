@@ -4,6 +4,28 @@ import Country from "../models/country.js"
 //obter o continente selecionado
 const continentSelected = sessionStorage.getItem("continentSelected")
 
+const continentName = document.querySelector("#continentName")
+
+if(continentSelected == "europe"){
+    continentName.innerHTML += "Europa"
+}
+else if(continentSelected == "asia"){
+    continentName.innerHTML += "Ásia"
+}
+else if(continentSelected == "africa"){
+    continentName.innerHTML += "África"
+}
+else if(continentSelected == "northAmerica"){
+    continentName.innerHTML += "América do Norte"
+}
+else if(continentSelected == "southAmerica"){
+    continentName.innerHTML += "América do Sul"
+}
+else if(continentSelected == "oceania"){
+    continentName.innerHTML += "Oceania"
+}
+
+
 export let countries = []
 
 if (localStorage.getItem("countries")) {

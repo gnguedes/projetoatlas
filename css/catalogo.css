@@ -206,3 +206,43 @@ hr {
     margin: auto;
     margin-right: 20%;
 }
+
+#dropdownMenuButton{
+    background-color: white;
+    border-radius: 30px; 
+    position: relative;
+    margin: auto;
+    margin-left: 69%;
+    width: 190px;
+    float: right;
+    color: black;
+}
+
+#orderArrow{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+#continentName{
+    top: -20px;
+    font-family: Tw Cen MT B;
+    font-size: 30px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+#txtSearchCountry{
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: gray;
+}
+
+#btnFilter{
+    float: left;
+    background-color: #FE9221;
+    color: black;
+    border-color: #FE9201;
+    border-radius: 30px;
+}
