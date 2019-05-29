@@ -30,16 +30,16 @@ for (const country of countries) {
             result += `<div class="row">`
         }
         result += `<div class="col-lg-4 col-md-6 col-sm-12">
-        <a class="aCard" href="../../html/country.html" id="${country.name}">
-            <div class="card" id="cardCountry">
-                <img src="../images/flags/${country.name}.png" id="imgCountry">
-                <hr />
-                <div class="card-body">
-                    <p class="card-text" id="cardText">${country.name}</p>
-                </div>
-            </div>
-        </a>
-    </div>`
+                        <a class="aCard" href="../../html/country.html" id="${country.name}">
+                            <div class="card" id="cardCountry">
+                                <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                <hr />
+                                <div class="card-body">
+                                    <p class="card-text" id="cardText">${country.name}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>`
         i++
         if (i % 3 == 0) {
             result += `</div>`
