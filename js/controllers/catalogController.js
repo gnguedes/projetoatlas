@@ -10,12 +10,13 @@ if (localStorage.getItem("countries")) {
     countries = JSON.parse(localStorage.getItem("countries"))
 } else {
     const portugal = new Country("Portugal", "europe", "Lisboa", "10 milhões", "Português", "Euro", "Mediterrânico", "1143", "", "20", "4.7")
-    const polonia = new Country("Polonia", "europe", "Varsóvia", "38 milhões", "Polaco/Polonês", "Złoty", "Temperado Continental", "1918", "", "37", "3.9   ")
+    const polonia = new Country("Polonia", "europe", "Varsóvia", "38 milhões", "Polaco/Polonês", "Złoty", "Temperado Continental", "1918", "", "37", "4.9")
     const alemanha = new Country("Alemanha", "europe", "Berlim", "82 milhões", "Alemão", "Euro", "Temperado Umido", "1871", "", "13", "4.5")
     const brasil = new Country("Brasil", "southAmerica", "Brasília", "209 milhões", "Português", "Real", "Tropical", "1821 a 1825", "", "54", "3.2")
-    const espanha = new Country("Espanha", "europe", "Madrid", "46 milhões", "Espanhol", "Euro", "Mediterrânico", "1640", "", "43", "4.1")
+    const espanha = new Country("Espanha", "europe", "Madrid", "46 milhões", "Espanhol", "Euro", "Mediterrânico", "1640", "", "43", "3.1")
+    const israel = new Country("Israel", "asia", "Jerusalém", "9 milhões", "Árabe", "Novo Shekel Israelense", "Mediterrânico", "1948", "", "12", "4.1")
 
-    countries.push(portugal, brasil, alemanha, polonia, espanha)
+    countries.push(portugal, brasil, alemanha, polonia, espanha, israel)
     localStorage.setItem("countries", JSON.stringify(countries))
 }
 
