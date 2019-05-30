@@ -58,12 +58,14 @@
                     Ordenar
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#"><img src="../images/seta_cima.png" id="orderArrow">Ordem
-                        Alfabética</a>
-                    <a class="dropdown-item" href="#"><img src="../images/seta_baixo.png" id="orderArrow">Ordem
-                        Alfabética</a>
-                    <a class="dropdown-item" href="#"><img src="../images/seta_cima.png" id="orderArrow">População</a>
-                    <a class="dropdown-item" href="#"><img src="../images/seta_baixo.png" id="orderArrow">População</a>
+                    <a class="dropdown-item filter" href="#" id="upAlfa"><img src="../images/seta_cima.png"
+                            class="orderArrow">Ordem Alfabética</a>
+                    <a class="dropdown-item filter" href="#" id="downAlfa"><img src="../images/seta_baixo.png"
+                            class="orderArrow">Ordem Alfabética</a>
+                    <a class="dropdown-item filter" href="#" id="upPop"><img src="../images/seta_cima.png"
+                            class="orderArrow">População</a>
+                    <a class="dropdown-item filter" href="#" id="downPop"><img src="../images/seta_baixo.png"
+                            class="orderArrow">População</a>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -75,6 +77,7 @@
                 </button>
             </div>
         </div>
+        <div id="divCatalog"></div>
     </div>
     <footer id="footer">
         <div class="container">

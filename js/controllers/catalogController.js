@@ -1,4 +1,5 @@
 import Country from "../models/country.js"
+import addCountrySelected from "../views/countryView.js"
 
 
 //obter o continente selecionado
@@ -6,22 +7,19 @@ const continentSelected = sessionStorage.getItem("continentSelected")
 
 const continentName = document.querySelector("#continentName")
 
-if(continentSelected == "europe"){
+const txtSearchCountry = document.querySelector("#txtSearchCountry")
+
+if (continentSelected == "europe") {
     continentName.innerHTML += "Europa"
-}
-else if(continentSelected == "asia"){
+} else if (continentSelected == "asia") {
     continentName.innerHTML += "Ásia"
-}
-else if(continentSelected == "africa"){
+} else if (continentSelected == "africa") {
     continentName.innerHTML += "África"
-}
-else if(continentSelected == "northAmerica"){
+} else if (continentSelected == "northAmerica") {
     continentName.innerHTML += "América do Norte"
-}
-else if(continentSelected == "southAmerica"){
+} else if (continentSelected == "southAmerica") {
     continentName.innerHTML += "América do Sul"
-}
-else if(continentSelected == "oceania"){
+} else if (continentSelected == "oceania") {
     continentName.innerHTML += "Oceania"
 }
 
@@ -43,15 +41,18 @@ if (localStorage.getItem("countries")) {
 }
 
 let i = 0;
-const container = document.querySelector("#container")
+const divCatalog = document.querySelector("#divCatalog")
 let result = ""
 
-for (const country of countries) {
-    if (country.continent == continentSelected) {
-        if (i % 3 == 0) {
-            result += `<div class="row">`
-        }
-        result += `<div class="col-lg-4 col-md-6 col-sm-12">
+renderCatalog();
+
+function renderCatalog() {
+    for (const country of countries) {
+        if (country.continent == continentSelected) {
+            if (i % 3 == 0) {
+                result += `<div class="row">`
+            }
+            result += `<div class="col-lg-4 col-md-6 col-sm-12">
                         <a class="aCard" href="../../html/country.html" id="${country.name}">
                             <div class="card" id="cardCountry">
                                 <img src="../images/flags/${country.name}.png" id="imgCountry">
@@ -62,10 +63,139 @@ for (const country of countries) {
                             </div>
                         </a>
                     </div>`
-        i++
-        if (i % 3 == 0) {
-            result += `</div>`
+            i++
+            if (i % 3 == 0) {
+                result += `</div>`
+            }
         }
     }
+    divCatalog.innerHTML += result
+    addCountrySelected()
 }
-container.innerHTML += result
+
+filterCatalog()
+
+function filterCatalog() {
+    const filters = document.querySelectorAll(".filter")
+    for (const filter of filters) {
+        filter.addEventListener("click", function () {
+            if (filter.id == "upAlfa") {
+                countries.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+                let resultFilter = ""
+                divCatalog.innerHTML = ""
+                let j = 0
+                for (const country of countries) {
+                    if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.startsWith(txtSearchCountry))) {
+                        if (j % 3 == 0) {
+                            resultFilter += `<div class="row">`
+                        }
+                        resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a class="aCard" href="../../html/country.html" id="${country.name}">
+                                        <div class="card" id="cardCountry">
+                                            <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                            <hr />
+                                            <div class="card-body">
+                                                <p class="card-text" id="cardText">${country.name}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>`
+                        j++
+                        if (j % 3 == 0) {
+                            resultFilter += `</div>`
+                        }
+                    }
+                }
+                divCatalog.innerHTML += resultFilter
+                addCountrySelected()
+            } else if (filter.id == "downAlfa") {
+                countries.sort((a, b) => (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0));
+                let resultFilter = ""
+                divCatalog.innerHTML = ""
+                let j = 0
+                for (const country of countries) {
+                    if (country.continent == continentSelected) {
+                        if (j % 3 == 0) {
+                            resultFilter += `<div class="row">`
+                        }
+                        resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a class="aCard" href="../../html/country.html" id="${country.name}">
+                                        <div class="card" id="cardCountry">
+                                            <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                            <hr />
+                                            <div class="card-body">
+                                                <p class="card-text" id="cardText">${country.name}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>`
+                        j++
+                        if (j % 3 == 0) {
+                            resultFilter += `</div>`
+                        }
+                    }
+                }
+                divCatalog.innerHTML += resultFilter
+                addCountrySelected()
+            } else if (filter.id == "upPop") {
+                countries.sort((a, b) => (a.population < b.population) ? 1 : ((b.population < a.population) ? -1 : 0));
+                let resultFilter = ""
+                divCatalog.innerHTML = ""
+                let j = 0
+                for (const country of countries) {
+                    if (country.continent == continentSelected) {
+                        if (j % 3 == 0) {
+                            resultFilter += `<div class="row">`
+                        }
+                        resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
+                                <a class="aCard" href="../../html/country.html" id="${country.name}">
+                                    <div class="card" id="cardCountry">
+                                        <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                        <hr />
+                                        <div class="card-body">
+                                            <p class="card-text" id="cardText">${country.name}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>`
+                        j++
+                        if (j % 3 == 0) {
+                            resultFilter += `</div>`
+                        }
+                    }
+                }
+                divCatalog.innerHTML += resultFilter
+                addCountrySelected()
+            } else if (filter.id == "downPop") {
+                countries.sort((a, b) => (a.population > b.population) ? 1 : ((b.population > a.population) ? -1 : 0));
+                let resultFilter = ""
+                divCatalog.innerHTML = ""
+                let j = 0
+                for (const country of countries) {
+                    if (country.continent == continentSelected) {
+                        if (j % 3 == 0) {
+                            resultFilter += `<div class="row">`
+                        }
+                        resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
+                                <a class="aCard" href="../../html/country.html" id="${country.name}">
+                                    <div class="card" id="cardCountry">
+                                        <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                        <hr />
+                                        <div class="card-body">
+                                            <p class="card-text" id="cardText">${country.name}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>`
+                        j++
+                        if (j % 3 == 0) {
+                            resultFilter += `</div>`
+                        }
+                    }
+                }
+                divCatalog.innerHTML += resultFilter
+                addCountrySelected()
+            }
+        })
+    }
+}

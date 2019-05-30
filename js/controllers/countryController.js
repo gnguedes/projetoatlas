@@ -27,7 +27,6 @@ function obtainContinent(continent){
     for (const country of countries) {
         if(country.name == countrySelected){
             if(continent == "europe"){
-                console.log("hololafoajfna")
                 return "Europa"
             }
             else if(continent == "asia"){
