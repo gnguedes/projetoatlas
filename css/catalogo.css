@@ -209,11 +209,12 @@ hr {
 
 #dropdownMenuButton{
     background-color: white;
-    border-radius: 30px; 
+    border-radius: 30px;
     position: relative;
     margin: auto;
     margin-left: 69%;
-    width: 190px;
+    width: 230px;
+    height: 35px;
     float: right;
     color: black;
 }
