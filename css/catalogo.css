@@ -65,6 +65,7 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+/*Ajuste no card encontrado na página que apresenta os detalhes do país*/
 #cardDetails {
     float: left;
     border-radius: 30px;
@@ -73,6 +74,8 @@ body {
     height: 500px;
 }
 
+/*Ajustes no card apresentado no catalogo dentro de um continente, ou seja, parte do catálogo que apresenta
+os países*/
 #cardCountry {
     top: 20px;
     margin: auto;
@@ -83,6 +86,7 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+/*baixar um pouco o card dos detalhes do país*/
 #divCardDetails {
     margin-top: 40px;
 }
@@ -104,6 +108,7 @@ body {
     align-items: center;
 }
 
+/*Ajustar o tamanho e propriedades da imagem dos cards que apresentam os países*/
 #imgCountry {
     width: 250px;
     height: 160px;
@@ -114,6 +119,7 @@ body {
     border: 1px solid #707070;
 }
 
+/*Configuração da imagem apresentada na página de detalhes do país*/
 #imgCountryDetails {
     width: 300px;
     height: 200px;
@@ -126,6 +132,7 @@ body {
     margin-top: -100px;
 }
 
+/*Configurar a letra do card de detalhes*/
 #txtCardDetails {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -147,6 +154,7 @@ a.aCard:link {
     text-decoration: none;
 }
 
+/*Edição do footer*/
 #footer {
     width: 100%;
     background-color: #FE9221;
@@ -173,6 +181,7 @@ a.aCard:link {
     margin-top: 15px;
 }
 
+/*Personalizar a linha presente nos cards*/
 hr {
     display: block;
     margin: auto;
@@ -184,6 +193,7 @@ hr {
     align-self: center;
 }
 
+/*Personalizar o lock encontrado quando o utilizador não tem xp suficiente para ver um continente*/
 #lock {
     position: absolute;
     margin: 10%;
@@ -191,6 +201,7 @@ hr {
     justify-content: center;
 }
 
+/*Configuração dos botões do card na página de detalhes*/
 #btnOtherCountry {
     width: 150px;
     height: 40px;
@@ -207,6 +218,7 @@ hr {
     margin-right: 20%;
 }
 
+/*Personalização da dropdownlist encontrada para filtrar os países*/
 #dropdownMenuButton{
     background-color: white;
     border-radius: 30px;
@@ -219,12 +231,14 @@ hr {
     color: black;
 }
 
+/*
 .orderArrow{
     width: 15px;
     height: 15px;
     margin-right: 10px;
-}
+}*/
 
+/*Personalização do título das páginas dentro dos continentes*/
 #continentName{
     top: -20px;
     font-family: Tw Cen MT B;
@@ -234,12 +248,14 @@ hr {
     text-align: center;
 }
 
+/*Personalização da caixa de texto para procurar por um país*/
 #txtSearchCountry{
     border-radius: 30px;
     border-width: 1px;
     border-color: gray;
 }
 
+/*Configuração do botão de procura*/
 #btnFilter{
     float: left;
     background-color: #FE9221;

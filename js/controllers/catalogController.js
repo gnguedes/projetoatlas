@@ -2,9 +2,9 @@ import Country from "../models/country.js"
 import addCountrySelected from "../views/countryView.js"
 
 
-//obter o continente selecionado
+//*obter o continente selecionado
 const continentSelected = sessionStorage.getItem("continentSelected")
-
+//*obter o titulo para introduzir o nome do continente em que nos encontramos
 const continentName = document.querySelector("#continentName")
 
 
@@ -24,10 +24,12 @@ if (continentSelected == "europe") {
 
 
 export let countries = []
-
+//*verificar se existe países criados na local storage
 if (localStorage.getItem("countries")) {
+    //*caso haja, carrega-os para um array
     countries = JSON.parse(localStorage.getItem("countries"))
 } else {
+    //*caso não haja, cria países, dá push para um array e coloca-os na local storage
     const portugal = new Country("Portugal", "europe", "Lisboa", "10 milhões", "Português", "Euro", "Mediterrânico", "1143", "", "20", "4.7")
     const polonia = new Country("Polonia", "europe", "Varsóvia", "38 milhões", "Polaco/Polonês", "Złoty", "Temperado Continental", "1918", "", "37", "4.9")
     const alemanha = new Country("Alemanha", "europe", "Berlim", "82 milhões", "Alemão", "Euro", "Temperado Umido", "1871", "", "13", "4.5")
@@ -40,11 +42,14 @@ if (localStorage.getItem("countries")) {
 }
 
 let i = 0;
+//*obter a div com o id divCatalog para posteriormente colocar os países no catálogo
 const divCatalog = document.querySelector("#divCatalog")
 let result = ""
 
 renderCatalog();
-
+/**
+ * Função RenderCatalog que coloca os países no catálogo na ordem que estes estão no array, ou seja, sem ordenação
+ */
 function renderCatalog() {
     for (const country of countries) {
         if (country.continent == continentSelected) {
@@ -69,5 +74,6 @@ function renderCatalog() {
         }
     }
     divCatalog.innerHTML += result
+    //*função importada que coloca na session storage o país que selecionamos para assim aparecer os dados detalhados
     addCountrySelected()
 }
