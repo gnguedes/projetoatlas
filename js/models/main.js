@@ -20,8 +20,3 @@ if (localStorage.getItem("users")) {
     users.push(admin, kid1)
     localStorage.setItem("users", JSON.stringify(users))
 }
-
-// funcao que adiciona utilizadores 
-export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday) {
-
-}
