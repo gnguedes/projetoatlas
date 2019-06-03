@@ -7,7 +7,7 @@
 /*Fonte usada em vários títulos*/
 @font-face {
     font-family: Tw Cen MT B;
-    src: url(../font/TCB_____.TTF)
+    src: url(../font/TCB_____.TTF);
 }
 
 * {
@@ -253,6 +253,7 @@ hr {
     border-radius: 30px;
     border-width: 1px;
     border-color: gray;
+    width: 230px;
 }
 
 /*Configuração do botão de procura*/

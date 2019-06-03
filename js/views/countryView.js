@@ -36,7 +36,7 @@ btnFilter.addEventListener("click", function () {
         for (const country of countries) {
             //*num ciclo que faz por todos os países verifica se este pertence ao continente prentendido e se
             //*o nome do país começa por o que o utilizador introduziu na caixa de texto
-            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().startsWith(txtSearchCountry.toLowerCase()))) {
+            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase()))) {
                 //*se ultrapassar as verificações, confirma se j % 3 = 0, se sim adiciona uma nova div para
                 //*assim os cards se encontrarem disposto em 3 por linha
                 if (j % 3 == 0) {
@@ -72,7 +72,7 @@ btnFilter.addEventListener("click", function () {
         divCatalog.innerHTML = ""
         let j = 0
         for (const country of countries) {
-            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().startsWith(txtSearchCountry.toLowerCase()))) {
+            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase()))) {
                 if (j % 3 == 0) {
                     resultFilter += `<div class="row">`
                 }
@@ -102,7 +102,7 @@ btnFilter.addEventListener("click", function () {
         divCatalog.innerHTML = ""
         let j = 0
         for (const country of countries) {
-            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().startsWith(txtSearchCountry.toLowerCase()))) {
+            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase()))) {
                 if (j % 3 == 0) {
                     resultFilter += `<div class="row">`
                 }
@@ -132,7 +132,7 @@ btnFilter.addEventListener("click", function () {
         divCatalog.innerHTML = ""
         let j = 0
         for (const country of countries) {
-            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().startsWith(txtSearchCountry.toLowerCase()))) {
+            if ((country.continent == continentSelected) && (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase()))) {
                 if (j % 3 == 0) {
                     resultFilter += `<div class="row">`
                 }

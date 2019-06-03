@@ -20,9 +20,14 @@ function verifyUserPossibilities() {
                 const imgAsia = document.querySelector(".imgAsia")
                 imgAsia.style.opacity = "0.3"
                 asia.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                asia.addEventListener("click", function () {
+                asia.addEventListener("click", function (event) {
                     alert("Ainda não tens nível suficiente para abrires este continente!")
+                    event.preventDefault()
                 })
+            } else {
+                //*No caso de o utilizador ter mais de o xp a verificar adiona-se uma ligação ao card para poder 
+                //*entrar dentro deste continente
+                document.querySelector("#asia").href = "catalogo_continente.html"
             }
             if (user.xp < 50) {
                 const africa = document.querySelector(".africa")
@@ -30,9 +35,12 @@ function verifyUserPossibilities() {
                 const imgAfrica = document.querySelector(".imgAfrica")
                 imgAfrica.style.opacity = "0.3"
                 africa.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                africa.addEventListener("click", function () {
+                africa.addEventListener("click", function (event) {
                     alert("Ainda não tens nível suficiente para abrires este continente!")
+                    event.preventDefault()
                 })
+            } else {
+                document.querySelector("#africa").href = "catalogo_continente.html"
             }
             if (user.xp < 100) {
                 const northAmerica = document.querySelector(".northAmerica")
@@ -40,9 +48,12 @@ function verifyUserPossibilities() {
                 const imgNorthAmerica = document.querySelector(".imgNorthAmerica")
                 imgNorthAmerica.style.opacity = "0.3"
                 northAmerica.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                northAmerica.addEventListener("click", function () {
+                northAmerica.addEventListener("click", function (event) {
                     alert("Ainda não tens nível suficiente para abrires este continente!")
+                    event.preventDefault()
                 })
+            } else {
+                document.querySelector("#northAmerica").href = "catalogo_continente.html"
             }
             if (user.xp < 300) {
                 const southAmerica = document.querySelector(".southAmerica")
@@ -50,9 +61,12 @@ function verifyUserPossibilities() {
                 const imgSouthAmerica = document.querySelector(".imgSouthAmerica")
                 imgSouthAmerica.style.opacity = "0.3"
                 southAmerica.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                southAmerica.addEventListener("click", function () {
+                southAmerica.addEventListener("click", function (event) {
                     alert("Ainda não tens nível suficiente para abrires este continente!")
+                    event.preventDefault()
                 })
+            } else {
+                document.querySelector("#southAmerica").href = "catalogo_continente.html"
             }
             if (user.xp < 600) {
                 const oceania = document.querySelector(".oceania")
@@ -60,9 +74,12 @@ function verifyUserPossibilities() {
                 const imgOceania = document.querySelector(".imgOceania")
                 imgOceania.style.opacity = "0.3"
                 oceania.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                oceania.addEventListener("click", function () {
+                oceania.addEventListener("click", function (event) {
                     alert("Ainda não tens nível suficiente para abrires este continente!")
+                    event.preventDefault()
                 })
+            } else {
+                document.querySelector("#oceania").href = "catalogo_continente.html"
             }
         }
     }

@@ -12,7 +12,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/quizz.css">
 </head>
-    <body>
+
+<body>
     <!--Container para manter a grelha pela página toda-->
     <div class="container" id="container">
         <!--Criação da navbar-->
@@ -60,8 +61,8 @@
         <!--Introdução dos cards dos continentes-->
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#" id="europe">
-                    <div class="card" id="card">
+                <a class="aCard" href="question.html" id="europe">
+                    <div class="card europe" id="card">
                         <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
                         <hr />
                         <div class="card-body">
@@ -71,9 +72,9 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#">
-                    <div class="card" id="card">
-                        <img src="../images/continents/asian-continent-hi.png" id="imgContinent">
+                <a class="aCard" href="" id="asia">
+                    <div class="card asia" id="card">
+                        <img src="../images/continents/asian-continent-hi.png" class="imgAsia" id="imgContinent">
                         <hr />
                         <div class="card-body">
                             <p class="card-text" id="cardText">Ásia</p>
@@ -82,9 +83,9 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#">
-                    <div class="card" id="card">
-                        <img src="../images/continents/african-continent-hi.png" id="imgContinent">
+                <a class="aCard" href="" id="africa">
+                    <div class="card africa" id="card">
+                        <img src="../images/continents/african-continent-hi.png" class="imgAfrica" id="imgContinent">
                         <hr />
                         <div class="card-body">
                             <p class="card-text" id="cardText">África</p>
@@ -93,11 +94,12 @@
                 </a>
             </div>
         </div>
-        <div class="row" style="margin-top: 5%">
+        <div class="row" style="margin-top: 20px">
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#">
-                    <div class="card" id="card">
-                        <img src="../images/continents/continent-of-north-america-hi.png" id="imgContinent">
+                <a class="aCard" href="" id="northAmerica">
+                    <div class="card northAmerica" id="card">
+                        <img src="../images/continents/continent-of-north-america-hi.png" class="imgNorthAmerica"
+                            id="imgContinent">
                         <hr />
                         <div class="card-body">
                             <p class="card-text" id="cardText">América do Norte</p>
@@ -106,9 +108,10 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#">
-                    <div class="card" id="card">
-                        <img src="../images/continents/continent-of-south-america-hi.png" id="imgContinent">
+                <a class="aCard" href="" id="southAmerica">
+                    <div class="card southAmerica" id="card">
+                        <img src="../images/continents/continent-of-south-america-hi.png" class="imgSouthAmerica"
+                            id="imgContinent">
                         <hr />
                         <div class="card-body">
                             <p class="card-text" id="cardText">América do Sul</p>
@@ -117,9 +120,10 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <a class="aCard" href="#">
-                    <div class="card" id="card">
-                        <img src="../images/continents/continent-of-oceania-hi.png" id="imgContinent">
+                <a class="aCard" href="" id="oceania">
+                    <div class="card oceania" id="card">
+                        <img src="../images/continents/continent-of-oceania-hi.png" class="imgOceania"
+                            id="imgContinent">
                         <hr />
                         <div class="card-body">
                             <p class="card-text" id="cardText">Oceania</p>
@@ -152,6 +156,7 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
+    <script src="../js/views/quizzView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -162,6 +167,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    </body>
+</body>
 
 </html>

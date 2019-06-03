@@ -5,16 +5,14 @@
 
 
 export default class Question {
-    constructor(level, question, answerOptionA, answerOptionB, answerOptionC, answerOptionD, answerRight, image, video) {
-        this.level = level
+    constructor(id, question, answers, answerRight, image, video, xp, level) {
+        this.id = id
         this.question = question
-        this.answerOptionA = answerOptionA
-        this.answerOptionB = answerOptionB
-        this.answerOptionC = answerOptionC
-        this.answerOptionD = answerOptionD
+        this.answers = answers
         this.answerRight = answerRight
         this.image = image
         this.video = video
-
+        this.xp = xp
+        this.lvel = level
     }
 }
