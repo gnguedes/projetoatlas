@@ -50,7 +50,26 @@
                 </a>
             </div>
         </nav>
-        <h1 id="titleCatalog"></h1>
+        <h1 id="continentName"></h1>
+        <div class="row">
+            <div class="col-lg-5">
+                <select id="dropdownMenuButton">
+                    <option value="upAlfa" selected class="filter">Ordem Alfabética Crescente</option>
+                    <option value="downAlfa" class="filter">Ordem Alfabética Decrescente</option>
+                    <option value="upPop" class="filter">População Crescente</option>
+                    <option value="downPop" class="filter">População Decrescente</option>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <input id="txtSearchCountry" type="text" class="form-control" />
+            </div>
+            <div class="col-lg-4">
+                <button id="btnFilter" type="button" class="btn btn-primary">
+                    PROCURAR
+                </button>
+            </div>
+        </div>
+        <div id="divCatalog"></div>
     </div>
     <footer id="footer">
         <div class="container">

@@ -11,13 +11,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        
     <title>Pagina de login</title>
 </head>
 
 <body>
     <!--Login-->
-    <div class="container">
+    <div class="container" id="login">
         <h1>Login</h1>
         <div id="frmLogin">
             <div class="form-group">
@@ -26,13 +26,16 @@
 
                 <label for="txtLoginPassword">Password</label>
                 <input type="password" id="txtLoginPassword">
+
+                <button type="submit" class="btn btn btn-primary">Login</button>
             </div>
         </div>
+        <p>Não tem conta? <button class="link" id="clickBtn">Clique aqui</button> </p>
     </div>
 
 
     <!--Registo-->
-    <div class="container">
+    <div class="container" id="register">
         <h1>Registo</h1>
         <form id="frmRegisterUser">
             <div class="form-group">
@@ -67,7 +70,7 @@
         </form>
     </div>
     <script type="module" src="js/controllers/index.js"></script>
-    <script type="module" src="js/controllers/controllerUser.js"></script>
+    <script type="module" src="js/views/userView.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
