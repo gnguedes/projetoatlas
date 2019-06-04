@@ -46,7 +46,7 @@ btnFilter.addEventListener("click", function () {
                 resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
                                 <a class="aCard" href="../../html/country.html" id="${country.name}">
                                     <div class="card" id="cardCountry">
-                                        <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                        <img src="${country.flag}" id="imgCountry">
                                         <hr />
                                         <div class="card-body">
                                             <p class="card-text" id="cardText">${country.name}</p>
@@ -79,7 +79,7 @@ btnFilter.addEventListener("click", function () {
                 resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
                                 <a class="aCard" href="../../html/country.html" id="${country.name}">
                                     <div class="card" id="cardCountry">
-                                        <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                        <img src="${country.flag}" id="imgCountry">
                                         <hr />
                                         <div class="card-body">
                                             <p class="card-text" id="cardText">${country.name}</p>
@@ -109,7 +109,7 @@ btnFilter.addEventListener("click", function () {
                 resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
                             <a class="aCard" href="../../html/country.html" id="${country.name}">
                                 <div class="card" id="cardCountry">
-                                    <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                    <img src="${country.flag}" id="imgCountry">
                                     <hr />
                                     <div class="card-body">
                                         <p class="card-text" id="cardText">${country.name}</p>
@@ -139,7 +139,7 @@ btnFilter.addEventListener("click", function () {
                 resultFilter += `<div class="col-lg-4 col-md-6 col-sm-12">
                             <a class="aCard" href="../../html/country.html" id="${country.name}">
                                 <div class="card" id="cardCountry">
-                                    <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                    <img src="${country.flag}" id="imgCountry">
                                     <hr />
                                     <div class="card-body">
                                         <p class="card-text" id="cardText">${country.name}</p>

@@ -5,14 +5,12 @@
 
 
 export default class Question {
-    constructor(id, question, answers, answerRight, image, video, xp, level) {
+    constructor(id, question, rightAnswer, answers, image, xp) {
         this.id = id
-        this.question = question
+        this.question = question        
+        this.rightAnswer = rightAnswer
         this.answers = answers
-        this.answerRight = answerRight
         this.image = image
-        this.video = video
         this.xp = xp
-        this.lvel = level
     }
 }

@@ -30,12 +30,12 @@ if (localStorage.getItem("countries")) {
     countries = JSON.parse(localStorage.getItem("countries"))
 } else {
     //*caso não haja, cria países, dá push para um array e coloca-os na local storage
-    const portugal = new Country("Portugal", "europe", "Lisboa", "10 milhões", "Português", "Euro", "Mediterrânico", "1143", "", "20", "4.7")
-    const polonia = new Country("Polonia", "europe", "Varsóvia", "38 milhões", "Polaco/Polonês", "Złoty", "Temperado Continental", "1918", "", "37", "4.9")
-    const alemanha = new Country("Alemanha", "europe", "Berlim", "82 milhões", "Alemão", "Euro", "Temperado Húmido", "1871", "", "13", "4.5")
-    const brasil = new Country("Brasil", "southAmerica", "Brasília", "209 milhões", "Português", "Real", "Tropical", "1821 a 1825", "", "54", "3.2")
-    const espanha = new Country("Espanha", "europe", "Madrid", "46 milhões", "Espanhol", "Euro", "Mediterrânico", "1640", "", "43", "3.1")
-    const israel = new Country("Israel", "asia", "Jerusalém", "9 milhões", "Árabe", "Novo Shekel Israelense", "Mediterrânico", "1948", "", "12", "4.1")
+    const portugal = new Country("Portugal", "europe", "Lisboa", "10 milhões", "Português", "Euro", "Mediterrânico", "1143", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/2000px-Flag_of_Portugal.svg.png", "20", "4.7")
+    const polonia = new Country("Polonia", "europe", "Varsóvia", "38 milhões", "Polaco/Polonês", "Złoty", "Temperado Continental", "1918", "https://partnersontheroad.com/wp-content/uploads/2018/07/flag-thuringia.png", "37", "4.9")
+    const alemanha = new Country("Alemanha", "europe", "Berlim", "82 milhões", "Alemão", "Euro", "Temperado Húmido", "1871", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/290px-Flag_of_Germany.svg.png", "13", "4.5")
+    const brasil = new Country("Brasil", "southAmerica", "Brasília", "209 milhões", "Português", "Real", "Tropical", "1821 a 1825", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png", "54", "3.2")
+    const espanha = new Country("Espanha", "europe", "Madrid", "46 milhões", "Espanhol", "Euro", "Mediterrânico", "1640", "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg", "43", "3.1")
+    const israel = new Country("Israel", "asia", "Jerusalém", "9 milhões", "Árabe", "Novo Shekel Israelense", "Mediterrânico", "1948", "https://pt.wikipedia.org/wiki/Bandeira_de_Israel#/media/File:Flag_of_Israel.svg", "12", "4.1")
 
     countries.push(portugal, brasil, alemanha, polonia, espanha, israel)
     localStorage.setItem("countries", JSON.stringify(countries))
@@ -59,7 +59,7 @@ function renderCatalog() {
             result += `<div class="col-lg-4 col-md-6 col-sm-12">
                         <a class="aCard" href="../../html/country.html" id="${country.name}">
                             <div class="card" id="cardCountry">
-                                <img src="../images/flags/${country.name}.png" id="imgCountry">
+                                <img src="${country.flag}" id="imgCountry">
                                 <hr />
                                 <div class="card-body">
                                     <p class="card-text" id="cardText">${country.name}</p>
