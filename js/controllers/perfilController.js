@@ -2,14 +2,12 @@ import User from"../models/user.js"
 
 /* Obter o user selecionado*/
 const loggedUser = sessionStorage.getItem("loggedUser")
- export let users = []
 
-localStorage.setItem("users", JSON.stringify(users))
+ const users = JSON.parse(localStorage.getItem("users"))
 
-users = JSON.parse(localStorage.getItem("users"))
-
-const divInfo = document.getElementById('divInfo')
+const divInfo = document.getElementById("divInfo")
 let result = ''
+function renderInfo(){
 for(let i=0 ; i < users.length; i++){
     console.log(users[i].username == loggedUser);   
     if( users[i].username == loggedUser){
@@ -20,4 +18,5 @@ for(let i=0 ; i < users.length; i++){
         }
     }
     divInfo.innerHTML += result
-
+}
+renderInfo()

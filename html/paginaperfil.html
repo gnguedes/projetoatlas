@@ -59,14 +59,16 @@
         <div class="row">
             <img src="../images/Grupo 119.png" id="imgPerfil">
             <div class="col-lg-4" id="divInfo">
-                
+
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4">
                 <label for="nivelxp" id="rating">Disparador de canhões</label><br>
-                <button type="button" class="btn btn-outline-primary" id="editarperfil" data-toggle="modal" data-target="#exampleModal">Edita o teu Perfil</button><br>
-                <button type="button" class="btn btn-outline-danger" id="logout" data-toggle="modal" data-target="#exampleModal">Logout</button>
+                <button type="button" class="btn btn-outline-primary" id="editarperfil" data-toggle="modal"
+                    data-target="#modalEditProfile">Edita o teu Perfil</button><br>
+                <button type="button" class="btn btn-outline-danger" id="logout" data-toggle="modal"
+                    data-target="#modalLogout">Logout</button>
             </div>
             <div class="col-lg-3">
                 <img src="../images/bau.png" id="bau" width="160px" height="160px">
@@ -79,15 +81,41 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Editar perfil</h5>
-                    <button type="button" id= "editProfile"class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" id="editProfile" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="close">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="editProfileUsername"
+                                placeholder="Novo username">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="editProfileName" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Palavra-passe:</label>
+                            <input type="password" class="form-control" id="editPassword"
+                                 placeholder="Palavra-passe">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Nova palavra-passe:</label>
+                            <input type="password" class="form-control" id="newPassword"
+                                 placeholder="Escreve a tua nova palavra-passe">
+                            <small id="emailHelp" class="form-text text-muted">Apenas tu irás saber a tua palavra-passe</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Confirmar palavra-passe:</label>
+                            <input type="password" class="form-control" id="confirmNewPassword"
+                                placeholder="Confirma a tua nova palavra-passe">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id= "saveChanges"class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="saveChanges" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
@@ -107,8 +135,8 @@
                     <p>Tens a certeza que queres sair?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Não :)</button>
+                    <button type="button" class="btn btn-danger">Sim, tenho! ;c</button>
                 </div>
             </div>
         </div>
@@ -136,7 +164,7 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
-    <script  type="module" src="../js/controllers/perfilController.js"></script>
+    <script type="module" src="../js/controllers/perfilController.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
