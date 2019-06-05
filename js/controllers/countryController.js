@@ -7,12 +7,18 @@ const divCard = document.querySelector("#divCardDetails")
 //*obter o local onde se irá colocar a bandeira do oaís
 const imgCountry = document.querySelector("#imgCountryDetails")
 
+const divCarousel = document.querySelector(".carousel-inner")
+
+const olCarousel = document.querySelector(".carousel-indicators")
+
 /**
  * Função que adiciona os detalhes e a bandeira do país ao card
  * Começa por entrar num ciclo para ver todos os países até encontrar um com o nome igual ao que o utilizador
  * escolheu e após isso adiconar as informações
  */
 function addInfoCountry() {
+    let result = ""
+    let indicator = ""
     for (const country of countries) {
         if (country.name == countrySelected) {
             divCard.innerHTML += `                    
@@ -26,6 +32,22 @@ function addInfoCountry() {
             <p id="txtCardDetails"><b>Ano de Independência:</b> ${country.independanceDate}</p>
         `
             imgCountry.src = `../images/flags/${country.name}.png`
+            console.log(country.images.length)
+            for (let i = 0; i < country.images.length; i++) {
+                if (i == 0) {
+                    result += `<div class="carousel-item active">
+                                <img class="d-block w-100" id="imgCarousel" src="${country.images[i]}">
+                            </div>`
+                    indicator += `<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>`
+                    continue;
+                }
+                result += `<div class="carousel-item">
+                                <img class="d-block w-100" id="imgCarousel" src="${country.images[i]}">
+                            </div>`
+                indicator += `<li data-target="#carouselExampleIndicators" data-slide-to="${i}"></li>`  
+            }
+            console.log(result)
+            divCarousel.innerHTML += result
         }
     }
 }

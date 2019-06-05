@@ -21,6 +21,7 @@ body {
     background-color: #F9D19F;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /*Personalização da navbar definindo a sua cor e colocação de uma sombra*/
@@ -82,7 +83,7 @@ os países*/
     margin-top: 5%;
     border-radius: 30px;
     width: 324px;
-    height: 290px;
+    height: 330px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
@@ -210,7 +211,7 @@ hr {
     margin-left: 20%;
 }
 
-#btnCommentCountry{
+#btnCommentCountry {
     width: 150px;
     height: 40px;
     border-radius: 30px;
@@ -219,7 +220,7 @@ hr {
 }
 
 /*Personalização da dropdownlist encontrada para filtrar os países*/
-#dropdownMenuButton{
+#dropdownMenuButton {
     background-color: white;
     border-radius: 30px;
     position: relative;
@@ -239,7 +240,7 @@ hr {
 }*/
 
 /*Personalização do título das páginas dentro dos continentes*/
-#continentName{
+#continentName {
     top: -20px;
     font-family: Tw Cen MT B;
     font-size: 30px;
@@ -249,7 +250,7 @@ hr {
 }
 
 /*Personalização da caixa de texto para procurar por um país*/
-#txtSearchCountry{
+#txtSearchCountry {
     border-radius: 30px;
     border-width: 1px;
     border-color: gray;
@@ -257,7 +258,7 @@ hr {
 }
 
 /*Configuração do botão de procura*/
-#btnFilter{
+#btnFilter {
     float: left;
     background-color: #FE9221;
     color: black;
@@ -265,12 +266,39 @@ hr {
     border-radius: 30px;
 }
 
-#carousel{
+#carousel {
     position: relative;
-    top:50px;
+    top: 50px;
     left: 9%;
 }
 
-#imgCarousel{
+#imgCarousel {
     height: 600px;
+}
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    align-self: center;
+    top: -5px;
+    font-family: FontAwesome;
+    font-size: 20pt;
+}
+
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
 }
