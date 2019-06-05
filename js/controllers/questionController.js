@@ -59,36 +59,6 @@ function rightAnswer() {
     return countryQuestion.name
 }
 
-function generateQuestion() {
-    const txtQuestion = document.querySelector("#txtQuestion")
-    let divAnswers = document.querySelector("#divAnswers")
-    let result = ``
-    for (const user of users) {
-        if (user.username == loggedUser) {
-            if (user.xp > 10) {
-                txtQuestion.innerHTML += question1.question
-                result += `<div class="row">
-                            <div class="col-6">
-                                <img id="flagGuessCountry" src="${question1.image}">
-                            </div>
-                            <div class="col-6">
-                                <div class="row" id="divBtnsAnswer">
-                                    <button type="button" id="${answers[0]}" class="btn btnAnswerQuestion">${answers[0]}</button>
-                                    <button type="button" id="${answers[1]}" class="btn btnAnswerQuestion">${answers[1]}</button>
-                                </div>
-                                <div class="row">
-                                    <button type="button" id="${answers[2]}" class="btn btnAnswerQuestion">${answers[2]}</button>
-                                    <button type="button" id="${answers[3]}" class="btn btnAnswerQuestion">${answers[3]}</button>
-                                </div>
-                            </div>
-                        </div>`
-                divAnswers.innerHTML += result
-                sessionStorage.setItem("idQuestion", question1)
-            }
-        }
-    }
-}
-
 function questionImage() {
     question1.image = countryQuestion.flag
     return countryQuestion.flag
@@ -98,5 +68,79 @@ function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+//*ids já distribuídos
+function generateQuestion() {
+    for (const user of users) {
+        if (user.username == loggedUser) {
+            if (user.xp < 10) {
+                defineQuestion(questions[0].id)
+                sessionStorage.setItem("idQuestion", question[0].id)
+            }
+            else if(user.xp < 25){
+                let random = Math.floor(Math.random() * 2)
+                defineQuestion(questions[random].id)
+                sessionStorage.setItem("idQuestion", questions[random].id)
+            }
+            else if(user.xp < 75){
+                let random = Math.floor(Math.random() * 3)
+                defineQuestion(questions[random].id)
+            }
+            else if(user.xp < 125){
+                let random = Math.floor(Math.random() * 4)
+                defineQuestion(questions[random].id)
+            }
+            else if(user.xp < 250){
+                let random = Math.floor(Math.random() * 5)
+                defineQuestion(questions[random].id)
+            }
+            else if(user.xp < 450){
+                let random = Math.floor(Math.random() * 6)
+                defineQuestion(questions[random].id)
+            }
+        }
+    }
+}
+
+//!CONTINUAR A FAZER A INTRODUÇÃO DA QUESTÃO
+function defineQuestion(id){
+    const txtQuestion = document.querySelector("#txtQuestion")
+    let result = ""
+    let divAnswers = document.querySelector("#divAnswers")
+    if(id == 1){
+        txtQuestion.innerHTML += question1.question
+        result += `<div class="row">
+                    <div class="col-6">
+                        <img id="flagGuessCountry" src="${questions[0].image}">
+                    </div>
+                    <div class="col-6">
+                        <div class="row" id="divBtnsAnswer">
+                            <button type="button" id="${answers[0]}" class="btn btnAnswerQuestion1">${answers[0]}</button>
+                            <button type="button" id="${answers[1]}" class="btn btnAnswerQuestion1">${answers[1]}</button>
+                        </div>
+                        <div class="row">
+                            <button type="button" id="${answers[2]}" class="btn btnAnswerQuestion1">${answers[2]}</button>
+                            <button type="button" id="${answers[3]}" class="btn btnAnswerQuestion1">${answers[3]}</button>
+                        </div>
+                    </div>
+                </div>`
+        divAnswers.innerHTML += result
+    }
+    else if(id == 2){
+        txtQuestion.innerHTML += question2.question
+        result += `<div class="row" id="divBtnsAnswer">
+                                <button type="button" id="${answers[0]}" class="btn btnAnswerQuestion2">${answers[0]}</button>
+                                <button type="button" id="${answers[1]}" class="btn btnAnswerQuestion3">${answers[1]}</button>
+                            </div>
+                            <div class="row">
+                                <button type="button" id="${answers[2]}" class="btn btnAnswerQuestion2">${answers[2]}</button>
+                                <button type="button" id="${answers[3]}" class="btn btnAnswerQuestion3">${answers[3]}</button>
+                            </div>`
+        divAnswers.innerHTML += result
+    }
+    else if(id == 3){
+
     }
 }
