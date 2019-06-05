@@ -2,19 +2,22 @@ import User from"../models/user.js"
 
 /* Obter o user selecionado*/
 const loggedUser = sessionStorage.getItem("loggedUser")
+ export let users = []
 
-const user = JSON.parse(localStorage.getItem("user"))
+localStorage.setItem("users", JSON.stringify(users))
+
+users = JSON.parse(localStorage.getItem("users"))
 
 const divInfo = document.getElementById('divInfo')
-const result = ''
-
-for(i=0 ; i < user.length; i++){
-    if( user[i].username == loggedUser){
-        result +=`<label for="username" id="info1">Username:${user.username}</label><br>
-        <label for="nome" id="info2">Nome:${user.name}</label><br>
-        <label for="e-mail" id="info3">E-mail:${user.email}</label><br>
-        <label for="datanascimento" id="info4"> Data de nascimento:${user.birthday}</label><br>`
+let result = ''
+for(let i=0 ; i < users.length; i++){
+    console.log(users[i].username == loggedUser);   
+    if( users[i].username == loggedUser){
+    result +=`<label for="username" id="info1">Username:${users[i].username}</label><br>
+            <label for="nome" id="info2">Nome:${users[i].name}</label><br>
+            <label for="e-mail" id="info3">E-mail:${users[i].email}</label><br>
+            <label for="datanascimento" id="info4"> Data de nascimento:${users[i].birthday}</label><br>`
+        }
     }
-    i++;
-}
-divInfo.innerHTML += result 
+    divInfo.innerHTML += result
+

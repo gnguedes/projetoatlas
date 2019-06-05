@@ -26,17 +26,24 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
         }
     }
 
+    const newPassword = document.querySelector("#txtPassword").value
+    const newCheckPassword = document.querySelector("#checkPassword").value
+
     //se o username estiver disponivel, adiciona o utilizador
-    if (existUser === false) {
-        users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday))
-        localStorage.setItem("users", JSON.stringify(users))
-        alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
-    }
-    //se nao o username nao estiver disponivel, nao atualiza o utilizador
+    if (newPassword != newCheckPassword) {
+        alert("As palavras-passe têm de ser iguais!")
+    } 
     else {
-        alert(`Utilizador ${txtUsername} já existe!`)
+        if (existUser === false) {
+            users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday))
+            localStorage.setItem("users", JSON.stringify(users))
+            alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
+        }
+        //se nao o username nao estiver disponivel, nao atualiza o utilizador
+        else {
+            alert(`Utilizador ${txtUsername} já existe!`)
+        }  
     }
-    
 }
 //login de utilizador
 
