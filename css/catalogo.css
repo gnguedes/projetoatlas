@@ -302,3 +302,31 @@ hr {
     content: "\f005 \f005 \f005 \f005 \f005";
     color: #f8ce0b;
 }
+
+#iconComments {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+}
+
+#idUserComments {
+    margin-left: 10px;
+    margin-top: 2px;
+    font-family: TW Cent MT;
+    font-size: 18px;
+}
+
+#txtComments {
+    margin-left: 55px;
+    margin-right: 10px;
+    padding: 3px 3px 3px 3px;
+}
+
+.md-form{
+    margin: 10px;
+}
+
+#btnComment{
+    position: relative;
+    top: -37px;
+}

@@ -32,7 +32,6 @@ function addInfoCountry() {
             <p id="txtCardDetails"><b>Ano de Independência:</b> ${country.independanceDate}</p>
         `
             imgCountry.src = `../images/flags/${country.name}.png`
-            console.log(country.images.length)
             for (let i = 0; i < country.images.length; i++) {
                 if (i == 0) {
                     result += `<div class="carousel-item active">
@@ -44,10 +43,10 @@ function addInfoCountry() {
                 result += `<div class="carousel-item">
                                 <img class="d-block w-100" id="imgCarousel" src="${country.images[i]}">
                             </div>`
-                indicator += `<li data-target="#carouselExampleIndicators" data-slide-to="${i}"></li>`  
+                indicator += `<li data-target="#carouselExampleIndicators" data-slide-to="${i}"></li>`
             }
-            console.log(result)
             divCarousel.innerHTML += result
+            olCarousel.innerHTML += indicator
         }
     }
 }
@@ -78,3 +77,27 @@ function obtainContinent(continent) {
         }
     }
 }
+
+function loadComments() {
+    const btnComments = document.querySelector("#btnCommentCountry")
+    const bodyModal = document.querySelector(".modal-body")
+    let result = ""
+    btnComments.addEventListener("click", function () {
+        for (const country of countries) {
+            if(country.name == countrySelected){
+                for (let i = 0; i < country.comments.length; i++) {
+                    result += `<div class="row">
+                                <img id="iconComments" src="../images/pirata_rapaz.png">
+                                <p id="idUserComments">${country.comments[i].user}</p>
+                            </div>
+                            <div class="row" id="rowComments">
+                                <p id="txtComments">${country.comments[i].comment}</p>
+                            </div>`            
+                }
+                bodyModal.innerHTML += result
+            }
+        }
+    })
+}
+
+loadComments()
