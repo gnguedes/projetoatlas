@@ -64,6 +64,7 @@ function renderCatalog() {
                                 <div class="card-body">
                                     <p class="card-text" id="cardText">${country.name}</p>
                                 </div>
+                                
                             </div>
                         </a>
                     </div>`

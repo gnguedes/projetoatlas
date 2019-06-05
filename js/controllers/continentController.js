@@ -29,7 +29,7 @@ function verifyUserPossibilities() {
                 //*entrar dentro deste continente
                 document.querySelector("#asia").href = "catalogo_continente.html"
             }
-            if (user.xp < 50) {
+            if (user.xp < 75) {
                 const africa = document.querySelector(".africa")
                 africa.style.backgroundColor = "#9D9D9D"
                 const imgAfrica = document.querySelector(".imgAfrica")
@@ -42,7 +42,7 @@ function verifyUserPossibilities() {
             } else {
                 document.querySelector("#africa").href = "catalogo_continente.html"
             }
-            if (user.xp < 100) {
+            if (user.xp < 150) {
                 const northAmerica = document.querySelector(".northAmerica")
                 northAmerica.style.backgroundColor = "#9D9D9D"
                 const imgNorthAmerica = document.querySelector(".imgNorthAmerica")

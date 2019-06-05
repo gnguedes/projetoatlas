@@ -264,3 +264,13 @@ hr {
     border-color: #FE9201;
     border-radius: 30px;
 }
+
+#carousel{
+    position: relative;
+    top:50px;
+    left: 9%;
+}
+
+#imgCarousel{
+    height: 600px;
+}
