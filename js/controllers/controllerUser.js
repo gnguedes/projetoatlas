@@ -19,8 +19,8 @@ if (localStorage.getItem("users")) {
 export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday) {
     let existUser = false
     //verifica se aquele username já existe
-    for (const User of users) {
-        if (User.username === txtUsername) {
+    for (const user of users) {
+        if (user.username === txtUsername) {
             existUser = true
             break
         }
@@ -48,16 +48,13 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
 //login de utilizador
 
 export function loginUser(txtLoginUsername, txtLoginPassword) {
-    let existUser = false
-    for (const User of users) {
-        if (User.username == txtLoginUsername && User.password == txtLoginPassword) {
+    for (const user of users) {
+        if (user.username == txtLoginUsername && user.password == txtLoginPassword) {
             sessionStorage.setItem("loggedUser", txtLoginUsername)
-            existUser = true
-            console.log("esta na sessao")
-            location.href = "../projetoatlas/html/home_page.html"
+            alert("Login efetuado com sucesso!")
+            location.href = "/html/homePage.html"
         }
     }
-    return existUser
 }
 
 export function logoutUser() {

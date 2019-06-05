@@ -1,7 +1,19 @@
-//import { User } from "../models/user.js"
+//import User from "../models/user.js"
 
 document.querySelector("#register").style.display = "none"
-const users = JSON.parse(localStorage.getItem("users"))
+
+let users = []
+
+if (localStorage.getItem("users")) {
+     users = JSON.parse(localStorage.getItem("users"))
+} else {
+    const admin = new User("admin", "admin", "admin@admin.pt", "1000", "M", "admin", "01-01-01")
+    const kid1 = new User("joao12", "123", "joao@gmail.pt", "20", "M", "joao", "08-10-2010")
+
+    users.push(admin, kid1)
+    localStorage.setItem("users", JSON.stringify(users))
+}
+
 
 const frmRegister = document.getElementById("frmRegisterUser")
 frmRegister.addEventListener("submit", function (event) {
@@ -19,11 +31,7 @@ frmRegister.addEventListener("submit", function (event) {
 
     event.preventDefault();
 })
-const frmLogin = document.getElementById("frmLoginUser")
-frmLogin.addEventListener("submit", function (event) {
-    const username = document.querySelector("#txtLoginUsername").value
-    const password = document.querySelector("#txtLoginPassword").value
-})
+
 export function login(txtLoginUsername, txtLoginPassword) {
     let existUser = false
     for (const user of users) {
