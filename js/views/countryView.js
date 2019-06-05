@@ -51,6 +51,9 @@ btnFilter.addEventListener("click", function () {
                                         <div class="card-body">
                                             <p class="card-text" id="cardText">${country.name}</p>
                                         </div>
+                                        <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                        </div>
                                     </div>
                                 </a>
                             </div>`
@@ -63,6 +66,13 @@ btnFilter.addEventListener("click", function () {
         }
         //*adição do catalogo ordenado ao html
         divCatalog.innerHTML += resultFilter
+        for (const country of countries) {
+            if (country.continent == continentSelected) {
+                const starPercentage = (country.rating / 5) * 100;
+                const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+                document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
+            }
+        }
         //*função que permite adicionar à session storage o país selecionado 
         addCountrySelected()
     } else if (filter == "downAlfa") {
@@ -84,6 +94,9 @@ btnFilter.addEventListener("click", function () {
                                         <div class="card-body">
                                             <p class="card-text" id="cardText">${country.name}</p>
                                         </div>
+                                        <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                        </div>
                                     </div>
                                 </a>
                             </div>`
@@ -94,6 +107,13 @@ btnFilter.addEventListener("click", function () {
             }
         }
         divCatalog.innerHTML += resultFilter
+        for (const country of countries) {
+            if (country.continent == continentSelected) {
+                const starPercentage = (country.rating / 5) * 100;
+                const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+                document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
+            }
+        }
         addCountrySelected()
     } else if (filter == "upPop") {
         //*array ordenado por população crescente
@@ -114,6 +134,9 @@ btnFilter.addEventListener("click", function () {
                                     <div class="card-body">
                                         <p class="card-text" id="cardText">${country.name}</p>
                                     </div>
+                                    <div class="stars-outer">
+                                        <div class="stars-inner"></div>
+                                    </div>
                                 </div>
                             </a>
                         </div>`
@@ -124,6 +147,13 @@ btnFilter.addEventListener("click", function () {
             }
         }
         divCatalog.innerHTML += resultFilter
+        for (const country of countries) {
+            if (country.continent == continentSelected) {
+                const starPercentage = (country.rating / 5) * 100;
+                const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+                document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
+            }
+        }
         addCountrySelected()
     } else if (filter == "downPop") {
         //*array ordenado por população decrescente
@@ -144,6 +174,9 @@ btnFilter.addEventListener("click", function () {
                                     <div class="card-body">
                                         <p class="card-text" id="cardText">${country.name}</p>
                                     </div>
+                                    <div class="stars-outer">
+                                        <div class="stars-inner"></div>
+                                    </div>
                                 </div>
                             </a>
                         </div>`
@@ -154,6 +187,13 @@ btnFilter.addEventListener("click", function () {
             }
         }
         divCatalog.innerHTML += resultFilter
+        for (const country of countries) {
+            if (country.continent == continentSelected) {
+                const starPercentage = (country.rating / 5) * 100;
+                const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+                document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
+            }
+        }
         addCountrySelected()
     }
 })
