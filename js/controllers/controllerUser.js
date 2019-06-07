@@ -19,43 +19,42 @@ if (localStorage.getItem("users")) {
 export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday) {
     let existUser = false
     //verifica se aquele username já existe
-    for (const User of users) {
-        if (User.username === txtUsername) {
+    for (const user of users) {
+        if (user.username === txtUsername) {
             existUser = true
             break
         }
     }
 
+    const newPassword = document.querySelector("#txtPassword").value
+    const newCheckPassword = document.querySelector("#checkPassword").value
+
     //se o username estiver disponivel, adiciona o utilizador
-    if (existUser === false) {
-        users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday))
-        localStorage.setItem("users", JSON.stringify(users))
-        
-        
-        alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
-        return true
-    }
-    //se nao o username nao estiver disponivel, nao atualiza o utilizador
+    if (newPassword != newCheckPassword) {
+        alert("As palavras-passe têm de ser iguais!")
+    } 
     else {
-        alert(`Utilizador ${txtUsername} já existe!`)
-        return false
+        if (existUser === false) {
+            users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday))
+            localStorage.setItem("users", JSON.stringify(users))
+            alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
+        }
+        //se nao o username nao estiver disponivel, nao atualiza o utilizador
+        else {
+            alert(`Utilizador ${txtUsername} já existe!`)
+        }  
     }
-    
-    
 }
 //login de utilizador
 
 export function loginUser(txtLoginUsername, txtLoginPassword) {
-    let existUser = false
-    for (const User of users) {
-        if ((User.username === txtLoginUsername) && (User.password === txtLoginPassword)) {
+    for (const user of users) {
+        if (user.username == txtLoginUsername && user.password == txtLoginPassword) {
             sessionStorage.setItem("loggedUser", txtLoginUsername)
-            existUser = true
-            alert("esta na sessao")
-            //location.href = "../projetoatlas/html/home_page.html"
+            alert("Login efetuado com sucesso!")
+            location.href = "/html/homePage.html"
         }
     }
-    return existUser
 }
 
 //logout de utilizador

@@ -7,81 +7,114 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="../projetoatlas/css/index.css">  
-    <title>Pagina de login</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <!--Login-->
+    <!--Introdução do card de login-->
     <div class="container" id="login">
-        <h1>Login</h1>
-        <div id="frmLogin">
-            <div class="form-group">
-                <label for="txtLoginUsername">Username</label>
-                <input type="text" id="txtLoginUsername"><br>
+        <div class="row">
+            <div class="col-lg-6" id="cardLogin">
+                <div class="card-body"></div>
+                <h1>Login</h1>
+                <form id="frmLoginUser">
+                    <div class="form-group">
+                        <label for="txtLoginUsername">Username</label>
+                        <input type="text" id="txtLoginUsername" required><br>
 
-                <label for="txtLoginPassword">Password</label>
-                <input type="password" id="txtLoginPassword">
+                        <label for="txtLoginPassword">Password</label>
+                        <input type="password" id="txtLoginPassword" required>
 
-                <button type="submit" class="btn btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn btn-primary" id="btnlogin">Login</button>
+                    </div>
+                </form>
+                <button class="btn btn-secondary" id="clickBtn">Não tens conta?</button>
+            </div>
+            <div class="col-lg-6">
+                <img src="../images/logo_cores.png" class="float-left" id="logoAtlasPag">
             </div>
         </div>
-        <p>Não tem conta? <button class="link" id="clickBtn">Clique aqui</button> </p>
     </div>
-
-
-    <!--Registo-->
+    <!--Introdução do card de Register-->
     <div class="container" id="register">
-        <h1>Registo</h1>
-        <form id="frmRegisterUser">
-            <div class="form-group">
-                <!--Nome de Utilizador-->
-                <label for="txtUsername">Username</label>
-                <input type="text" id="txtUsername" required><br>
-
-                <!--Palavra-passe-->
-                <label for="txtPassword">Password</label>
-                <input type="password" id="txtPassword" required><br>
-
-                <!--Repetição da Palavra-passe para verificar-->
-                <label for="checkPassword">Verificar password</label>
-                <input type="password" id="checkPassword" required><br>
-
-                <!--Email-->
-                <label for="txtEmail">E-mail</label>
-                <input type="text" id="txtEmail" required><br>
-
-                <!--Sexo do utilizador-->
-                <div class="form-group">
-                    <label for="sltGenre">Sexo</label>
-                    <select class="form-control form-control-sm" id="sltGenre">
-                        <option>Rapaz</option>
-                        <option>Rapariga</option>
-                    </select>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card-body">
+                    <h1>Registo</h1>
                 </div>
+                <form id="frmRegisterUser">
+                    <div class="form-group">
+                        <!--Nome de utilizador-->
+                        <label for="txtUsername">Username</label>
+                        <input type="text" id="txtUsername" required><br>
 
-                <!--Butao de submição-->
-                <button type="submit" class="btn btn-primary">Registar</button>
+                        <!--Palavra-passe-->
+                        <label for="txtPassword">Password</label>
+                        <input type="password" id="txtPassword" required>
+
+                        <!--Repetição da Palavra-passe para verificar-->
+                        <label for="checkPassword">Verificar password</label>
+                        <input type="password" id="checkPassword" required><br>
+
+                        <!--Email-->
+                        <label for="txtEmail">E-mail</label>
+                        <input type="text" id="txtEmail" required><br>
+
+                        <!--Sexo do utilizador-->
+                        <div class="form-group">
+                            <label for="sltGenre">Sexo</label>
+                            <select class="form-control form-control-sm" id="sltGenre">
+                                <option>Rapaz</option>
+                                <option>Rapariga</option>
+                            </select>
+                        </div>
+                        <!--Butao de submição-->
+                        <button type="submit" id="btnRegisterUser" class="btn btn-primary">Registar</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
-    <script type="module" src="js/controllers/index.js"></script>
-    <script type="module" src="js/views/userView.js"></script>
+    </div>
+    <img src="../images/ocean.png" id="imgHome" width="100%" height="100%">
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <!--Logo da ESMAD-->
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <img src="../images/logo_esmad.png" id="logoESMAD" width="200px;" height="130px;">
+                </div>
+                <!--Textos no meio do footer-->
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p id="footerText">Contacto:<br>atlas@esmad.ipp.pt</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <p id="footerText">Desenvolvida no âmbito da<br>disciplina de Projeto I<br>TSIW ESMAD © 2019
+                    </p>
+                </div>
+                <!--Logo do projeto Atlas-->
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <img src="../images/logo_sem_mar-08.png" width="100px;" height="100px;" id="logoAtlas">
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="module" src="js/controllers/index.js"></script>
+    <script type="module" src="js/views/userView.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </body>
 

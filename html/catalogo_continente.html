@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/catalogo.css">
 </head>
 
@@ -17,7 +18,7 @@
     <div class="container" id="container">
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="paginaperfil.html">
                     <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
                         alt="">
                 </a>
@@ -52,21 +53,15 @@
         </nav>
         <h1 id="continentName"></h1>
         <div class="row">
-            <div class="dropdown col-lg-5">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ordenar
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item filter" href="#" id="upAlfa"><img src="../images/seta_cima.png"
-                            class="orderArrow">Ordem Alfabética</a>
-                    <a class="dropdown-item filter" href="#" id="downAlfa"><img src="../images/seta_baixo.png"
-                            class="orderArrow">Ordem Alfabética</a>
-                    <a class="dropdown-item filter" href="#" id="upPop"><img src="../images/seta_cima.png"
-                            class="orderArrow">População</a>
-                    <a class="dropdown-item filter" href="#" id="downPop"><img src="../images/seta_baixo.png"
-                            class="orderArrow">População</a>
-                </div>
+            <div class="col-lg-5">
+                <select id="dropdownMenuButton">
+                    <option value="upAlfa" selected class="filter">A-Z</option>
+                    <option value="downAlfa" class="filter">Z-A</option>
+                    <option value="upPop" class="filter">Mais Pessoas</option>
+                    <option value="downPop" class="filter">Menos Pessoas</option>
+                    <option value="upRating" class="filter">Mais Estrelas</option>
+                    <option value="downRating" class="filter">Menos Estrelas</option>
+                </select>
             </div>
             <div class="col-lg-3">
                 <input id="txtSearchCountry" type="text" class="form-control" />

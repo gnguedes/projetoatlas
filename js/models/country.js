@@ -7,7 +7,7 @@
 
 export default class Country {
     constructor(name, continent, capital, population, languange, coin, climate, 
-        independanceDate, video, views, rating) {
+        independanceDate, flag, rating, images, comments) {
         this.name = name
         this.continent = continent
         this.capital = capital
@@ -16,8 +16,9 @@ export default class Country {
         this.coin = coin
         this.climate = climate
         this.independanceDate = independanceDate
-        this.video = video
-        this.views = views
+        this.flag = flag
         this.rating = rating
+        this.images = images
+        this.comments = comments
     }
 }

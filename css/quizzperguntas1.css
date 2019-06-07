@@ -10,6 +10,11 @@
     src: url(../font/TCB_____.TTF);
 }
 
+@font-face{
+    font-family: TW Cen MT;
+    src: url(../font/TCM_____.TTF)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -45,15 +50,6 @@ body {
     top: 120px;
 }
 
-/*Definição das características do título presente no topo da página*/
-#titleCatalog {
-    font-family: Tw Cen MT B;
-    font-size: 30px;
-    margin: auto;
-    position: relative;
-    text-align: center;
-}
-
 #footer {
     width: 100%;
     background-color: #3384A2;
@@ -80,23 +76,6 @@ body {
     margin-top: 15px;
 }
 
-hr {
-    display: block;
-    margin: auto;
-    margin-top: 10%;
-    border-width: 1px;
-    border-color: #1BA8BE;
-    width: 250px;
-    position: relative;
-    align-self: center;
-}
-
-#lock {
-    position: absolute;
-    margin: 10%;
-    align-content: center;
-    justify-content: center;
-}
 
 /* Configuração do texto presente */
 #cardQuestion {
@@ -104,9 +83,10 @@ hr {
     color: black;
     font-size: 30px;
     margin-left: 15%;
-    margin-top: 100px;
+    margin-top: 130px;
     text-align: center;
     position: relative;
+    vertical-align: middle;
 }
 
 /* Estilização do card */
@@ -141,3 +121,68 @@ hr {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+#flagGuessCountry{
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: gray;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+    float: right;
+    margin-top: 50px;
+    position: relative;
+    left: -15px
+}
+
+#divBtnsAnswer{
+    margin-top: 40px;
+}
+
+.btnAnswerQuestion1{
+    background-color: white;
+    color: black;
+    float: left;
+    margin-top: 30px;
+    margin-right: 20px;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+    font-family: Tw Cen MT;
+    font-size: 25px;
+}
+
+.btnAnswerQuestion2{
+    background-color: white;
+    color: black;
+    margin-top: 30px;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+    font-family: Tw Cen MT;
+    font-size: 25px;
+    position: relative;
+    margin-left: 50%;
+    left: -200px;
+}
+
+.btnAnswerQuestion3{
+    background-color: white;
+    color: black;
+    margin-top: 30px;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+    font-family: Tw Cen MT;
+    font-size: 25px;
+    position: relative;
+    left: -150px;
+}
