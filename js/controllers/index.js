@@ -13,7 +13,6 @@ frmRegister.addEventListener("submit", function (event) {
         alert("esta fixe")
 
     }
-    //
     document.querySelector("#register").style.display = "none"
     document.querySelector("#login").style.display = "block"
 

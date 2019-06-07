@@ -30,12 +30,17 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
     if (existUser === false) {
         users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday))
         localStorage.setItem("users", JSON.stringify(users))
+        
+        
         alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
+        return true
     }
     //se nao o username nao estiver disponivel, nao atualiza o utilizador
     else {
         alert(`Utilizador ${txtUsername} já existe!`)
+        return false
     }
+    
     
 }
 //login de utilizador
@@ -43,16 +48,17 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
 export function loginUser(txtLoginUsername, txtLoginPassword) {
     let existUser = false
     for (const User of users) {
-        if (User.username == txtLoginUsername && User.password == txtLoginPassword) {
+        if ((User.username === txtLoginUsername) && (User.password === txtLoginPassword)) {
             sessionStorage.setItem("loggedUser", txtLoginUsername)
             existUser = true
-            console.log("esta na sessao")
-            location.href = "../projetoatlas/html/home_page.html"
+            alert("esta na sessao")
+            //location.href = "../projetoatlas/html/home_page.html"
         }
     }
     return existUser
 }
 
+//logout de utilizador
 export function logoutUser() {
     sessionStorage.removeItem("loggedUser")
 }

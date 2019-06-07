@@ -1,7 +1,6 @@
 import {
     addUser, 
-    loginUser,
-    logoutUser
+    loginUser  
 }
 from  "../controllers/controllerUser.js"
 
