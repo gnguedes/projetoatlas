@@ -7,7 +7,7 @@
 /*Fonte usada em vários títulos*/
 @font-face {
     font-family: Tw Cen MT B;
-    src: url(../font/TCB_____.TTF)
+    src: url(../font/TCB_____.TTF);
 }
 
 * {
@@ -21,6 +21,7 @@ body {
     background-color: #F9D19F;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /*Personalização da navbar definindo a sua cor e colocação de uma sombra*/
@@ -65,6 +66,7 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+/*Ajuste no card encontrado na página que apresenta os detalhes do país*/
 #cardDetails {
     float: left;
     border-radius: 30px;
@@ -73,16 +75,19 @@ body {
     height: 500px;
 }
 
+/*Ajustes no card apresentado no catalogo dentro de um continente, ou seja, parte do catálogo que apresenta
+os países*/
 #cardCountry {
     top: 20px;
     margin: auto;
     margin-top: 5%;
     border-radius: 30px;
     width: 324px;
-    height: 290px;
+    height: 330px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+/*baixar um pouco o card dos detalhes do país*/
 #divCardDetails {
     margin-top: 40px;
 }
@@ -104,6 +109,7 @@ body {
     align-items: center;
 }
 
+/*Ajustar o tamanho e propriedades da imagem dos cards que apresentam os países*/
 #imgCountry {
     width: 250px;
     height: 160px;
@@ -114,6 +120,7 @@ body {
     border: 1px solid #707070;
 }
 
+/*Configuração da imagem apresentada na página de detalhes do país*/
 #imgCountryDetails {
     width: 300px;
     height: 200px;
@@ -126,6 +133,7 @@ body {
     margin-top: -100px;
 }
 
+/*Configurar a letra do card de detalhes*/
 #txtCardDetails {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -147,6 +155,7 @@ a.aCard:link {
     text-decoration: none;
 }
 
+/*Edição do footer*/
 #footer {
     width: 100%;
     background-color: #FE9221;
@@ -173,6 +182,7 @@ a.aCard:link {
     margin-top: 15px;
 }
 
+/*Personalizar a linha presente nos cards*/
 hr {
     display: block;
     margin: auto;
@@ -184,6 +194,7 @@ hr {
     align-self: center;
 }
 
+/*Personalizar o lock encontrado quando o utilizador não tem xp suficiente para ver um continente*/
 #lock {
     position: absolute;
     margin: 10%;
@@ -191,6 +202,7 @@ hr {
     justify-content: center;
 }
 
+/*Configuração dos botões do card na página de detalhes*/
 #btnOtherCountry {
     width: 150px;
     height: 40px;
@@ -199,7 +211,7 @@ hr {
     margin-left: 20%;
 }
 
-#btnCommentCountry{
+#btnCommentCountry {
     width: 150px;
     height: 40px;
     border-radius: 30px;
@@ -207,24 +219,28 @@ hr {
     margin-right: 20%;
 }
 
-#dropdownMenuButton{
+/*Personalização da dropdownlist encontrada para filtrar os países*/
+#dropdownMenuButton {
     background-color: white;
-    border-radius: 30px; 
+    border-radius: 30px;
     position: relative;
     margin: auto;
     margin-left: 69%;
-    width: 190px;
+    width: 230px;
+    height: 35px;
     float: right;
     color: black;
 }
 
+/*
 .orderArrow{
     width: 15px;
     height: 15px;
     margin-right: 10px;
-}
+}*/
 
-#continentName{
+/*Personalização do título das páginas dentro dos continentes*/
+#continentName {
     top: -20px;
     font-family: Tw Cen MT B;
     font-size: 30px;
@@ -233,16 +249,84 @@ hr {
     text-align: center;
 }
 
-#txtSearchCountry{
+/*Personalização da caixa de texto para procurar por um país*/
+#txtSearchCountry {
     border-radius: 30px;
     border-width: 1px;
     border-color: gray;
+    width: 230px;
 }
 
-#btnFilter{
+/*Configuração do botão de procura*/
+#btnFilter {
     float: left;
     background-color: #FE9221;
     color: black;
     border-color: #FE9201;
     border-radius: 30px;
+}
+
+#carousel {
+    position: relative;
+    top: 50px;
+    left: 9%;
+}
+
+#imgCarousel {
+    height: 600px;
+}
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    align-self: center;
+    top: -5px;
+    font-family: FontAwesome;
+    font-size: 20pt;
+}
+
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+}
+
+#iconComments {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+}
+
+#idUserComments {
+    margin-left: 10px;
+    margin-top: 2px;
+    font-family: TW Cent MT;
+    font-size: 18px;
+}
+
+#txtComments {
+    margin-left: 55px;
+    margin-right: 10px;
+    padding: 3px 3px 3px 3px;
+}
+
+.md-form{
+    margin: 10px;
+}
+
+#btnComment{
+    position: relative;
+    top: -37px;
 }

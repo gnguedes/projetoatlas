@@ -19,7 +19,7 @@
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
                 <!--Ícone do perfil-->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="paginaperfil.html">
                     <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
                         alt="">
                 </a>
@@ -58,27 +58,12 @@
     </div>
     <div id="cardQuestion" class="col-lg-8">
         <div class="card" id="question">
-            <p id="txtQuestion">Pergunta: Berlim é a capital de que país?</p>
+            <p id="txtQuestion"></p>
         </div>
     </div>
     <!--Introdução das respostas-->
-    <div>
-        <div class="row">
-            <div class="col-lg-6">
-                <img src="../images/flags/Alemanha.png" id="imgLeft">
-            </div>
-            <div class="col-lg-6">
-                <img src="../images/flags/" id="imgRight">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <img src="../images/flags/Belgica.png" id="imgLeft">
-            </div>
-            <div class="col-lg-6">
-                <img src="../images/flags/" id="imgRight">
-            </div>
-        </div>
+    <div id="divAnswers">
+
     </div>
     <!--Introdução do footer-->
     <footer id="footer">
@@ -103,6 +88,8 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/controllers/questionController.js"></script>
+    <script type="module" src="../js/views/questionView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

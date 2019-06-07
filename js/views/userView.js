@@ -22,7 +22,7 @@ formRegister.addEventListener("submit", function (event) {
 })
 
 //listener no botao de login
-const formLogin = document.querySelector("#frmLogin")
+const formLogin = document.querySelector("#frmLoginUser")
 
 formLogin.addEventListener("submit", function (event) {
     const txtLoginUsername = document.querySelector("#txtLoginUsername").value

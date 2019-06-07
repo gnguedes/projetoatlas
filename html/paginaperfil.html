@@ -10,14 +10,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/paginaperfil.css" </head> <body>
+    <link rel="stylesheet" href="../css/paginaperfil.css">
+</head>
+
+<body>
     <!--Container para manter a grelha pela página toda-->
     <div class="container" id="container">
         <!--Criação da navbar-->
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
                 <!--Ícone do perfil-->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="paginaperfil.html">
                     <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
                         alt="">
                 </a>
@@ -55,21 +58,86 @@
         </nav>
         <div class="row">
             <img src="../images/Grupo 119.png" id="imgPerfil">
-            <div class="col-lg-4">
-                <label for="username" id="info1">Username: BLA BLA BLA</label><br>
-                <label for="nome" id="info2">Nome : BLA BLA BLA</label><br>
-                <label for="e-mail" id="info3">E-mail: BLA BLA BLA</label><br>
-                <label for="datanascimento" id="info4"> Data de nascimento: BLA BLA BLA</label><br>
+            <div class="col-lg-4" id="divInfo">
+
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4">
                 <label for="nivelxp" id="rating">Disparador de canhões</label><br>
-                <button type="button" id="editarperfil" class="btn btn-outline-primary">Edita o teu perfil</button><br>
-                <button type="button" id="logout" class="btn btn-outline-danger">Log out</button>
+                <button type="button" class="btn btn-outline-primary" id="editarperfil" data-toggle="modal"
+                    data-target="#modalEditProfile">Edita o teu Perfil</button><br>
+                <button type="button" class="btn btn-outline-danger" id="logout" data-toggle="modal"
+                    data-target="#modalLogout">Logout</button>
             </div>
             <div class="col-lg-3">
                 <img src="../images/bau.png" id="bau" width="160px" height="160px">
+            </div>
+        </div>
+    </div>
+    <!--Modal de editar perfil-->
+    <div class="modal" id="modalEditProfile" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar perfil</h5>
+                    <button type="button" id="editProfile" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="close">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="editProfileUsername"
+                                placeholder="Novo username">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="editProfileName" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Palavra-passe:</label>
+                            <input type="password" class="form-control" id="editPassword"
+                                 placeholder="Palavra-passe">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Nova palavra-passe:</label>
+                            <input type="password" class="form-control" id="newPassword"
+                                 placeholder="Escreve a tua nova palavra-passe">
+                            <small id="emailHelp" class="form-text text-muted">Apenas tu irás saber a tua palavra-passe</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Confirmar palavra-passe:</label>
+                            <input type="password" class="form-control" id="confirmNewPassword"
+                                placeholder="Confirma a tua nova palavra-passe">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveChanges" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal de logout-->
+    <div class="modal" id="modalLogout" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Logout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Tens a certeza que queres sair?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Não :)</button>
+                    <button type="button" class="btn btn-danger">Sim, tenho! ;c</button>
+                </div>
             </div>
         </div>
     </div>
@@ -96,6 +164,7 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/controllers/perfilController.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -106,6 +175,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    </body>
+</body>
 
 </html>

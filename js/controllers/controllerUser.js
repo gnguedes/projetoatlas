@@ -19,12 +19,15 @@ if (localStorage.getItem("users")) {
 export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday) {
     let existUser = false
     //verifica se aquele username já existe
-    for (const User of users) {
-        if (User.username === txtUsername) {
+    for (const user of users) {
+        if (user.username === txtUsername) {
             existUser = true
             break
         }
     }
+
+    const newPassword = document.querySelector("#txtPassword").value
+    const newCheckPassword = document.querySelector("#checkPassword").value
 
     //se o username estiver disponivel, adiciona o utilizador
     if (existUser === false) {
@@ -55,7 +58,6 @@ export function loginUser(txtLoginUsername, txtLoginPassword) {
             //location.href = "../projetoatlas/html/home_page.html"
         }
     }
-    return existUser
 }
 
 //logout de utilizador
