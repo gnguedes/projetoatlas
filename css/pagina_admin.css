@@ -1,0 +1,107 @@
+/*Fonte usada nas navbar, assim como, fonte do logótipo*/
+@font-face {
+    font-family: blackPearl;
+    src: url(../font/BlackPearl.ttf);
+}
+
+/*Fonte usada em vários títulos*/
+@font-face {
+    font-family: Tw Cen MT B;
+    src: url(../font/TCB_____.TTF)
+}
+/*Definição da cor de fundo da página, assim como, a largura e altura da página para ocupar 100% da página*/
+body {
+    background-color:#BFBFBF;
+    width: 100%;
+    height: 100%;
+}
+
+/*Personalização da navbar definindo a sua cor e colocação de uma sombra*/
+.navbar {
+    background-color: #3B3B3B;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+/*Configuração do texto presente na navbar*/
+#navBarText {
+    font-family:blackPearl;
+    color: #DBD6D6;
+    font-size: 30px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+
+}
+
+/*Colocar o container principal mais para baixo na página para não ficar por trás da navbar*/
+#container {
+    position: relative;
+    top: 120px;
+}
+
+#container-btn{
+    position: relative;
+    width: 50%;
+    
+}
+#footer {
+    width: 100%;
+    background-color:#3B3B3B;
+    bottom:0;
+    margin-top: 10%;
+    position: absolute;
+    box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
+}
+
+/*Mudar posicionamento do logo da aplicação para estar dentro da grelha*/
+#logoAtlas {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    align-content: center;
+}
+
+/*Configuração do texto presente no footer*/
+#footerText {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-top: 5%;
+}
+
+
+/* Configuração do button log out*/
+#logout {
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 40px;
+    position: relative;
+}
+
+hr {
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    border-width: 1px;
+    border-color: black;
+    width: 250px;
+    position: relative;
+    align-self: center;
+}
+
+.btn {
+    position: relative;
+    background-color: beige;
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    width: 100%;
+}
