@@ -135,6 +135,18 @@ body {
     margin-top: 10px;
     position: relative;
 }
+/* Configuração do butão de acesso à area do admin*/
+#btnAdmin{
+    font-family: Tw Cen MT B;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+}
+
 /* Configuração do button log out*/
 #logout {
     font-family: Tw Cen MT B;
@@ -166,3 +178,4 @@ hr {
     position: relative;
     align-self: center;
 }
+

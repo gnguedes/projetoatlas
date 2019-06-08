@@ -32,7 +32,7 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
     //se o username estiver disponivel, adiciona o utilizador
     if (newPassword != newCheckPassword) {
         alert("As palavras-passe têm de ser iguais!")
-    } 
+    }
     else {
         if (existUser === false) {
             users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday))
@@ -42,7 +42,7 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
         //se nao o username nao estiver disponivel, nao atualiza o utilizador
         else {
             alert(`Utilizador ${txtUsername} já existe!`)
-        }  
+        }
     }
 }
 //login de utilizador
@@ -56,8 +56,50 @@ export function loginUser(txtLoginUsername, txtLoginPassword) {
         }
     }
 }
-
 //logout de utilizador
 export function logoutUser() {
     sessionStorage.removeItem("loggedUser")
+    location.href = "/index.html"
 }
+
+
+//  funcão renderUser que criar uma tabela com todos os utilizadores registados
+
+const divUser = document.querySelector("#tableUser")
+let tableU = ""
+renderUsers()
+
+
+function renderUsers() {
+    for (const user of users) {
+        tableU += `
+        <table class="table">
+        <thead>
+                <tr>
+                    <th>Utilizador</th>
+                    <th>email</th>
+                    <th>xp</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">${user.username}</td>
+                        <td>${user.email}</td>
+                        <td>${user.xp}</td>
+                        <td><button id="${user.username}" class="btn btn-danger remove">Remover</button><td>
+                        <br>
+                    </tr>
+                </tbody>
+            </table>
+            
+        `
+
+    }
+    divUser.innerHTML = tableU
+    /*
+    const btnRemove = document.getElementById("user.username")
+    btnRemove.addEventListener("click", function(){
+        localStorage.removeItem(user)
+    })
+    */
+} 

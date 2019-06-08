@@ -1,7 +1,6 @@
 //*obter a lista de todos os users
 const users = JSON.parse(localStorage.getItem("users"))
 //*obter o user que está logado
-sessionStorage.setItem("loggedUser", "joao12")
 const loggedUser = sessionStorage.getItem("loggedUser")
 
 /**

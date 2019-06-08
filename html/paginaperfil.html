@@ -37,13 +37,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent15">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Página Inicial</a>
+                                <a class="nav-link" href="homePage.html">Página Inicial</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Joga um Quizz</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Vê Todos os Países</a>
+                                <a class="nav-link" href="catalogo.html">Vê Todos os Países</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Sugere um País</a>
@@ -65,10 +65,16 @@
         <div class="row">
             <div class="col-lg-4">
                 <label for="nivelxp" id="rating">Disparador de canhões</label><br>
+
                 <button type="button" class="btn btn-outline-primary" id="editarperfil" data-toggle="modal"
                     data-target="#modalEditProfile">Edita o teu Perfil</button><br>
+                <form action="/html/pagina_admin.html">
+                    <button type="submit" class="btn btn-outline-secondary" id="btnAdmin">Aceder Area Admin</button><br>
+                </form>
                 <button type="button" class="btn btn-outline-danger" id="logout" data-toggle="modal"
                     data-target="#modalLogout">Logout</button>
+
+
             </div>
             <div class="col-lg-3">
                 <img src="../images/bau.png" id="bau" width="160px" height="160px">
@@ -98,14 +104,14 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Palavra-passe:</label>
-                            <input type="password" class="form-control" id="editPassword"
-                                 placeholder="Palavra-passe">
+                            <input type="password" class="form-control" id="editPassword" placeholder="Palavra-passe">
                         </div>
                         <div class="form-group">
                             <label for="password">Nova palavra-passe:</label>
                             <input type="password" class="form-control" id="newPassword"
-                                 placeholder="Escreve a tua nova palavra-passe">
-                            <small id="emailHelp" class="form-text text-muted">Apenas tu irás saber a tua palavra-passe</small>
+                                placeholder="Escreve a tua nova palavra-passe">
+                            <small id="emailHelp" class="form-text text-muted">Apenas tu irás saber a tua
+                                palavra-passe</small>
                         </div>
                         <div class="form-group">
                             <label for="password">Confirmar palavra-passe:</label>
@@ -136,7 +142,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Não :)</button>
-                    <button type="button" class="btn btn-danger">Sim, tenho! ;c</button>
+                    <button type="button" id="btnLogout" class="btn btn-danger">Sim, tenho! ;c</button>
                 </div>
             </div>
         </div>
@@ -168,13 +174,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

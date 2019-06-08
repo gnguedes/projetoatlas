@@ -47,7 +47,14 @@ body {
 #footer {
     width: 100%;
     background-color:#3B3B3B;
-    bottom:0;
+    margin-top: 10%;
+    position: absolute;
+    box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
+}
+#footerAdmin {
+    width: 100%;
+    background-color:#3B3B3B;
+    bottom: 0;
     margin-top: 10%;
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
@@ -71,20 +78,6 @@ body {
     margin-top: 5%;
 }
 
-
-/* Configuração do button log out*/
-#logout {
-    font-family: Tw Cen MT B;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    border-radius: 30px;
-    margin: auto;
-    margin-top: 10px;
-    margin-left: 40px;
-    position: relative;
-}
-
 hr {
     display: block;
     margin: auto;
@@ -100,7 +93,7 @@ hr {
     position: relative;
     background-color: beige;
     font-family: Tw Cen MT B;
-    font-size: 20px;
+    font-size: 26px;
     text-align: center;
     color: black;
     width: 100%;

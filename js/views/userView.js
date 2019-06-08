@@ -1,8 +1,8 @@
 import {
-    addUser, 
-    loginUser  
+    addUser,
+    loginUser
 }
-from  "../controllers/controllerUser.js"
+    from "../controllers/controllerUser.js"
 
 //listener no botao de registo
 const formRegister = document.querySelector("#frmRegisterUser")
@@ -28,6 +28,8 @@ formLogin.addEventListener("submit", function (event) {
     const txtLoginUsername = document.querySelector("#txtLoginUsername").value
     const txtLoginPassword = document.querySelector("#txtLoginPassword").value
 
-    loginUser(txtLoginUsername,txtLoginPassword)
+    loginUser(txtLoginUsername, txtLoginPassword)
     event.preventDefault();
 })
+
+
