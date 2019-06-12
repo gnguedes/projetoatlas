@@ -20,3 +20,8 @@ document.querySelector("#btnComment").addEventListener("click", function(){
         }
     }
 })
+
+
+document.querySelector("#btnOtherCountry").addEventListener("click", function(){
+    location.href = "catalogo_continente.html"
+})

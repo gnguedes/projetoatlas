@@ -29,31 +29,34 @@ questionImage()
 generateQuestion()
 
 function generateCountry() {
-    let random = 0
-    const countriesQuestion = []
-    for (const country of countries) {
-        if (country.continent == continentSelected) {
-            countriesQuestion.push(country)
-        }
-    }
+    const userCountries = []
     for (const user of users) {
         if (user.username == loggedUser) {
-            let j = true
-            while (j == true) {
-                random = Math.floor((Math.random() * countriesQuestion.length))
-                const answeredCountries = []
-                for (let i = 0; i < user.answeredQuestions.length; i++) {
-                    answeredCountries.push(user.answeredQuestions[i].country)
-                }
-                console.log(countriesQuestion[random].name)
-                if (!answeredCountries.includes(countriesQuestion[random].name)) {
-                    j = false
+            for (let i = 0; i < user.answeredQuestions.length; i++) {
+                userCountries.push(user.answeredQuestions.country)
+            }
+            const countriesQuestion = []
+            for (const country of countries) {
+                if (country.continent == continentSelected) {
+                    countriesQuestion.push(country)
                 }
             }
+            let random = Math.floor((Math.random() * countriesQuestion.length))
+            if (userCountries.includes(countriesQuestion[random])) {
+                for (let i = 0; i < user.answeredQuestions.length; i++) {
+                    if ((user.answeredQuestions[i].country == countriesQuestion[random]) && (user.answeredQuestions[i].id == idQuestion)) {
+                        continue
+                    } else {
+                        return countriesQuestion[random]
+                    }
+                }
+            } else {
+                console.log(countriesQuestion[random])
+                return countriesQuestion[random]
+            }
+
         }
     }
-    console.log(countriesQuestion[random])
-    return countriesQuestion[random]
 }
 
 function randomAnswers(id) {
@@ -156,13 +159,13 @@ function defineQuestion(id) {
         divAnswers.innerHTML += result
     } else if (id == 2) {
         txtQuestion.innerHTML += question2.question
-        result += `<div class="row" id="divBtnsAnswer">
-                                <button type="button" id="${answers[0]}" class="btn btnAnswerQuestion2">${answers[0]}</button>
-                                <button type="button" id="${answers[1]}" class="btn btnAnswerQuestion3">${answers[1]}</button>
+        result += `<div class="row" id="divBtnsAnswer2">
+                                <button type="button" id="${answers[0]}" class="btn btnAnswer">${answers[0]}</button>
+                                <button type="button" id="${answers[1]}" class="btn btnAnswer">${answers[1]}</button>
                             </div>
-                            <div class="row">
-                                <button type="button" id="${answers[2]}" class="btn btnAnswerQuestion2">${answers[2]}</button>
-                                <button type="button" id="${answers[3]}" class="btn btnAnswerQuestion3">${answers[3]}</button>
+                            <div class="row" id="divBtnsAnswer2">
+                                <button type="button" id="${answers[2]}" class="btn btnAnswer">${answers[2]}</button>
+                                <button type="button" id="${answers[3]}" class="btn btnAnswer">${answers[3]}</button>
                             </div>`
         divAnswers.innerHTML += result
     } else if (id == 3) {
