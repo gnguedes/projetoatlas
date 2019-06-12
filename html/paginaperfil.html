@@ -20,10 +20,18 @@
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
                 <!--Ícone do perfil-->
-                <a class="navbar-brand" href="paginaperfil.html">
-                    <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
-                        alt="">
-                </a>
+                
+                    <a class="navbar-brand" href="paginaperfil.html">
+                        <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
+                            alt="">
+                        <div id="navbarUsername">
+                            
+                        </div>
+                    </a>
+
+        
+                
+                
                 <!--Texto no centro da navbar-->
                 <p id="navBarText">O teu perfil</p>
                 <!--Menu hamburguer-->
@@ -142,7 +150,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
-                    <a href="../index.html">
+                    <a href="/index.html">
                         <button type="button" class="btn btn-danger">Sim, tenho!</button>
                     </a>
                 </div>
@@ -226,6 +234,7 @@
     </footer>
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controllers/perfilController.js"></script>
+    <script type="module" src="../js/views/logoutUser.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

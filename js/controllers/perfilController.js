@@ -53,14 +53,6 @@ saveChanges.addEventListener("click", function () {
     }
 })
 
-//botao de logout
-const btnLogout = document.querySelector("#btnLogout")
-btnLogout.addEventListener("click", function (event) {
-
-    logoutUser()
-
-    event.preventDefault();
-})
 
 //verifica se o utilizador é admin ou nao, se for, a area admin fica disponivel na pagina de perfil
 document.querySelector("#btnAdmin").style.display = "none"
@@ -71,6 +63,8 @@ function checkTypeUser (){
         document.querySelector("#btnAdmin").style.display = "block"
     }
 }
+
+document.querySelector("#navbarUsername").innerHTML = loggedUser
 
 
     
