@@ -88,3 +88,5 @@ function renderCatalog() {
     //*função importada que coloca na session storage o país que selecionamos para assim aparecer os dados detalhados
     addCountrySelected()
 }
+
+

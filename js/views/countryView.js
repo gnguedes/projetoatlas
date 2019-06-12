@@ -18,6 +18,9 @@ const continentSelected = sessionStorage.getItem("continentSelected")
 //*obter o botão para filtrar
 const btnFilter = document.querySelector("#btnFilter")
 //!adição de evento no click do botão
+if(btnFilter != null){
+
+
 btnFilter.addEventListener("click", function () {
     //*obter o valor introduzido no campo de pesquisa por nome
     const txtSearchCountry = document.querySelector("#txtSearchCountry").value
@@ -277,3 +280,4 @@ btnFilter.addEventListener("click", function () {
         addCountrySelected()
     }
 })
+}

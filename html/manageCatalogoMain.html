@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Página de Administrador</title>
+    <title>Gerir Catálogo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,60 +25,70 @@
                         alt="">
                 </a>
                 <!--Texto no centro da navbar-->
-                <p id="navBarText">Administrador</p>
-                <!--Menu hamburguer-->
-                <a class="navbar-brand" href="#">
-                    <!--Botão caracteristico de um menu hamburguer-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
-                        aria-expanded="false" aria-label="Toggle navigation"><span><img
-                                src="../images/menu hambuger branco.png" width="40px" height="40px"></span></button>
-                    <!--Espaço onde se encontra os itens do menu-->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="./homePage.html">Página Inicial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./quizz.html">Joga um Quizz</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./catalogo.html">Vê Todos os Países</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sugere um País</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Os teus Favoritos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
+                <p id="navBarText">Gerir Catálogo</p>
+                <a href="pagina_admin.html">página admin</a>
             </div>
         </nav>
         <!--Menu do admin-->
         <div class="container-fluid" id="container-btn">
             <div class="list-group" id="frm-btn">
-                <form action="manageUsers.html">
-                    <button type="submit" id="btnUser" class="btn btn-dark btn-lg">Gerir Utilizadores</button>
-                </form>
+                <button type="button" id="btnAddCountry" class="btn btn-dark btn-lg" data-toggle="modal"
+                    data-target="#modalAddCountry">Adicionar País</button>
                 <br>
-                <form action="manageCatalogoMain.html">
-                    <button type="submit" id="btn" class="btn btn-dark btn-lg">Gerir Catálogo</button>
-                </form>
-                <br>
-                <form action="">
-                    <button type="submit" id="btn" class="btn btn-dark btn-lg">Gerir Comentários</button>
+                <form action="manageCatalogo.html">
+                    <button type="submit" id="btn" class="btn btn-dark btn-lg">Gerir Países</button>
                 </form>
                 <br>
                 <form action="">
-                    <button type="submit" id="btn" class="btn btn-dark btn-lg">Gerir Quizzes</button>
+                    <button type="submit" id="btn" class="btn btn-dark btn-lg">Consultar Sugestões</button>
                 </form>
             </div>
-
         </div>
-        
     </div>
+    <!--Modal de Adicionar País-->
+    <div class="modal" id="modalAddCountry" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Adicionar País</h5>
+                    <button type="button" id="editCountry" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="close">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="continent">Continente:</label>
+                            <input type="text" class="form-control" id="newContinent"
+                                placeholder="Continente">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" class="form-control" id="newName" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="population">População:</label>
+                            <input type="text" class="form-control" id="newPop" placeholder="População">
+                        </div>
+                        <div class="form-group">
+                            <label for="capilat">Capital:</label>
+                            <input type="text" class="form-control" id="newCapital" placeholder="Capital">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Confirmar palavra-passe:</label>
+                            <input type="password" class="form-control" id="confirmNewPassword"
+                                placeholder="Confirma a tua nova palavra-passe">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveChanges" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!--Introdução do footer-->
     <footer id="footerAdmin">
         <div class="container">
