@@ -10,7 +10,7 @@
     src: url(../font/TCB_____.TTF);
 }
 
-@font-face{
+@font-face {
     font-family: TW Cen MT;
     src: url(../font/TCM_____.TTF)
 }
@@ -121,7 +121,7 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
-#flagGuessCountry{
+#flagGuessCountry {
     width: 300px;
     height: 200px;
     border-radius: 30px;
@@ -134,11 +134,11 @@ body {
     left: -15px
 }
 
-#divBtnsAnswer{
+#divBtnsAnswer {
     margin-top: 40px;
 }
 
-.btnAnswerQuestion1{
+.btnAnswer {
     background-color: white;
     color: black;
     float: left;
@@ -154,7 +154,7 @@ body {
     font-size: 25px;
 }
 
-.btnAnswerQuestion2{
+.btnAnswerQuestion2 {
     background-color: white;
     color: black;
     margin-top: 30px;
@@ -171,7 +171,7 @@ body {
     left: -200px;
 }
 
-.btnAnswerQuestion3{
+.btnAnswerQuestion3 {
     background-color: white;
     color: black;
     margin-top: 30px;

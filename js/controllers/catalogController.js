@@ -1,5 +1,5 @@
 import Country from "../models/country.js"
-import addCountrySelected from "../views/countryView.js"
+import addCountrySelected from "../views/catalogContinentView.js"
 
 
 //*obter o continente selecionado

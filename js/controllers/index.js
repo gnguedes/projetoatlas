@@ -5,10 +5,13 @@ document.querySelector("#register").style.display = "none"
 let users = []
 
 if (localStorage.getItem("users")) {
-     users = JSON.parse(localStorage.getItem("users"))
+    users = JSON.parse(localStorage.getItem("users"))
 } else {
-    const admin = new User("admin", "admin", "admin@admin.pt", "1000", "M", "admin", "01-01-01")
-    const kid1 = new User("joao12", "123", "joao@gmail.pt", "20", "M", "joao", "08-10-2010")
+    const admin = new User("admin", "admin", "admin@admin.pt", "1000", "M", "admin", "01-01-01", "")
+    const kid1 = new User("joao12", "123", "joao@gmail.pt", "20", "M", "joao", "08-10-2010", [{
+        "id": "1",
+        "country": "Alemanha"
+    }])
 
     users.push(admin, kid1)
     localStorage.setItem("users", JSON.stringify(users))

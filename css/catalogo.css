@@ -268,12 +268,11 @@ hr {
 
 #carousel {
     position: relative;
-    top: 50px;
-    left: 9%;
+    left: 12%;
 }
 
 #imgCarousel {
-    height: 600px;
+    height: 400px;
 }
 
 .stars-outer {
@@ -329,4 +328,12 @@ hr {
 #btnComment{
     position: relative;
     top: -37px;
+}
+
+#btnImages {
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 35%
 }

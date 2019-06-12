@@ -9,6 +9,7 @@
     font-family: Tw Cen MT B;
     src: url(../font/TCB_____.TTF)
 }
+
 /*Definição da cor de fundo da página, assim como, a largura e altura da página para ocupar 100% da página*/
 body {
     background-color: #FCE7AF;
@@ -37,6 +38,7 @@ body {
     position: relative;
     top: 120px;
 }
+
 /*Configuração da imagem de perfil*/
 #imgPerfil {
     width: 250px;
@@ -45,6 +47,7 @@ body {
     position: relative;
     left: -20px;
 }
+
 #footer {
     width: 100%;
     background-color: #FEC321;
@@ -70,6 +73,7 @@ body {
     position: relative;
     margin-top: 5%;
 }
+
 /* Configuração do username do utilizador*/
 #info1 {
     font-family: Tw Cen MT B;
@@ -81,6 +85,7 @@ body {
     margin-top: 15px;
     position: relative;
 }
+
 /* Configuração do nome do utilizador*/
 #info2 {
     font-family: Tw Cen MT B;
@@ -92,6 +97,7 @@ body {
     margin-top: 15px;
     position: relative;
 }
+
 /* Configuração do e-mail do utilizador*/
 #info3 {
     font-family: Tw Cen MT B;
@@ -103,6 +109,7 @@ body {
     margin-top: 15px;
     position: relative;
 }
+
 /* Configuração do data de nascimento do utilizador*/
 #info4 {
     font-family: Tw Cen MT B;
@@ -114,6 +121,7 @@ body {
     margin-top: 15px;
     position: relative;
 }
+
 /* Configuração do rating do utilizador*/
 #rating {
     font-family: Tw Cen MT B;
@@ -124,6 +132,7 @@ body {
     margin-top: 10px;
     position: relative;
 }
+
 /* Configuração do button editar o perfil do utilizador*/
 #editarperfil {
     font-family: Tw Cen MT B;
@@ -135,8 +144,9 @@ body {
     margin-top: 10px;
     position: relative;
 }
+
 /* Configuração do butão de acesso à area do admin*/
-#btnAdmin{
+#btnAdmin {
     font-family: Tw Cen MT B;
     font-size: 20px;
     color: black;
@@ -159,6 +169,7 @@ body {
     margin-left: 40px;
     position: relative;
 }
+
 /* Configuração do bau*/
 #bau {
     width: 160px;
@@ -168,6 +179,7 @@ body {
     margin-left: -40px;
     margin-top: -30px;
 }
+
 hr {
     display: block;
     margin: auto;
@@ -179,3 +191,33 @@ hr {
     align-self: center;
 }
 
+/* configuração do livro */
+#libro {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 10px;
+}
+
+/* configuração da primeira conquista (conquista1) */
+#conquista1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+/* configuração da quarta conquista (conquista4) */
+#conquista2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 20px;
+}
+
+/* configuração da quarta conquista (conquista4) */
+#conquista3 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 20px;
+}

@@ -10,7 +10,7 @@ for (let i = 0; i < continents.length; i++) {
 const users = JSON.parse(localStorage.getItem("users"))
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-sessionStorage.setItem("loggedUser", "joao12")
+/*sessionStorage.setItem("loggedUser", "joao12")*/
 
 //*obter o user logado
 const loggedUser = sessionStorage.getItem("loggedUser")

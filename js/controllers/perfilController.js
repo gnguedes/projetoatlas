@@ -22,6 +22,37 @@ function renderInfo() {
 }
 renderInfo()
 
+const changeProfile = document.getElementById("changeProfile")
+result = ''
+
+function editProfile() {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].username == loggedUser) {
+            document.querySelector("#editProfileUsername").setAttribute('value', users[i].username)
+            document.querySelector("#editProfileName").setAttribute('value', users[i].name)
+            document.querySelector("#editPassword").setAttribute('value', users[i].password)
+        }
+    }
+    changeProfile.innerHTML += result
+}
+editProfile()
+
+const saveChanges = document.querySelector("#saveChanges")
+saveChanges.addEventListener("click", function () {
+    const newPassword = document.querySelector("#newPassword").value
+    const confirmNewPassword = document.querySelector("#confirmNewPassword").value
+    for (const user of users) {
+        if (user.username == loggedUser) {
+            if ((newPassword == confirmNewPassword) && (user.password != newPassword)) {
+                user.password = newPassword
+                localStorage.setItem("users", JSON.stringify(users))
+                alert("Palavra-passe alterada com sucesso!!")
+                location.reload()
+            }
+        }
+    }
+})
+
 //botao de logout
 const btnLogout = document.querySelector("#btnLogout")
 btnLogout.addEventListener("click", function (event) {

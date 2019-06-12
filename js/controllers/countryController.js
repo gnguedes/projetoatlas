@@ -78,24 +78,28 @@ function obtainContinent(continent) {
     }
 }
 
-function loadComments() {
+export function loadComments() {
     const btnComments = document.querySelector("#btnCommentCountry")
-    const bodyModal = document.querySelector(".modal-body")
+    const bodyModal = document.querySelector("#modalBodyComments")
     let result = ""
+    let i = true
     btnComments.addEventListener("click", function () {
-        for (const country of countries) {
-            if(country.name == countrySelected){
-                for (let i = 0; i < country.comments.length; i++) {
-                    result += `<div class="row">
+        if (i == true) {
+            for (const country of countries) {
+                if (country.name == countrySelected) {
+                    for (let i = 0; i < country.comments.length; i++) {
+                        result += `<div class="row">
                                 <img id="iconComments" src="../images/pirata_rapaz.png">
                                 <p id="idUserComments">${country.comments[i].user}</p>
                             </div>
                             <div class="row" id="rowComments">
                                 <p id="txtComments">${country.comments[i].comment}</p>
-                            </div>`            
+                            </div>`
+                    }
                 }
-                bodyModal.innerHTML += result
             }
+            bodyModal.innerHTML += result
+            i = false
         }
     })
 }
