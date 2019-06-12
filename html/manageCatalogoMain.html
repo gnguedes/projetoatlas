@@ -51,16 +51,15 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title">Adicionar País</h5>
-                    <button type="button" id="editCountry" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="close">&times;</span>
-                    </button>
+                        <button type="button" id="editCountry" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="close">&times;</span>
+                        </button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
                             <label for="continent">Continente:</label>
-                            <input type="text" class="form-control" id="newContinent"
-                                placeholder="Continente">
+                            <input type="text" class="form-control" id="newContinent" placeholder="Continente">
                         </div>
                         <div class="form-group">
                             <label for="name">Nome:</label>
@@ -71,24 +70,41 @@
                             <input type="text" class="form-control" id="newPop" placeholder="População">
                         </div>
                         <div class="form-group">
-                            <label for="capilat">Capital:</label>
+                            <label for="capital">Capital:</label>
                             <input type="text" class="form-control" id="newCapital" placeholder="Capital">
                         </div>
                         <div class="form-group">
-                            <label for="password">Confirmar palavra-passe:</label>
-                            <input type="password" class="form-control" id="confirmNewPassword"
-                                placeholder="Confirma a tua nova palavra-passe">
+                            <label for="coin">Moeda:</label>
+                            <input type="text" class="form-control" id="newCoin" placeholder="Moeda">
                         </div>
+                        <div class="form-group">
+                            <label for="climate">Clima:</label>
+                            <input type="text" class="form-control" id="newClimate" placeholder="Clima">
+                        </div>
+                        <div class="form-group">
+                            <label for="population">Data de Independência:</label>
+                            <input type="text" class="form-control" id="newIndepDate"
+                                placeholder="Data de Independência">
+                        </div>
+                        <div class="form-group">
+                            <label for="flag">Bandeira:</label>
+                            <input type="url" class="form-control" id="newFlag" placeholder="Bandeira">
+                        </div>
+                        <div class="form-group">
+                            <label for="images">Imagem:</label>
+                            <input type="url" class="form-control" id="newImage" placeholder="Imagens">
+                        </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="saveChanges" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="saveChanges" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!--Introdução do footer-->
     <footer id="footerAdmin">
         <div class="container">

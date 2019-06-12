@@ -40,5 +40,10 @@ function renderCountry() {
     
 } 
 
+const btnSave = document.querySelector("#btn")
+btnSave.addEventListener("submit", function (event) {
+    
+})
+
 
 
