@@ -1,6 +1,4 @@
 import {
-    questions,
-    answers,
     countryQuestion
 } from "../controllers/questionController.js"
 

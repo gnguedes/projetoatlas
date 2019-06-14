@@ -11,6 +11,8 @@ const divCarousel = document.querySelector(".carousel-inner")
 
 const olCarousel = document.querySelector(".carousel-indicators")
 
+const comments = JSON.parse(localStorage.getItem("comments"))
+
 /**
  * Função que adiciona os detalhes e a bandeira do país ao card
  * Começa por entrar num ciclo para ver todos os países até encontrar um com o nome igual ao que o utilizador
@@ -85,22 +87,20 @@ export function loadComments() {
     let i = true
     btnComments.addEventListener("click", function () {
         if (i == true) {
-            for (const country of countries) {
-                if (country.name == countrySelected) {
-                    for (let i = 0; i < country.comments.length; i++) {
-                        result += `<div class="row">
-                                <img id="iconComments" src="../images/pirata_rapaz.png">
-                                <p id="idUserComments">${country.comments[i].user}</p>
-                            </div>
-                            <div class="row" id="rowComments">
-                                <p id="txtComments">${country.comments[i].comment}</p>
-                            </div>`
-                    }
+            for (const comment of comments) {
+                if (comment.country == countrySelected) {
+                    result += `<div class="row">
+                                        <img id="iconComments" src="../images/pirata_rapaz.png">
+                                        <p id="idUserComments">${comment.loggedUser}</p>
+                                    </div>
+                                    <div class="row" id="rowComments">
+                                        <p id="txtComments">${comment.comment}</p>
+                                    </div>`
                 }
             }
-            bodyModal.innerHTML += result
-            i = false
         }
+        bodyModal.innerHTML = result
+        i = false
     })
 }
 
