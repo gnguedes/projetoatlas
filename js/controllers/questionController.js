@@ -12,7 +12,13 @@ const loggedUser = sessionStorage.getItem("loggedUser")
 
 const idQuestion = sessionStorage.getItem("idQuestions")
 
-export const countryQuestion = generateCountry()
+const questionCountries = []
+for (const country of countries) {
+    questionCountries.push(country)
+}
+
+export let countryQuestion = generateCountry()
+console.log(countryQuestion)
 
 const question1 = new Question("1", "A que país pertence esta bandeira?", ``, ``, ``, "2")
 const question2 = new Question("2", `/*City*/ é a capital de que país?`, ``, ``, ``, "3")
@@ -29,32 +35,29 @@ questionImage()
 generateQuestion()
 
 function generateCountry() {
-    const userCountries = []
+    let random = Math.floor((Math.random() * questionCountries.length))
+    getQuestionCountry(questionCountries[random])
+}
+
+function getQuestionCountry(country) {
     for (const user of users) {
         if (user.username == loggedUser) {
-            for (let i = 0; i < user.answeredQuestions.length; i++) {
-                userCountries.push(user.answeredQuestions.country)
-            }
-            const countriesQuestion = []
-            for (const country of countries) {
-                if (country.continent == continentSelected) {
-                    countriesQuestion.push(country)
+            const idCountries = []
+            for (const userCountry of user.answeredQuestions) {
+                if (userCountry.country == country.name) {
+                    idCountries.push(userCountry.id)
                 }
             }
-            let random = Math.floor((Math.random() * countriesQuestion.length))
-            if (userCountries.includes(countriesQuestion[random])) {
-                for (let i = 0; i < user.answeredQuestions.length; i++) {
-                    if ((user.answeredQuestions[i].country == countriesQuestion[random]) && (user.answeredQuestions[i].id == idQuestion)) {
-                        continue
+            for (const userCountry of user.answeredQuestions) {
+                if (userCountry.country == country.name) {
+                    if (idCountries.includes(idQuestion)) {
+                        generateCountry()
                     } else {
-                        return countriesQuestion[random]
+                        return country
                     }
                 }
-            } else {
-                console.log(countriesQuestion[random])
-                return countriesQuestion[random]
             }
-
+            return country
         }
     }
 }

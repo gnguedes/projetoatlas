@@ -31,7 +31,7 @@ if (idQuestion != 3) {
                                 localStorage.setItem("users", JSON.stringify(users))
                             }
                         }
-                        location.reload()
+                        //location.reload()
                     } else {
                         alert("resposta errada")
                     }
