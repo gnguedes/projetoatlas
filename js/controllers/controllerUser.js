@@ -48,13 +48,21 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
 //login de utilizador
 
 export function loginUser(txtLoginUsername, txtLoginPassword) {
+    let stateLogin = false
     for (const user of users) {
         if (user.username == txtLoginUsername && user.password == txtLoginPassword) {
-            sessionStorage.setItem("loggedUser", txtLoginUsername)
-            alert("Login efetuado com sucesso!")
-            location.href = "/html/homePage.html"
+            stateLogin = true;
         }
     }
+    if (stateLogin == true) {
+        sessionStorage.setItem("loggedUser", txtLoginUsername)
+        alert("Login efetuado com sucesso!")
+        location.href = "/html/homePage.html"
+    }
+    else {
+        alert("Credenciais inválidas!")
+    }
+
 }
 //logout de utilizador
 export function logoutUser() {
@@ -62,4 +70,18 @@ export function logoutUser() {
     location.href = "/index.html"
 }
 
+
+//remover utilizador
+export function removeUser(txtUsername) {
+    let removeUser = confirm(`Deseja mesmo remover o utilizador ${txtUsername}?`)
+    if (removeUser) {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].username === txtUsername) {
+                users.splice(i, 1)
+            }
+        }
+        localStorage.setItem("users", JSON.stringify(users))
+        location.reload()
+    }
+}
 

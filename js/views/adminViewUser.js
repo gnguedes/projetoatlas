@@ -1,5 +1,8 @@
-//import 
+//import utilizadores do local storage
 const users = JSON.parse(localStorage.users)
+//import da funcao que remove utilizadores
+import {removeUser} from "../controllers/controllerUser.js"
+
 
 const divUser = document.querySelector("#tableUser")
 let tableU = ""
@@ -33,10 +36,15 @@ function renderUsers() {
 
     }
     divUser.innerHTML = tableU
-    /** 
-    const btnRemove = document.getElementById("user.username")
-    btnRemove.addEventListener("click", function(){
-        localStorage.removeItem(user)
-    })*/
+
+    //elimina o utilizador seleccionado
+    const btnRemove = document.getElementsByClassName("btn btn-danger remove")
+    for (const elem of btnRemove) {
+        elem.addEventListener("click", function () {
+            let txtUsername = elem.id
+            removeUser(txtUsername)
+            
+        })
+    }
     
-} 
+}

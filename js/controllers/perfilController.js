@@ -64,6 +64,7 @@ function checkTypeUser (){
     }
 }
 
+//coloca nome do utilizador na navbar
 document.querySelector("#navbarUsername").innerHTML = loggedUser
 
 

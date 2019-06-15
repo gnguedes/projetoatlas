@@ -1,5 +1,6 @@
 //import paises do local storage
 const countries = JSON.parse(localStorage.countries)
+import {removeCountry} from "../controllers/catalogController.js"
 
 
 const divCountry = document.querySelector("#tableCountry")
@@ -32,18 +33,14 @@ function renderCountry() {
 
     }
     divCountry.innerHTML = tableC
-    /*
-    const btnRemove = document.getElementById("user.username")
-    btnRemove.addEventListener("click", function(){
-        localStorage.removeItem(user)
-    })*/
     
-} 
+    const btnRemove = document.getElementsByClassName("btn btn-danger remove")
+    for (const elem of btnRemove) {
+        elem.addEventListener("click", function () {
+            let name = elem.id
+            removeCountry(name)
+            
+        })
+    }
 
-const btnSave = document.querySelector("#btn")
-btnSave.addEventListener("submit", function (event) {
-    
-})
-
-
-
+}
