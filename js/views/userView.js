@@ -29,7 +29,7 @@ function userManage() {
     formLogin.addEventListener("submit", function (event) {
         const txtLoginUsername = document.querySelector("#txtLoginUsername").value
         const txtLoginPassword = document.querySelector("#txtLoginPassword").value
-        console.log(txtLoginPassword)
+        
 
         loginUser(txtLoginUsername, txtLoginPassword)
         event.preventDefault();
