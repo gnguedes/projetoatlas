@@ -5,8 +5,10 @@
 
 
 export default class Question {
-    constructor(id, question, rightAnswer, answers, image, xp) {
+    constructor(id, level, continent, question, rightAnswer, answers, image, xp) {
         this.id = id
+        this.level = level
+        this.continent = continent
         this.question = question        
         this.rightAnswer = rightAnswer
         this.answers = answers

@@ -30,7 +30,7 @@ function verifyUserPossibilityToPlay() {
                 const imgAsia = document.querySelector(".imgAsia")
                 imgAsia.style.opacity = "0.3"
                 asia.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                asia.addEventListener("click", function event() {
+                asia.addEventListener("click", function(event) {
                     alert("Ainda não tens nível suficiente para jogares neste continente!")
                     //*este event.preventDefault() serve para a página não dar refresh, ou seja, dá uma
                     //*melhor sensação de que o utilizador não tem acesso a esta área
