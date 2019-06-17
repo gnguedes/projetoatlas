@@ -14,11 +14,11 @@ formRegister.addEventListener("submit", function (event) {
     const txtEmail = document.querySelector("#txtEmail").value
     const sltGenre = document.querySelector("#sltGenre").value
     //Estes valores têm um valor pré-definido pois pode ser editado posteriormente pela "criança"
-    const txtName = ""
+    // const txtName = ""
     const valueXp = "0"
-    const dateBirthday = "00-00-0000"
+    // const dateBirthday = "00-00-0000"
 
-    addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday)
+    addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre,newName)
     event.preventDefault();
 })
 
