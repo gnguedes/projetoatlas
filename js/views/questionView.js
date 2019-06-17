@@ -10,6 +10,8 @@ const users = JSON.parse(localStorage.getItem("users"))
 
 const loggedUser = sessionStorage.getItem("loggedUser")
 
+const levelId = sessionStorage.getItem("levelId")
+
 for (const btn of answerBtns) {
     btn.addEventListener("click", function (event) {
         for (const question of questions) {
@@ -18,8 +20,10 @@ for (const btn of answerBtns) {
                     for (const user of users) {
                         if (user.username == loggedUser) {
                             user.xp = parseInt(user.xp, 10) + parseInt(question.xp, 10)
-                            user.answeredQuestions.push(question.id)
-                            localStorage.setItem("users", JSON.stringify(users))
+                            if (levelId != "level4") {
+                                user.answeredQuestions.push(question.id)
+                                localStorage.setItem("users", JSON.stringify(users))
+                            }
                             location.reload()
                         }
                     }

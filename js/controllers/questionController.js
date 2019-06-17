@@ -6,6 +6,8 @@ const loggedUser = sessionStorage.getItem("loggedUser")
 
 const continentSelected = sessionStorage.getItem("continentSelected")
 
+const levelId = sessionStorage.getItem("levelId")
+
 export const questions = []
 
 if (localStorage.getItem("questions")) {
@@ -20,6 +22,7 @@ if (localStorage.getItem("questions")) {
     const question7 = new Question("7", "6", "europe", "Qual o clima de Portugal?", "Mediterrânico", ["Continental", "Mediterrânico", "Húmido", "Tropical"], "", 20)
 
     questions.push(question1, question2, question3, question4, question5, question6, question7)
+    localStorage.setItem("questions", JSON.stringify(questions))
 }
 
 generateQuestion()
@@ -29,95 +32,112 @@ function generateQuestion() {
     for (const user of users) {
         if (user.username == loggedUser) {
             let k = 0
-            if (user.xp < 10) {
-                for (const question of questions) {
-                    if (question.continent == continentSelected) {
-                        if (question.level == 1) {
-                            questionsLevel.push(question)
+            if (levelId == "level1") {
+                if (user.xp <= 10) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 1) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                } else if ((user.xp < 25) || (user.xp > 25)) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 1 || question.level == 2) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
                         }
                     }
                 }
-                console.log(questionsLevel)
-                for (let i = 0; i < questionsLevel.length; i++) {
-                    if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                        console.log(user.answeredQuestions.includes(questionsLevel[i].id))
-                        k++
-                        continue
-                    } else {
-                        createQuestion(questionsLevel[i])
-                        break
+            } else if (levelId == "level2") {
+                if (user.xp <= 75) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 3) {
+                                questionsLevel.push(question)
+                            }
+                        }
                     }
-                }
-            } else if (user.xp < 25) {
-                for (const question of questions) {
-                    if (question.continent == continentSelected) {
-                        if (question.level == 1 || question.level == 2) {
-                            questionsLevel.push(question)
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                } else if ((user.xp < 140) || (user.xp > 140)) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 3 || question.level == 4) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
                         }
                     }
                 }
-                console.log(questionsLevel)
-                for (let i = 0; i < questionsLevel.length; i++) {
-                    if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                        k++
-                        continue
-                    } else {
-                        createQuestion(questionsLevel[i])
-                        break
-                    }
-                }
-            } else if (user.xp < 75) {
-                for (const question of questions) {
-                    if (question.continent == continentSelected) {
-                        if (question.level == 1 || question.level == 2 || question.level == 3) {
-                            questionsLevel.push(question)
+            } else if (levelId == "level3") {
+                if (user.xp < 225) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 5) {
+                                questionsLevel.push(question)
+                            }
                         }
                     }
-                }
-                console.log(questionsLevel)
-                for (let i = 0; i < questionsLevel.length; i++) {
-                    if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                        k++
-                        continue
-                    } else {
-                        createQuestion(questionsLevel[i])
-                        break
-                    }
-                }
-            } else if (user.xp < 140) {
-                for (const question of questions) {
-                    if (question.continent == continentSelected) {
-                        if (question.level == 1 || question.level == 2 || question.level == 3 || question.level == 4) {
-                            questionsLevel.push(question)
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
                         }
                     }
-                }
-                console.log(questionsLevel)
-                for (let i = 0; i < questionsLevel.length; i++) {
-                    if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                        k++
-                        continue
-                    } else {
-                        createQuestion(questionsLevel[i])
-                        break
-                    }
-                }
-            } else if (user.xp < 225) {
-                for (const question of questions) {
-                    if (question.continent == continentSelected) {
-                        if (question.level != 6) {
-                            questionsLevel.push(question)
+                } else {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 5 || question.level == 6) {
+                                questionsLevel.push(question)
+                            }
                         }
                     }
-                }
-                console.log(questionsLevel)
-                for (let i = 0; i < questionsLevel.length; i++) {
-                    if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                        k++
-                        continue
-                    } else {
-                        createQuestion(questionsLevel[i])
-                        break
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
                     }
                 }
             } else {
@@ -129,9 +149,7 @@ function generateQuestion() {
                 let random = Math.floor((Math.random() * questionsLevel.length))
                 createQuestion(questionsLevel[random])
             }
-            console.log(k)
-            console.log(questionsLevel.length == k)
-            if(questionsLevel.length == k){
+            if (questionsLevel.length == k) {
                 alert("Ja respondeste a todas as questoes deste nivel. Parabens")
                 location.href = "quizzLevel.html"
             }

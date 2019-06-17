@@ -4,6 +4,15 @@ const users = JSON.parse(localStorage.getItem("users"))
 //*obter o user logado
 const loggedUser = sessionStorage.getItem("loggedUser")
 
+const cardsLevel = document.getElementsByClassName("aCard")
+console.log(cardsLevel)
+
+for (const card of cardsLevel) {
+    card.addEventListener("click", function(){
+        sessionStorage.setItem("levelId", this.id)
+    })
+}
+
 verifyUserPossibilityToPlay()
 
 /**
