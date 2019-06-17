@@ -1,5 +1,5 @@
 /** classe do utilizador constituida pelo seu nome de utilizador,
- palavra-passe, email, experiencia, sexo, o seu verdadeiro nome
+ palavra-passe, email, experiencia, sexo, o seu verdadeiro nome 
 */
 
 export default class User {
