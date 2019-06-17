@@ -1,5 +1,6 @@
 //import paises do local storage
 const countries = JSON.parse(localStorage.countries)
+//import da funcao que remove paises
 import {removeCountry} from "../controllers/catalogController.js"
 
 
