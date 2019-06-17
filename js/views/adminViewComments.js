@@ -11,7 +11,7 @@ renderComments()
 //  funcão renderUser que criar uma tabela com todos os utilizadores registados
 function renderComments() {
     for (const comment of comments) {
-        tableU += `<table class="table">
+        tableC += `<table class="table">
         <thead>
                 <tr>
                     <th>Utilizador</th>
