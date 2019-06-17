@@ -1,146 +1,224 @@
 import Question from "../models/question.js"
 
-const countries = JSON.parse(localStorage.getItem("countries"))
-
-const continentSelected = sessionStorage.getItem("continentSelected")
-
 const users = JSON.parse(localStorage.getItem("users"))
-
-sessionStorage.setItem("loggedUser", "joao12")
 
 const loggedUser = sessionStorage.getItem("loggedUser")
 
-export const countryQuestion = generateCountry()
+const continentSelected = sessionStorage.getItem("continentSelected")
 
-const question1 = new Question("1", "A que país pertence esta bandeira?", ``, ``, ``, "2")
-const question2 = new Question("2", `/*City*/ é a capital de que país?`, ``, ``, ``, "3")
-const question3 = new Question("3", `Qual a bandeira de /*Country*/?`, ``, ``, "", "5")
-const question4 = new Question("4", "Qual o país com mais pessoas?", ``, ``, "", "10")
-const question5 = new Question("5", "Qual é a língua falada em /*Country*/", ``, ``, "", "15")
-const question6 = new Question("6", "Qual o clima de /*Country*/", ``, ``, "", "20")
+const levelId = sessionStorage.getItem("levelId")
 
-export const questions = [question1, question2, question3, question4, question5, question6]
+export let questions = []
 
-const answers = [`${rightAnswer()}`]
+if (localStorage.getItem("questions")) {
+    questions = JSON.parse(localStorage.getItem("questions"))
+} else {
+    const question1 = new Question("1", "1", "europe", "A que país pertence esta bandeira?", "Portugal", ["Alemanha", "Espanha", "Portugal", "Itália"], "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/2000px-Flag_of_Portugal.svg.png", 2)
+    const question2 = new Question("2", "1", "europe", "A bandeira abaixo pertence a que país?", "Alemanha", ["Espanha", "França", "Bélgica", "Alemanha"], "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/290px-Flag_of_Germany.svg.png", 2)
+    const question3 = new Question("3", "2", "europe", "Berlim é a capital de que país?", "Alemanha", ["Holanda", "Bélgica", "Alemanha", "Suiça"], "", 3)
+    const question4 = new Question("4", "3", "europe", "Qual é a bandeira de França?", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg", ["https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg", "https://partnersontheroad.com/wp-content/uploads/2018/07/flag-thuringia.png", "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg", "https://static.significados.com.br/foto/flag-of-the-netherlands.svg_sm.png"], "", 5)
+    const question5 = new Question("5", "4", "europe", "Qual o país com mais pessoas?", "Alemanha", ["Portugal", "Espanha", "Alemanha", "Polónia"], "", 10)
+    const question6 = new Question("6", "5", "europe", "Qual a língua falada em Portugal?", "Português", ["Português", "Alemão", "Francês", "Espanhol"], "", 15)
+    const question7 = new Question("7", "6", "europe", "Qual o clima de Portugal?", "Mediterrânico", ["Continental", "Mediterrânico", "Húmido", "Tropical"], "", 20)
 
-randomAnswers()
-questionImage()
+    questions.push(question1, question2, question3, question4, question5, question6, question7)
+    localStorage.setItem("questions", JSON.stringify(questions))
+}
+
 generateQuestion()
 
-console.log(countryQuestion)
-
-function generateCountry() {
-    const countriesQuestion = []
-    for (const country of countries) {
-        if (country.continent == continentSelected) {
-            countriesQuestion.push(country)
-        }
-    }
-    let random = Math.floor((Math.random() * countriesQuestion.length))
-    return countriesQuestion[random]
-}
-
-function randomAnswers() {
-    for (let i = 0; i < 3; i++) {
-        let random = Math.floor((Math.random() * countries.length))
-        if ((countries[random].continent == continentSelected) && (answers.indexOf(countries[random].name) == -1)) {
-            answers.push(countries[random].name)
-        } else {
-            i--
-        }
-    }
-    shuffle(answers)
-    question1.answers = answers
-    return answers
-}
-
-function rightAnswer() {
-    question1.rightAnswer = countryQuestion.name
-    return countryQuestion.name
-}
-
-function questionImage() {
-    question1.image = countryQuestion.flag
-    return countryQuestion.flag
-}
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
-//*ids já distribuídos
 function generateQuestion() {
+    const questionsLevel = []
     for (const user of users) {
         if (user.username == loggedUser) {
-            if (user.xp < 10) {
-                defineQuestion(questions[0].id)
-                sessionStorage.setItem("idQuestion", question[0].id)
+            let k = 0
+            if (levelId == "level1") {
+                if (user.xp <= 10) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 1) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                } else if ((user.xp < 25) || (user.xp > 25)) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 1 || question.level == 2) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                }
+            } else if (levelId == "level2") {
+                if (user.xp <= 75) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 3) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                } else if ((user.xp < 140) || (user.xp > 140)) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 3 || question.level == 4) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                }
+            } else if (levelId == "level3") {
+                if (user.xp < 225) {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 5) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                } else {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if (question.level == 5 || question.level == 6) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    for (let i = 0; i < questionsLevel.length; i++) {
+                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                            k++
+                            continue
+                        } else {
+                            createQuestion(questionsLevel[i])
+                            break
+                        }
+                    }
+                }
+            } else {
+                for (const question of questions) {
+                    if (question.continent == continentSelected) {
+                        questionsLevel.push(question)
+                    }
+                }
+                let random = Math.floor((Math.random() * questionsLevel.length))
+                createQuestion(questionsLevel[random])
             }
-            else if(user.xp < 25){
-                let random = Math.floor(Math.random() * 2)
-                defineQuestion(questions[random].id)
-                sessionStorage.setItem("idQuestion", questions[random].id)
-            }
-            else if(user.xp < 75){
-                let random = Math.floor(Math.random() * 3)
-                defineQuestion(questions[random].id)
-            }
-            else if(user.xp < 125){
-                let random = Math.floor(Math.random() * 4)
-                defineQuestion(questions[random].id)
-            }
-            else if(user.xp < 250){
-                let random = Math.floor(Math.random() * 5)
-                defineQuestion(questions[random].id)
-            }
-            else if(user.xp < 450){
-                let random = Math.floor(Math.random() * 6)
-                defineQuestion(questions[random].id)
+            if (questionsLevel.length == k) {
+                alert("Ja respondeste a todas as questoes deste nivel. Parabens")
+                location.href = "quizzLevel.html"
             }
         }
     }
 }
 
 //!CONTINUAR A FAZER A INTRODUÇÃO DA QUESTÃO
-function defineQuestion(id){
+function createQuestion(question) {
+    sessionStorage.setItem("idQuestion", question.id)
     const txtQuestion = document.querySelector("#txtQuestion")
     let result = ""
     let divAnswers = document.querySelector("#divAnswers")
-    if(id == 1){
-        txtQuestion.innerHTML += question1.question
+    txtQuestion.innerHTML += question.question
+    if (question.level == 1) {
         result += `<div class="row">
                     <div class="col-6">
-                        <img id="flagGuessCountry" src="${questions[0].image}">
+                        <img id="flagGuessCountry" src="${question.image}">
                     </div>
                     <div class="col-6">
-                        <div class="row" id="divBtnsAnswer1">
-                            <button type="button" id="${answers[0]}" class="btn btnAnswer">${answers[0]}</button>
-                            <button type="button" id="${answers[1]}" class="btn btnAnswer">${answers[1]}</button>
+                        <div class="row" id="divBtnsAnswer">
+                            <div class="col-3">
+                                <button type="button" id="${question.answers[0]}" class="btn userAnswer btnAnswer1">${question.answers[0]}</button>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" id="${question.answers[1]}" class="btn userAnswer btnAnswer1">${question.answers[1]}</button>
+                            </div>                
                         </div>
-                        <div class="row" id="divBtnsAnswer1">
-                            <button type="button" id="${answers[2]}" class="btn btnAnswer">${answers[2]}</button>
-                            <button type="button" id="${answers[3]}" class="btn btnAnswer">${answers[3]}</button>
+                        <div class="row">
+                            <div class="col-3">
+                                <button type="button" id="${question.answers[2]}" class="btn userAnswer btnAnswer1">${question.answers[2]}</button>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" id="${question.answers[3]}" class="btn userAnswer btnAnswer1">${question.answers[3]}</button>
+                            </div>
                         </div>
                     </div>
                 </div>`
         divAnswers.innerHTML += result
-    }
-    else if(id == 2){
-        txtQuestion.innerHTML += question2.question
+    } else if (question.level == 2 || question.level == 4 || question.level == 5 || question.level == 6) {
         result += `<div class="row" id="divBtnsAnswer2">
-                                <button type="button" id="${answers[0]}" class="btn btnAnswer">${answers[0]}</button>
-                                <button type="button" id="${answers[1]}" class="btn btnAnswer">${answers[1]}</button>
-                            </div>
-                            <div class="row" id="divBtnsAnswer2">
-                                <button type="button" id="${answers[2]}" class="btn btnAnswer">${answers[2]}</button>
-                                <button type="button" id="${answers[3]}" class="btn btnAnswer">${answers[3]}</button>
-                            </div>`
+                        <div class="col-6 d-flex justify-content-end">
+                            <button type="button" id="${question.answers[0]}" class="btn userAnswer btnAnswer">${question.answers[0]}</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" id="${question.answers[1]}" class="btn userAnswer btnAnswer">${question.answers[1]}</button>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <button type="button" id="${question.answers[2]}" class="btn userAnswer btnAnswer">${question.answers[2]}</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" id="${question.answers[3]}" class="btn userAnswer btnAnswer">${question.answers[3]}</button>
+                        </div>`
         divAnswers.innerHTML += result
-    }
-    else if(id == 3){
-
+    } else if (question.level == 3) {
+        result += `<div class="row">
+                    <div class="col-lg-6">
+                        <a href=""><img src="${question.answers[0]}" id="${question.answers[0]}" class="imgLeft userAnswer"></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href=""><img src="${question.answers[1]}" id="${question.answers[1]}" class="imgRight userAnswer"></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href=""><img src="${question.answers[2]}" id="${question.answers[2]}" class="imgLeft userAnswer"></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href=""><img src="${question.answers[3]}" id="${question.answers[3]}" class="imgRight userAnswer"></a>
+                    </div>
+                </div>`
+        divAnswers.innerHTML += result
     }
 }

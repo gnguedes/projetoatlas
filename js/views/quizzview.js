@@ -30,14 +30,14 @@ function verifyUserPossibilityToPlay() {
                 const imgAsia = document.querySelector(".imgAsia")
                 imgAsia.style.opacity = "0.3"
                 asia.innerHTML += `<img src="../images/lock-6.png" id="lock">`
-                asia.addEventListener("click", function event() {
+                asia.addEventListener("click", function(event) {
                     alert("Ainda não tens nível suficiente para jogares neste continente!")
                     //*este event.preventDefault() serve para a página não dar refresh, ou seja, dá uma
                     //*melhor sensação de que o utilizador não tem acesso a esta área
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#asia").href = "question.html"
+                document.querySelector("#asia").href = "quizzLevel.html"
             }
             if (user.xp < 50) {
                 const africa = document.querySelector(".africa")
@@ -50,7 +50,7 @@ function verifyUserPossibilityToPlay() {
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#africa").href = "question.html"
+                document.querySelector("#africa").href = "quizzLevel.html"
             }
             if (user.xp < 100) {
                 const northAmerica = document.querySelector(".northAmerica")
@@ -63,7 +63,7 @@ function verifyUserPossibilityToPlay() {
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#northAmerica").href = "question.html"
+                document.querySelector("#northAmerica").href = "quizzLevel.html"
             }
             if (user.xp < 300) {
                 const southAmerica = document.querySelector(".southAmerica")
@@ -76,7 +76,7 @@ function verifyUserPossibilityToPlay() {
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#southAmerica").href = "question.html"
+                document.querySelector("#southAmerica").href = "quizzLevel.html"
             }
             if (user.xp < 600) {
                 const oceania = document.querySelector(".oceania")
@@ -89,7 +89,7 @@ function verifyUserPossibilityToPlay() {
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#oceania").href = "question.html"
+                document.querySelector("#oceania").href = "quizzLevel.html"
             }
         }
     }

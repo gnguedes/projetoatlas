@@ -28,10 +28,6 @@
                             
                         </div>
                     </a>
-
-        
-                
-                
                 <!--Texto no centro da navbar-->
                 <p id="navBarText">O teu perfil</p>
                 <!--Menu hamburguer-->
@@ -45,13 +41,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent15">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Página Inicial</a>
+                                <a class="nav-link" href="../html/homePage.html">Página Inicial</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Joga um Quizz</a>
+                                <a class="nav-link" href="../html/quizz.html">Joga um Quizz</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Vê Todos os Países</a>
+                                <a class="nav-link" href="../html/catalogo.html">Vê Todos os Países</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Sugere um País</a>
@@ -76,7 +72,7 @@
                 <button type="button" class="btn btn-outline-primary" id="editarperfil" data-toggle="modal"
                     data-target="#modalEditProfile">Edita o teu Perfil</button><br>
                 <form action="/html/pagina_admin.html">
-                    <button type="submit" class="btn btn-outline-secondary" id="btnAdmin">Aceder Area Admin</button><br>
+                    <button type="submit" class="btn btn-outline-secondary" id="btnAdmin">Aceder Area Admin</button>
                 </form>
                 <button type="button" class="btn btn-outline-danger" id="logout" data-toggle="modal"
                     data-target="#modalLogout">Logout</button>
@@ -102,12 +98,8 @@
                     <form id="changeProfile">
                         <div class="form-group">
                             <label for="username">Username:</label>
-                            <input type="text" class="form-control" id="editProfileUsername" placeholder="Novo username"
+                            <input type="text" class="form-control" id="editProfileUsername" disabled placeholder="Novo username"
                                 value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" class="form-control" id="editProfileName" placeholder="Nome" value="">
                         </div>
                         <div class="form-group">
                             <label for="password">Palavra-passe:</label>
