@@ -44,6 +44,7 @@ body {
 #container {
     position: relative;
     top: 120px;
+    margin-bottom: 16%;
 }
 
 /*Definição das características do título presente no topo da página*/
@@ -72,18 +73,17 @@ body {
     border-radius: 30px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
     width: 500px;
-    height: 500px;
+    height: 520px;
 }
 
 /*Ajustes no card apresentado no catalogo dentro de um continente, ou seja, parte do catálogo que apresenta
 os países*/
 #cardCountry {
-    top: 20px;
     margin: auto;
     margin-top: 5%;
     border-radius: 30px;
-    width: 324px;
-    height: 330px;
+    width: 250px;
+    height: 280px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
@@ -111,8 +111,8 @@ os países*/
 
 /*Ajustar o tamanho e propriedades da imagem dos cards que apresentam os países*/
 #imgCountry {
-    width: 250px;
-    height: 160px;
+    width: 200px;
+    height: 120px;
     margin: auto;
     margin-top: 10%;
     align-items: center;
@@ -159,17 +159,17 @@ a.aCard:link {
 #footer {
     width: 100%;
     background-color: #FE9221;
-    margin-top: 16%;
+    /* margin-top: 16%; */
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
 /*Mudar posicionamento do logo da aplicação para estar dentro da grelha*/
 #logoAtlas {
-    display: block;
-    margin: auto;
+    /* display: block;
+    margin: auto; */
     margin-top: 5%;
-    align-content: center;
+    /* align-content: center; */
 }
 
 /*Configuração do texto presente no footer*/
@@ -178,7 +178,7 @@ a.aCard:link {
     font-size: 20px;
     color: black;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     margin-top: 15px;
 }
 
@@ -189,7 +189,7 @@ hr {
     margin-top: 10%;
     border-width: 1px;
     border-color: #1BA8BE;
-    width: 250px;
+    width: 200px;
     position: relative;
     align-self: center;
 }
@@ -223,10 +223,10 @@ hr {
 #dropdownMenuButton {
     background-color: white;
     border-radius: 30px;
-    position: relative;
-    margin: auto;
-    margin-left: 69%;
-    width: 230px;
+    /* position: relative; */
+    /* margin: auto; */
+    margin-bottom: 5px;
+    /* width: 230px; */
     height: 35px;
     float: right;
     color: black;
@@ -254,12 +254,14 @@ hr {
     border-radius: 30px;
     border-width: 1px;
     border-color: gray;
-    width: 230px;
+    margin-bottom: 5px;
+    /*width: 230px;*/
 }
 
 /*Configuração do botão de procura*/
 #btnFilter {
-    float: left;
+    /* position: relative;
+    left: 100px; */
     background-color: #FE9221;
     color: black;
     border-color: #FE9201;
@@ -279,7 +281,7 @@ hr {
     display: inline-block;
     position: relative;
     align-self: center;
-    top: -5px;
+    top: -10px;
     font-family: FontAwesome;
     font-size: 20pt;
 }

@@ -1,22 +1,35 @@
-import {loadComments} from "../controllers/countryController.js"
+import Comment from "../models/comments.js"
 
-const loggedUser = sessionStorage.getItem("loggedUser")
+
+let comments = []
+
+if(localStorage.getItem("comments")){
+    comments = JSON.parse(localStorage.getItem("comments"))
+}
+else{
+    const comment1 = new Comment("joao12", "Portugal", "Esta país é muito bonito", "")
+    const comment2 = new Comment("jorge", "Alemanha", "Não gosto de alemães", "")
+
+    comments.push(comment1, comment2)
+    localStorage.setItem("comments", JSON.stringify(comments))
+}
 
 document.querySelector("#btnComment").addEventListener("click", function(){
-    let i = true
-    const countries = JSON.parse(localStorage.getItem("countries"))
-    const countrySelected = sessionStorage.getItem("countrySelected")
     const txtComment = document.querySelector("#txtComment").value
-    for (const country of countries) {
-        if(country.name == countrySelected){
-            const comment = {
-                "user": loggedUser,
-                "comment": txtComment
-            }
-            country.comments.push(comment)
-            localStorage.setItem("countries", JSON.stringify(countries))
-            location.reload()
-            loadComments()
-        }
-    }
+    const loggedUser = sessionStorage.getItem("loggedUser")
+    const countrySelected = sessionStorage.getItem("countrySelected")
+    const userComment = {
+        "loggedUser": loggedUser,
+        "country": countrySelected,
+        "comment": txtComment,
+        "date": new Date().toLocaleDateString()
+    } 
+    comments.push(userComment)
+    localStorage.setItem("comments", JSON.stringify(comments))
+    location.reload()
+})
+
+
+document.querySelector("#btnOtherCountry").addEventListener("click", function(){
+    location.href = "catalogo_continente.html"
 })

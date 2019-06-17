@@ -1,4 +1,3 @@
-import Country from "../models/country.js"
 import addCountrySelected from "../views/catalogContinentView.js"
 
 
@@ -7,6 +6,7 @@ const continentSelected = sessionStorage.getItem("continentSelected")
 //*obter o titulo para introduzir o nome do continente em que nos encontramos
 const continentName = document.querySelector("#continentName")
 
+const countries = JSON.parse(localStorage.getItem("countries"))
 
 if (continentSelected == "europe") {
     continentName.innerHTML += "Europa"
@@ -22,6 +22,7 @@ if (continentSelected == "europe") {
     continentName.innerHTML += "Oceania"
 }
 
+<<<<<<< HEAD
 
 export let countries = []
 //*verificar se existe países criados na local storage
@@ -41,22 +42,29 @@ if (localStorage.getItem("countries")) {
     localStorage.setItem("countries", JSON.stringify(countries))
 }
 
+=======
+>>>>>>> dde5d41412d14eb6e9260ed7bc7e5fc409467780
 let i = 0;
 //*obter a div com o id divCatalog para posteriormente colocar os países no catálogo
 const divCatalog = document.querySelector("#divCatalog")
 let result = ""
+const countriesContinent = []
+for (const country of countries) {
+    if(country.continent == continentSelected){
+        countriesContinent.push(country)
+    }
+}
 
 renderCatalog();
 /**
  * Função RenderCatalog que coloca os países no catálogo na ordem que estes estão no array, ou seja, sem ordenação
  */
 function renderCatalog() {
-    for (const country of countries) {
-        if (country.continent == continentSelected) {
-            if (i % 3 == 0) {
+    for (const country of countriesContinent) {
+            if (i == 0) {
                 result += `<div class="row">`
             }
-            result += `<div class="col-lg-4 col-md-6 col-sm-12">
+            result += `<div class="col-sm-6 col-md-6 col-lg-3">
                         <a class="aCard" href="../../html/country.html" id="${country.name}">
                             <div class="card" id="cardCountry">
                                 <img src="${country.flag}" id="imgCountry">
@@ -71,11 +79,10 @@ function renderCatalog() {
                         </a>
                     </div>`
             i++
-            if (i % 3 == 0) {
+            if (i == countriesContinent.length) {
                 result += `</div>`
             }
 
-        }
     }
     divCatalog.innerHTML += result
     for (const country of countries) {
