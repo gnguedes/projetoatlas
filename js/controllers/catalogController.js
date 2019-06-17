@@ -22,7 +22,6 @@ if (continentSelected == "europe") {
     continentName.innerHTML += "Oceania"
 }
 
-<<<<<<< HEAD
 
 export let countries = []
 //*verificar se existe países criados na local storage
@@ -42,8 +41,6 @@ if (localStorage.getItem("countries")) {
     localStorage.setItem("countries", JSON.stringify(countries))
 }
 
-=======
->>>>>>> dde5d41412d14eb6e9260ed7bc7e5fc409467780
 let i = 0;
 //*obter a div com o id divCatalog para posteriormente colocar os países no catálogo
 const divCatalog = document.querySelector("#divCatalog")
