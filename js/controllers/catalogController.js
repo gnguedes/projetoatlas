@@ -50,8 +50,8 @@ function renderCatalog() {
                                 <div class="card-body">
                                     <p class="card-text" id="cardText">${country.name}</p>
                                 </div>
-                                <div class="stars-outer">
-                                    <div class="stars-inner"></div>
+                                <div class="stars-outer outer1">
+                                    <div class="stars-inner inner1"></div>
                                 </div>
                             </div>
                         </a>

@@ -8,7 +8,7 @@ const continentSelected = sessionStorage.getItem("continentSelected")
 
 const levelId = sessionStorage.getItem("levelId")
 
-export const questions = []
+export let questions = []
 
 if (localStorage.getItem("questions")) {
     questions = JSON.parse(localStorage.getItem("questions"))
