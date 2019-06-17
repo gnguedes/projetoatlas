@@ -52,7 +52,8 @@ body {
     width: 100%;
     background-color: #FEC321;
     margin-top: 10%;
-    position: absolute;
+    position: relative;
+    bottom: 0%;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
