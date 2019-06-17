@@ -67,7 +67,8 @@
     width: 100%;
     background-color: #3384A2;
     margin-top: 135px;
-    position: absolute;
+    position: relative;
+    bottom: 0%;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 #footerText {

@@ -14,8 +14,7 @@ function renderInfo() {
         if (users[i].username == loggedUser) {
             result += `<label for="username" id="info1">Username:${users[i].username}</label><br>
             <label for="nome" id="info2">Nome:${users[i].name}</label><br>
-            <label for="e-mail" id="info3">E-mail:${users[i].email}</label><br>
-            <label for="datanascimento" id="info4"> Data de nascimento:${users[i].birthday}</label><br>`
+            <label for="e-mail" id="info3">E-mail:${users[i].email}</label><br>`
         }
     }
     divInfo.innerHTML += result
@@ -29,7 +28,6 @@ function editProfile() {
     for (let i = 0; i < users.length; i++) {
         if (users[i].username == loggedUser) {
             document.querySelector("#editProfileUsername").setAttribute('value', users[i].username)
-            document.querySelector("#editProfileName").setAttribute('value', users[i].name)
             document.querySelector("#editPassword").setAttribute('value', users[i].password)
         }
     }

@@ -160,8 +160,8 @@ a.aCard:link {
 #footer {
     width: 100%;
     background-color: #FE9221;
-    /* margin-top: 16%; */
-    position: absolute;
+    position: relative;
+    bottom: 0%;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
