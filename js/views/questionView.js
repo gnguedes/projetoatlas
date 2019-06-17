@@ -10,8 +10,6 @@ const users = JSON.parse(localStorage.getItem("users"))
 
 const loggedUser = sessionStorage.getItem("loggedUser")
 
-console.log(idQuestion)
-
 for (const btn of answerBtns) {
     btn.addEventListener("click", function (event) {
         for (const question of questions) {

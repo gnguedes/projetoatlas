@@ -4,6 +4,8 @@ const users = JSON.parse(localStorage.getItem("users"))
 
 const loggedUser = sessionStorage.getItem("loggedUser")
 
+const continentSelected = sessionStorage.getItem("continentSelected")
+
 export const questions = []
 
 if (localStorage.getItem("questions")) {
@@ -26,16 +28,20 @@ function generateQuestion() {
     const questionsLevel = []
     for (const user of users) {
         if (user.username == loggedUser) {
+            let k = 0
             if (user.xp < 10) {
                 for (const question of questions) {
-                    if (question.level == 1)[
-                        questionsLevel.push(question)
-                    ]
+                    if (question.continent == continentSelected) {
+                        if (question.level == 1) {
+                            questionsLevel.push(question)
+                        }
+                    }
                 }
-                console.log(user.answeredQuestions)
+                console.log(questionsLevel)
                 for (let i = 0; i < questionsLevel.length; i++) {
                     if (user.answeredQuestions.includes(questionsLevel[i].id)) {
                         console.log(user.answeredQuestions.includes(questionsLevel[i].id))
+                        k++
                         continue
                     } else {
                         createQuestion(questionsLevel[i])
@@ -44,13 +50,16 @@ function generateQuestion() {
                 }
             } else if (user.xp < 25) {
                 for (const question of questions) {
-                    if (question.level == 1 || question.level == 2)[
-                        questionsLevel.push(question)
-                    ]
+                    if (question.continent == continentSelected) {
+                        if (question.level == 1 || question.level == 2) {
+                            questionsLevel.push(question)
+                        }
+                    }
                 }
                 console.log(questionsLevel)
                 for (let i = 0; i < questionsLevel.length; i++) {
                     if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                        k++
                         continue
                     } else {
                         createQuestion(questionsLevel[i])
@@ -59,13 +68,16 @@ function generateQuestion() {
                 }
             } else if (user.xp < 75) {
                 for (const question of questions) {
-                    if (question.level == 1 || question.level == 2 || question.level == 3)[
-                        questionsLevel.push(question)
-                    ]
+                    if (question.continent == continentSelected) {
+                        if (question.level == 1 || question.level == 2 || question.level == 3) {
+                            questionsLevel.push(question)
+                        }
+                    }
                 }
                 console.log(questionsLevel)
                 for (let i = 0; i < questionsLevel.length; i++) {
                     if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                        k++
                         continue
                     } else {
                         createQuestion(questionsLevel[i])
@@ -74,13 +86,16 @@ function generateQuestion() {
                 }
             } else if (user.xp < 140) {
                 for (const question of questions) {
-                    if (question.level == 1 || question.level == 2 || question.level == 3 || question.level == 4)[
-                        questionsLevel.push(question)
-                    ]
+                    if (question.continent == continentSelected) {
+                        if (question.level == 1 || question.level == 2 || question.level == 3 || question.level == 4) {
+                            questionsLevel.push(question)
+                        }
+                    }
                 }
                 console.log(questionsLevel)
                 for (let i = 0; i < questionsLevel.length; i++) {
                     if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                        k++
                         continue
                     } else {
                         createQuestion(questionsLevel[i])
@@ -89,13 +104,16 @@ function generateQuestion() {
                 }
             } else if (user.xp < 225) {
                 for (const question of questions) {
-                    if (question.level != 6)[
-                        questionsLevel.push(question)
-                    ]
+                    if (question.continent == continentSelected) {
+                        if (question.level != 6) {
+                            questionsLevel.push(question)
+                        }
+                    }
                 }
                 console.log(questionsLevel)
                 for (let i = 0; i < questionsLevel.length; i++) {
                     if (user.answeredQuestions.includes(questionsLevel[i].id)) {
+                        k++
                         continue
                     } else {
                         createQuestion(questionsLevel[i])
@@ -103,14 +121,19 @@ function generateQuestion() {
                     }
                 }
             } else {
-                for (let i = 0; i < questions.length; i++) {
-                    if (user.answeredQuestions.includes(questions[i].id)) {
-                        continue
-                    } else {
-                        createQuestion(questions[i])
-                        break
+                for (const question of questions) {
+                    if (question.continent == continentSelected) {
+                        questionsLevel.push(question)
                     }
                 }
+                let random = Math.floor((Math.random() * questionsLevel.length))
+                createQuestion(questionsLevel[random])
+            }
+            console.log(k)
+            console.log(questionsLevel.length == k)
+            if(questionsLevel.length == k){
+                alert("Ja respondeste a todas as questoes deste nivel. Parabens")
+                location.href = "quizzLevel.html"
             }
         }
     }

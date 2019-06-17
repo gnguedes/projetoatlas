@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <!--Container para manter a grelha pela página toda-->
     <div class="container" id="container">
         <!--Criação da navbar-->
         <nav class="navbar navbar-light fixed-top">
@@ -56,74 +55,49 @@
             </div>
         </nav>
         <!--Título da página-->
-        <h1 id="titleCatalog">ESCOLHE O CONTINENTE EM QUE QUERES JOGAR!!!</h1>
+        <h1 id="titleCatalog">ESCOLHE A DIFICULDADE!</h1>
         <!--Introdução dos cards dos continentes-->
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <a class="aCard" href="quizzLevel.html" id="europe">
-                    <div class="card europe" id="card">
-                        <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
-                        <hr />
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <a class="aCard" href="question.html">
+                    <div class="card" id="cardLevel">
+                        <h1>1</h1>
+                        <hr id="hrLevel" />
                         <div class="card-body">
-                            <p class="card-text" id="cardText">Europa</p>
+                            <p class="card-text" id="cardTextLevel">Nível Fácil</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <a class="aCard" href="" id="asia">
-                    <div class="card asia" id="card">
-                        <img src="../images/continents/asian-continent-hi.png" class="imgAsia" id="imgContinent">
-                        <hr />
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <a class="aCard" href="" id="level2">
+                    <div class="card level2" id="cardLevel">
+                        <h1>2</h1>
+                        <hr id="hrLevel" />
                         <div class="card-body">
-                            <p class="card-text" id="cardText">Ásia</p>
+                            <p class="card-text" id="cardTextLevel">Nível Médio</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <a class="aCard" href="" id="africa">
-                    <div class="card africa" id="card">
-                        <img src="../images/continents/african-continent-hi.png" class="imgAfrica" id="imgContinent">
-                        <hr />
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <a class="aCard" href="" id="level3">
+                    <div class="card level3" id="cardLevel">
+                        <h1>3</h1>
+                        <hr id="hrLevel" />
                         <div class="card-body">
-                            <p class="card-text" id="cardText">África</p>
+                            <p class="card-text" id="cardTextLevel">Nível Difícil</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <a class="aCard" href="" id="northAmerica">
-                    <div class="card northAmerica" id="card">
-                        <img src="../images/continents/continent-of-north-america-hi.png" class="imgNorthAmerica"
-                            id="imgContinent">
-                        <hr />
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <a class="aCard" href="" id="level4">
+                    <div class="card level4" id="cardLevel">
+                        <h1>4</h1>
+                        <hr id="hrLevel" />
                         <div class="card-body">
-                            <p class="card-text" id="cardText">América do Norte</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <a class="aCard" href="" id="southAmerica">
-                    <div class="card southAmerica" id="card">
-                        <img src="../images/continents/continent-of-south-america-hi.png" class="imgSouthAmerica"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">América do Sul</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <a class="aCard" href="" id="oceania">
-                    <div class="card oceania" id="card">
-                        <img src="../images/continents/continent-of-oceania-hi.png" class="imgOceania"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Oceania</p>
+                            <p class="card-text" id="cardTextLevel">Nível Sortido</p>
                         </div>
                     </div>
                 </a>
@@ -131,7 +105,7 @@
         </div>
     </div>
     <!--Introdução do footer-->
-    <footer id="footer">
+    <footer id="footerLevel">
         <div class="container">
             <div class="row">
                 <!--Logo da ESMAD-->
@@ -153,7 +127,7 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
-    <script src="../js/views/quizzView.js"></script>
+    <script src="../js/views/quizzLevelView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

@@ -56,12 +56,12 @@ body {
 
 /*Ajustes nos cards para igualar o design pretendido*/
 #card {
-    top: 10%;
+    top: 20px;
     margin: auto;
     margin-top: 5%;
     border-radius: 30px;
-    width: 324px;
-    height: 340px;
+    width: 250px;
+    height: 280px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
@@ -76,8 +76,8 @@ body {
 
 /*Configuração das imagens presentes nos cards*/
 #imgContinent {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     margin: auto;
     margin-top: 10%;
     align-items: center;
@@ -97,6 +97,14 @@ a.aCard:link {
     width: 100%;
     background-color: #3384A2;
     margin-top: 16%;
+    position: absolute;
+    box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
+}
+
+#footerLevel{
+    width: 100%;
+    background-color: #3384A2;
+    bottom: 0;
     position: absolute;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
@@ -124,14 +132,65 @@ hr {
     margin: auto;
     margin-top: 10%;
     border-width: 1px;
-    border-color: black;
-    width: 250px;
+    border-color: #1BA8BE;
+    width: 200px;
     position: relative;
     align-self: center;
 }
+
 #lock {
+    width: 200px;
+    height: 180px;
     position: absolute;
-    margin: 10%;
+    margin: 12%;
+    align-content: center;
+    justify-content: center;
+}
+
+#imgLevel {
+    width: 50px;
+    height: 100px;
+}
+
+#cardLevel {
+    top: 20px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}
+
+h1 {
+    position: relative;
+    top: -10%;
+    margin: 0;
+    font-size: 150px;
+    font-family: Tw Cen MT B;
+    color: black;
+    text-align: center
+}
+
+#hrLevel {
+    width: 150px;
+    top: -30%;
+}
+
+#cardTextLevel {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    position: relative;
+    top: -225%;
+}
+
+#lockLevel{
+    width: 145px;
+    height: 120px;
+    position: absolute;
+    margin: 14%;
     align-content: center;
     justify-content: center;
 }
