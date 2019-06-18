@@ -90,18 +90,7 @@ export function addCountry(name, continent, capital, population, coin, climate, 
 
     }
 }
-export function removeCountry(name) {
-    let removeCountry = confirm(`Deseja mesmo remover o país ${name}?`)
-    if (removeCountry) {
-        for (let i = 0; i < countries.length; i++) {
-            if (countries[i].name === name) {
-                countries.splice(i, 1)
-            }
-        }
-        localStorage.setItem("countries", JSON.stringify(countries))
-        location.reload()
-    }
-}
+
 
 
 

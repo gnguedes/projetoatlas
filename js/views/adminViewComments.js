@@ -1,5 +1,7 @@
+// import da class de comentarios
 const comments = JSON.parse(localStorage.getItem("comments"))
-
+// import da funcao que remove comentarios
+import {removeComments} from "../controllers/adminController.js"
 
 
 const divComment = document.querySelector("#tableComments")
@@ -18,6 +20,8 @@ function renderComments() {
                     <th>País</th>
                     <th>Comentário</th>
                     <th>Data</th>
+                    <th>Botão XP</th>
+                    <th>Botão remover</th>
                 </tr>
             </thead>
                 <tbody>
@@ -26,6 +30,7 @@ function renderComments() {
                         <td>${comment.country}</td>
                         <td>${comment.comment}</td>
                         <td>${comment.date}</td>
+                        <td><button id="${comment.loggedUser}" class="btn">Dar 5 XP</button><td>
                         <td><button id="${comment.loggedUser}" class="btn btn-danger remove">Remover</button><td>
                         <br>
                     </tr>
@@ -37,14 +42,14 @@ function renderComments() {
     }
     divComment.innerHTML = tableC
 
-    //elimina o utilizador seleccionado
-    /** const btnRemove = document.getElementsByClassName("btn btn-danger remove")
+    //elimina o comentario seleccionado
+    const btnRemove = document.getElementsByClassName("btn btn-danger remove")
     for (const elem of btnRemove) {
         elem.addEventListener("click", function () {
-            let txtUsername = elem.id
-            removeUser(txtUsername)
+            let txtCommentUser = elem.id
+            removeComments(txtCommentUser)
             
         })
-    }*/
+    }
     
 }
