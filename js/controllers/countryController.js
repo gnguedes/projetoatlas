@@ -13,6 +13,10 @@ const olCarousel = document.querySelector(".carousel-indicators")
 
 const comments = JSON.parse(localStorage.getItem("comments"))
 
+const users = JSON.parse(localStorage.getItem("users"))
+
+const loggedUser = sessionStorage.getItem("loggedUser")
+
 /**
  * Função que adiciona os detalhes e a bandeira do país ao card
  * Começa por entrar num ciclo para ver todos os países até encontrar um com o nome igual ao que o utilizador
@@ -49,6 +53,15 @@ function addInfoCountry() {
             }
             divCarousel.innerHTML += result
             olCarousel.innerHTML += indicator
+            for (const user of users) {
+                if (user.username == loggedUser) {
+                    for (const country of user.favCountries) {
+                        if (country == countrySelected) {
+                            document.querySelector(`.inner2`).style.width = "100%"
+                        }
+                    }
+                }
+            }
         }
     }
 }

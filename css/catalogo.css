@@ -88,9 +88,9 @@ os países*/
 }
 
 /*baixar um pouco o card dos detalhes do país*/
-/* #divCardDetails {
-    margin-top: 40px;
-} */
+#divCardDetails {
+    margin-top: -20px;
+}
 
 /*Configuração do texto presente nos cards*/
 #cardText {
@@ -290,6 +290,7 @@ hr {
 }
 
 .outer2 {
+    margin-top: 10px;
     display: inline-block;
     position: relative;
     margin-right: 30px;
@@ -369,13 +370,4 @@ hr {
     border-radius: 30px;
     margin-top: 10px;
     margin-left: 35%
-}
-
-.fas {
-    display: inline-block;
-    position: relative;
-    align-self: center;
-    top: -10px;
-    font-family: FontAwesome;
-    font-size: 20pt;
 }

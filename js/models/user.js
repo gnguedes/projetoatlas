@@ -3,7 +3,7 @@
 */
 
 export default class User {
-    constructor(username, password, email, xp, genre, name, answeredQuestions) {
+    constructor(username, password, email, xp, genre, name, answeredQuestions, favCountries) {
         this.username = username
         this.password = password
         this.email = email
@@ -11,5 +11,6 @@ export default class User {
         this.genre = genre
         this.name = name
         this.answeredQuestions = answeredQuestions
+        this.favCountries = favCountries
     }
 }

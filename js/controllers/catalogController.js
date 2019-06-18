@@ -50,8 +50,8 @@ function renderCatalog() {
                                 <div class="card-body">
                                     <p class="card-text" id="cardText">${country.name}</p>
                                 </div>
-                                <div class="stars-outer">
-                                    <div class="stars-inner"></div>
+                                <div class="stars-outer outer1">
+                                    <div class="stars-inner inner1"></div>
                                 </div>
                             </div>
                         </a>
@@ -65,9 +65,9 @@ function renderCatalog() {
     divCatalog.innerHTML += result
     for (const country of countries) {
         if (country.continent == continentSelected) {
-            const starPercentage = (country.rating / 5) * 100;
-            const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-            document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
+            const starPercentage = (country.rating / 5) * 100
+            const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
+            document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
         }
     }
     //*função importada que coloca na session storage o país que selecionamos para assim aparecer os dados detalhados
