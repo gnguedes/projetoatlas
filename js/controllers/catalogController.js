@@ -73,23 +73,7 @@ function renderCatalog() {
     //*função importada que coloca na session storage o país que selecionamos para assim aparecer os dados detalhados
     addCountrySelected()
 }
-export function addCountry(name, continent, capital, population, coin, climate, independanceDate, flag, rating, images) {
-    let countryExist = false
-    for (const country of countries) {
-        if (country.name === name) {
-            countryExist = true
-            alert("País já existe no catálogo")
-            break
-        }
 
-        if (countryExist === false) {
-            countries.push(new country(name, continent, capital, population, coin, climate, independanceDate, flag, rating, images))
-            localStorage.setItem("countries", JSON.stringify(countries))
-            alert(`${name} adicionado com sucesso`)
-        }
-
-    }
-}
 
 
 
