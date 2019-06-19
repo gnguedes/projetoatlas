@@ -50,7 +50,7 @@ function generateQuestion() {
                             break
                         }
                     }
-                } else if ((user.xp < 25) || (user.xp > 25)) {
+                } else {
                     for (const question of questions) {
                         if (question.continent == continentSelected) {
                             if (question.level == 1 || question.level == 2) {
@@ -86,7 +86,7 @@ function generateQuestion() {
                             break
                         }
                     }
-                } else if ((user.xp < 140) || (user.xp > 140)) {
+                } else {
                     for (const question of questions) {
                         if (question.continent == continentSelected) {
                             if (question.level == 3 || question.level == 4) {
