@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Página Inicial</title>
+    <title>Gestão Sugestões</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,41 +10,26 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/home_page.css">
+    <link rel="stylesheet" href="../css/pagina_admin.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <a href="paginaperfil.html">
-                    <img id="userIcon" src="../images/pirata_rapaz.png">
-                </a>
+    <!--Container para manter a grelha pela página toda-->
+    <div class="container" id="container">
+        <!--Criação da navbar-->
+        <nav class="navbar navbar-light fixed-top">
+            <div class="container">
+                <!--Texto no centro da navbar-->
+                <p id="navBarText">Gestão de Sugestões</p>
+                <a href="pagina_admin.html">página admin</a>
             </div>
-        </div>
-        <div class="row" id="rowHome">
-            <div class="col-lg-6">
-                <img src="../images/logo_cores.png" id="logoAtlasPag">
-            </div>
-            <div class="col-lg-6" id="btnsHome">
-                <div class="row">
-                    <a href="../html/quizz.html"><button type="button" id="btnHome" class="btn btnQuizz">Joga um
-                            Quizz</button></a>
-                </div>
-                <div class="row">
-                    <a href="../html/catalogo.html"><button type="button" id="btnHome" class="btn">Vê Todos os
-                            Países</button></a>
-                </div>
-                <div class="row">
-                    <a href="../html/sugestCountry.html"><button type="button" id="btnHome" class="btn">Sugere Novos Países</button></a>
-                </div>
-                <div class="row">
-                    <a href="../html/favoritos.html"><button type="button" id="btnHome" class="btn">Os teus Favoritos</button></a>
-                </div>
-            </div>
+        </nav>
+        <div id="tableSugestion">
+           
+            
         </div>
     </div>
-    <img src="../images/ocean.png" id="imgHome" width="100%" height="100%">
+    <!--Introdução do footer-->
     <footer id="footer">
         <div class="container">
             <div class="row">
@@ -57,8 +42,7 @@
                     <p id="footerText">Contacto:<br>atlas@esmad.ipp.pt</p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
-                    <p id="footerText">Desenvolvida no âmbito da<br>disciplina de Projeto I<br>TSIW ESMAD © 2019
-                    </p>
+                    <p id="footerText">Desenvolvida no âmbito da<br>disciplina de Projeto I<br>TSIW ESMAD © 2019</p>
                 </div>
                 <!--Logo do projeto Atlas-->
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -68,6 +52,7 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/views/adminViewSugestions.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
