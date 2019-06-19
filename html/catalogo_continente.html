@@ -32,19 +32,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent15">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Página Inicial</a>
+                                <a class="nav-link" href="../html/homePage.html">Página Inicial</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Joga um Quizz</a>
+                                <a class="nav-link" href="../html/quizz.html">Joga um Quizz</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Vê Todos os Países</a>
+                                <a class="nav-link" href="../html/catalogo.html">Vê Todos os Países</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sugere um País</a>
+                                <a class="nav-link" href="../html/sugestCountry.html">Sugere um País</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Os teus Favoritos</a>
+                                <a class="nav-link" href="../html/favoritos.html">Os teus Favoritos</a>
                             </li>
                         </ul>
                     </div>
@@ -53,7 +53,14 @@
         </nav>
         <h1 id="continentName"></h1>
         <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-md-3 col-lg-2 d-flex justify-content-center">
+                <a href="catalogo.html">
+                    <button id="btnVoltar" type="button" class="btn btn-primary">
+                        Voltar
+                    </button>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-3 d-flex justify-content-center">
                 <select id="dropdownMenuButton">
                     <option value="upAlfa" selected class="filter">A-Z</option>
                     <option value="downAlfa" class="filter">Z-A</option>
@@ -66,7 +73,7 @@
             <div class="col-sm-8 col-md-4 col-lg-4">
                 <input id="txtSearchCountry" type="text" class="form-control" />
             </div>
-            <div class="col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-md-4 col-lg-3 d-flex justify-content-center">
                 <button id="btnFilter" type="button" class="btn btn-primary">
                     PROCURAR
                 </button>
