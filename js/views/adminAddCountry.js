@@ -1,9 +1,8 @@
-import {addCountry} from "../controllers/catalogController.js"
+import {addCountry} from "../controllers/adminController.js"
 
-const btnSave = document.querySelector("#btnSaveChanges")
+const frmAddCountry = document.querySelector("#frmAddCountry")
 
-btnSave.addEventListener("submit", function (event) {
-    console.log("ola")
+frmAddCountry.addEventListener("submit", function (event) {
     const name = document.querySelector("#newName")
     const continent = document.querySelector("#newContinent")
     const population = document.querySelector("#newPop")
