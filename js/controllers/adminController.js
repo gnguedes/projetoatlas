@@ -31,6 +31,8 @@ export function removeCountry(name) {
         location.reload()
     }
 }
+
+//da 5xp ao utilizado 
 export function rewardComment(txtCommentUserPositive) {
     let acceptC = confirm(`Deseja dar 5xp a este utilizador?`)
     if (acceptC) {

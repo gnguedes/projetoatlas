@@ -1,6 +1,6 @@
-//import paises do local storage
+//import sugestoes do local storage
 const sugestions = JSON.parse(localStorage.sugestions)
-//import da funcao que remove paises
+//import da funcao que remove sugestoes e recompensa sugestoes
 import {removeSugestion,acceptSugestion} from "../controllers/sugestionsController.js"
 
 
@@ -8,7 +8,7 @@ const divSugestion = document.querySelector("#tableSugestion")
 let tableS = ''
 
 renderSugestion()
-//função que lista os países
+//função que lista as sugestoes
 function renderSugestion() {
     for (const sugestion of sugestions) {
         tableS += `<table class="table">
@@ -39,6 +39,7 @@ function renderSugestion() {
      
     divSugestion.innerHTML = tableS
     
+    //botao que remove sugestoes
     const btnRemove = document.getElementsByClassName("btn btn-danger remove")
     for (const elem of btnRemove) {
         elem.addEventListener("click", function () {
@@ -48,7 +49,7 @@ function renderSugestion() {
         })
     }
 
-     
+     //botao que recompensa sugestoes
     const btnSucess = document.getElementsByClassName("btn btn-success") 
     for (const elem2 of btnSucess){
         elem2.addEventListener("click", function () {

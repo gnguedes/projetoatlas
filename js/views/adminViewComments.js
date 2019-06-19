@@ -51,7 +51,7 @@ function renderComments() {
             
         })
     }
-    
+    //recompensa o utilizador responsavel pelo comentario em questao
     const btnSucess = document.getElementsByClassName("btn btn-success") 
     for (const elem2 of btnSucess){
         elem2.addEventListener("click", function () {

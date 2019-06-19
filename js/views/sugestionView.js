@@ -10,7 +10,6 @@ manageSugestion()
 function manageSugestion() {
     //listener quando é submitida a sugestao
     formSugestion.addEventListener("submit", function (event) {
-        console.log("ola")
         const txtNewCountry = document.querySelector("#txtNewCountry").value
         const txtNewCountryContinent = document.querySelector("#txtNewCountryContinent").value
         const newReasons = document.querySelector("#txtReason").value

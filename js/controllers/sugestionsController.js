@@ -45,7 +45,7 @@ export function removeSugestion(txtSugestionNegative) {
     }
 }
 
-
+//aceita a sugestao do utilizador e recompensa com 5xp
 export function acceptSugestion(txtSugestionPositive) {
     let acceptS = confirm(`Deseja dar 5xp a este utilizador?`)
     if (acceptS) {
