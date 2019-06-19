@@ -37,7 +37,7 @@ function addInfoCountry() {
             <p id="txtCardDetails"><b>Clima:</b> ${country.climate}</p>
             <p id="txtCardDetails"><b>Ano de Independência:</b> ${country.independanceDate}</p>
         `
-            imgCountry.src = `../images/flags/${country.name}.png`
+            imgCountry.src = `${country.flag}`
             for (let i = 0; i < country.images.length; i++) {
                 if (i == 0) {
                     result += `<div class="carousel-item active">

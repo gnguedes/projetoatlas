@@ -15,11 +15,12 @@ function userManage() {
         const txtEmail = document.querySelector("#txtEmail").value
         const sltGenre = document.querySelector("#sltGenre").value
         //Estes valores têm um valor pré-definido pois pode ser editado posteriormente pela "criança"
-        const txtName = ""
+        const txtName = document.querySelector("#txtName").value
         const valueXp = "0"
-        const dateBirthday = "00-00-0000"
+        const answeredQuestions = []
+        const favCountries = []
 
-        addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, dateBirthday)
+        addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, answeredQuestions, favCountries)
         event.preventDefault();
     })
 
