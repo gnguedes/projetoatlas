@@ -5,13 +5,47 @@ const users = JSON.parse(localStorage.getItem("users"))
 const loggedUser = sessionStorage.getItem("loggedUser")
 
 const cardsLevel = document.getElementsByClassName("aCard")
-console.log(cardsLevel)
+
+const questions = JSON.parse(localStorage.getItem("questions"))
+
+const continentSelected = sessionStorage.getItem("continentSelected")
 
 for (const card of cardsLevel) {
-    card.addEventListener("click", function(){
+    card.addEventListener("click", function () {
         sessionStorage.setItem("levelId", this.id)
     })
 }
+
+const questions1 = []
+const questions2 = []
+const questions3 = []
+for (const user of users) {
+    if (user.username == loggedUser) {
+        for (const question of questions) {
+            // console.log(question.id)
+            if (((question.level == 1) || (question.level == 2)) && (!user.answeredQuestions.includes(question.id)) && (question.continent == continentSelected)) {
+                console.log(!user.answeredQuestions.includes(question.level));
+                questions1.push(question)
+            }
+        }
+        for (const question of questions) {
+            if (((question.level == 3) || (question.level == 4)) && (!user.answeredQuestions.includes(question.id)) && (question.continent == continentSelected)) {
+                questions2.push(question)
+            }
+
+        }
+        for (const question of questions) {
+            if (((question.level == 5) || (question.level == 6)) && (!user.answeredQuestions.includes(question.id)) && (question.continent == continentSelected)) {
+                questions3.push(question)
+            }
+
+        }
+    }
+}
+console.log(questions1)
+console.log(questions2)
+console.log(questions3)
+
 
 verifyUserPossibilityToPlay()
 
@@ -22,6 +56,13 @@ verifyUserPossibilityToPlay()
 function verifyUserPossibilityToPlay() {
     for (const user of users) {
         if (user.username == loggedUser) {
+            if (questions1.length == 0) {
+                document.querySelector(".level1").style.backgroundColor = "rgb(51, 204, 51)"
+                document.querySelector("#level1").href = ""
+                document.querySelector("#level1").addEventListener("click", function () {
+                    alert("Já completaste todas as questoes deste nivel")
+                })
+            }
             if (user.xp < 75) {
                 const level2 = document.querySelector(".level2")
                 level2.style.backgroundColor = "#9D9D9D"
@@ -33,7 +74,15 @@ function verifyUserPossibilityToPlay() {
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#level2").href = "question.html"
+                if (questions2.length == 0) {
+                    document.querySelector(".level2").style.backgroundColor = "rgb(51, 204, 51)"
+                    document.querySelector("#level2").href = ""
+                    document.querySelector("#level2").addEventListener("click", function () {
+                        alert("Já completaste todas as questoes deste nivel")
+                    })
+                } else {
+                    document.querySelector("#level2").href = "question.html"
+                }
             }
             if (user.xp < 225) {
                 const level3 = document.querySelector(".level3")
@@ -44,7 +93,15 @@ function verifyUserPossibilityToPlay() {
                     event.preventDefault()
                 })
             } else {
-                document.querySelector("#level3").href = "question.html"
+                if (questions3.length == 0) {
+                    document.querySelector(".level3").style.backgroundColor = "rgb(51, 204, 51)"
+                    document.querySelector("#level3").href = ""
+                    document.querySelector("#level3").addEventListener("click", function () {
+                        alert("Já completaste todas as questoes deste nivel")
+                    })
+                } else {
+                    document.querySelector("#level3").href = "question.html"
+                }
             }
             if (user.xp < 400) {
                 const level4 = document.querySelector(".level4")

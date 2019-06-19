@@ -35,6 +35,7 @@ function renderCountry() {
     }
     divCountry.innerHTML = tableC
     
+    //botao que remove país
     const btnRemove = document.getElementsByClassName("btn btn-danger remove")
     for (const elem of btnRemove) {
         elem.addEventListener("click", function () {
