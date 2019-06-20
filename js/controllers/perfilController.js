@@ -1,5 +1,4 @@
-import User from "../models/user.js"
-import {logoutUser} from "../controllers/controllerUser.js"
+import { logoutUser } from "../controllers/controllerUser.js"
 
 /* Obter o user selecionado*/
 const loggedUser = sessionStorage.getItem("loggedUser")
@@ -56,7 +55,7 @@ saveChanges.addEventListener("click", function () {
 document.querySelector("#btnAdmin").style.display = "none"
 checkTypeUser()
 
-function checkTypeUser (){
+function checkTypeUser() {
     if (loggedUser === "admin") {
         document.querySelector("#btnAdmin").style.display = "block"
     }
@@ -65,7 +64,29 @@ function checkTypeUser (){
 //coloca nome do utilizador na navbar
 document.querySelector("#navbarUsername").innerHTML = loggedUser
 
+/** teste
+export function checkGenre() {
+    const genreUser = ''
+    for (const user of users) {
+        if (user.username == loggedUser) {
+            genreUser = user.genre
+        }
 
-    
+
+    }
+
+}
+*/
+
+//atua quando o utilizador carrega para fazer logout
+manageLogout()
+function manageLogout() {
+    const btnLogout = document.querySelector("#btnLogout")
+    btnLogout.addEventListener("click", function (event) {
+        logoutUser()
+        event.preventDefault()
+    })
+}
+
 
 

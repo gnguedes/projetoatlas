@@ -30,7 +30,7 @@ function userManage() {
     formLogin.addEventListener("submit", function (event) {
         const txtLoginUsername = document.querySelector("#txtLoginUsername").value
         const txtLoginPassword = document.querySelector("#txtLoginPassword").value
-        
+
 
         loginUser(txtLoginUsername, txtLoginPassword)
         event.preventDefault();
@@ -39,4 +39,19 @@ function userManage() {
 
 }
 
+/**
+const imgProfile = document.querySelector("#imgPerfil")
+let imgPIC = ''
 
+profilePic()
+//função que lista as questões
+function profilePic() {
+    for (const question of questions) {
+        imgPIC += `
+        <img src="../images/Grupo 119.png" id="imgPerfil">
+        <div class="col-lg-4" id="divInfo">
+        `
+        imgPIC.innerHTML = imgPIC
+    }
+
+}*/
