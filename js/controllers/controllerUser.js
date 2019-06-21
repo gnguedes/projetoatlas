@@ -25,6 +25,8 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
             users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, answeredQuestions, favCountries))
             localStorage.setItem("users", JSON.stringify(users))
             alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
+            document.querySelector("#register").style.display = "none"
+            document.querySelector("#login").style.display = "block"
         }
         //se nao o username nao estiver disponivel, nao atualiza o utilizador
         else {
