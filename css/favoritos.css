@@ -55,12 +55,13 @@ body {
     position: relative;
     text-align: center;
 }
+
 /*Edição do footer*/
 #footer {
     width: 100%;
     background-color: #FE9221;
     position: relative;
-    bottom: 0%;
+    bottom: -25px;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
