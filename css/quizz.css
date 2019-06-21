@@ -51,6 +51,8 @@ body {
     font-size: 30px;
     margin: auto;
     position: relative;
+    left: -100px;
+    margin-top: 7px; 
     text-align: center;
 }
 
@@ -93,11 +95,16 @@ a.aCard:link {
     text-decoration: none;
 }
 
-#btnVoltar1 {
+#btnVoltar {
     background-color: #3384A2;
     color: black;
     border-color: #3384A2;
     border-radius: 30px;
+}
+
+#setaretroceder {
+    width: 30px;
+    height: 30px;
 }
 
 #footer {
@@ -109,7 +116,7 @@ a.aCard:link {
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
-#footerLevel{
+#footerLevel {
     width: 100%;
     background-color: #3384A2;
     bottom: 0;
@@ -194,7 +201,7 @@ h1 {
     top: -225%;
 }
 
-#lockLevel{
+#lockLevel {
     width: 145px;
     height: 120px;
     position: absolute;

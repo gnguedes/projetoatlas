@@ -134,6 +134,18 @@ body {
     position: relative;
 }
 
+#btnVoltar {
+    background-color: #FEC321;
+    color: black;
+    border-color: #FEC321;
+    border-radius: 30px;
+    position: relative;
+    left: -200px;
+}
+#setaretroceder{
+    width: 30px;
+    height: 30px;
+}
 /* Configuração do button editar o perfil do utilizador*/
 #editarperfil {
     font-family: Tw Cen MT B;

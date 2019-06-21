@@ -20,14 +20,14 @@
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
                 <!--Ícone do perfil-->
-                
-                    <a class="navbar-brand" href="paginaperfil.html">
-                        <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
-                            alt="">
-                        <div id="navbarUsername">
-                            
-                        </div>
-                    </a>
+
+                <a class="navbar-brand" href="paginaperfil.html">
+                    <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
+                        alt="">
+                    <div id="navbarUsername">
+
+                    </div>
+                </a>
                 <!--Texto no centro da navbar-->
                 <p id="navBarText">O teu perfil</p>
                 <!--Menu hamburguer-->
@@ -60,6 +60,13 @@
                 </a>
             </div>
         </nav>
+        <div class="col-md-3 col-lg-2 d-flex justify-content-center">
+            <a href="../html/homePage.html">
+                <button id="btnVoltar" type="button" class="btn btn-primary">
+                    <img src="../images/seta retroceder.png" id="setaretroceder">
+                </button>
+            </a>
+        </div>
         <div class="row">
             <img src="../images/Grupo 119.png" id="imgPerfil">
             <div class="col-lg-4" id="divInfo">
@@ -98,8 +105,8 @@
                     <form id="changeProfile">
                         <div class="form-group">
                             <label for="username">Username:</label>
-                            <input type="text" class="form-control" id="editProfileUsername" disabled placeholder="Novo username"
-                                value="">
+                            <input type="text" class="form-control" id="editProfileUsername" disabled
+                                placeholder="Novo username" value="">
                         </div>
                         <div class="form-group">
                             <label for="password">Palavra-passe:</label>
@@ -143,7 +150,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
                     <a href="">
-                        <button type="button" id="btnLogout"class="btn btn-danger">Sim, tenho!</button>
+                        <button type="button" id="btnLogout" class="btn btn-danger">Sim, tenho!</button>
                     </a>
                 </div>
             </div>
