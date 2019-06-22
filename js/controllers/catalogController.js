@@ -33,22 +33,21 @@ for (const country of countries) {
     }
 }
 
-//renderCatalog();
-/**
- * Função RenderCatalog que coloca os países no catálogo na ordem que estes estão no array, ou seja, sem ordenação
- */
-function renderCatalog() {
-    for (const country of countriesContinent) {
-        if (i == 0) {
-            result += `<div class="row">`
-        }
-        result += `<div class="col-sm-6 col-md-6 col-lg-3">
-                        <a class="aCard" href="../../html/country.html" id="${country.name}">
+renderCatalog(countriesContinent);
+
+export function renderCatalog(countriesC) {
+    for (let i = 0; i < 12; i++) {
+        if (typeof countriesC[i] != "undefined") {
+            if (i == 0) {
+                result += `<div class="row">`
+            }
+            result += `<div class="col-sm-6 col-md-6 col-lg-3">
+                        <a class="aCard" href="../../html/country.html" id="${countriesC[i].name}">
                             <div class="card" id="cardCountry">
-                                <img src="${country.flag}" id="imgCountry">
+                                <img src="${countriesC[i].flag}" id="imgCountry">
                                 <hr />
                                 <div class="card-body">
-                                    <p class="card-text" id="cardText">${country.name}</p>
+                                    <p class="card-text" id="cardText">${countriesC[i].name}</p>
                                 </div>
                                 <div class="stars-outer outer1">
                                     <div class="stars-inner inner1"></div>
@@ -56,13 +55,14 @@ function renderCatalog() {
                             </div>
                         </a>
                     </div>`
-        i++
-        if (i == countriesContinent.length) {
-            result += `</div>`
+            if (i == 11) {
+                result += `</div>`
+            }
         }
 
+
     }
-    divCatalog.innerHTML += result
+    divCatalog.innerHTML = result
     for (const country of countries) {
         if (country.continent == continentSelected) {
             const starPercentage = (country.rating / 5) * 100
@@ -72,27 +72,32 @@ function renderCatalog() {
     }
     //*função importada que coloca na session storage o país que selecionamos para assim aparecer os dados detalhados
     addCountrySelected()
+    renderCatalogPag(countriesC)
 }
 
-const btnsPagination = document.getElementsByClassName("page-link")
+/**
+ * Função RenderCatalog que coloca os países no catálogo na ordem que estes estão no array, ou seja, sem ordenação
+ */
+function renderCatalogPag(countriesC) {
+    const btnsPagination = document.getElementsByClassName("page-link")
 
-for (const btn of btnsPagination) {
-    btn.addEventListener("click", function () {
-        let result = ""
-        document.querySelector("#divCatalog").innerHTML = ""
-        if (this.id == "1") {
-            for (let i = 0; i < 12; i++) {
-                if (countriesContinent[i].continent == continentSelected) {
-                    if (i == 0) {
-                        result += `<div class="row">`
-                    }
-                    result += `<div class="col-sm-6 col-md-6 col-lg-3">
-                                <a class="aCard" href="../../html/country.html" id="${countriesContinent[i].name}">
+    for (const btn of btnsPagination) {
+        btn.addEventListener("click", function () {
+            let result = ""
+            document.querySelector("#divCatalog").innerHTML = ""
+            if (this.id == "1") {
+                for (let i = 0; i < 12; i++) {
+                    if (typeof countriesC[i] != "undefined") {
+                        if (i == 0) {
+                            result += `<div class="row">`
+                        }
+                        result += `<div class="col-sm-6 col-md-6 col-lg-3">
+                                <a class="aCard" href="../../html/country.html" id="${countriesC[i].name}">
                                     <div class="card" id="cardCountry">
-                                        <img src="${countriesContinent[i].flag}" id="imgCountry">
+                                        <img src="${countriesC[i].flag}" id="imgCountry">
                                         <hr />
                                         <div class="card-body">
-                                            <p class="card-text" id="cardText">${countriesContinent[i].name}</p>
+                                            <p class="card-text" id="cardText">${countriesC[i].name}</p>
                                         </div>
                                         <div class="stars-outer outer1">
                                             <div class="stars-inner inner1"></div>
@@ -100,20 +105,54 @@ for (const btn of btnsPagination) {
                                     </div>
                                 </a>
                             </div>`
-                    if (i == 11) {
-                        result += `</div>`
+                        if (i == 11) {
+                            result += `</div>`
+                        }
                     }
-                }else{}
+                }
+                document.querySelector("#divCatalog").innerHTML += result
+                for (const country of countries) {
+                    if (country.continent == continentSelected) {
+                        const starPercentage = (country.rating / 5) * 100
+                        const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
+                        document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
+                    }
+                }
             }
-            document.querySelector("#divCatalog").innerHTML += result
-            console.log(document.querySelector("#divCatalog"))
-            // for (const country of countries) {
-            //     if (country.continent == continentSelected) {
-            //         const starPercentage = (country.rating / 5) * 100
-            //         const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
-            //         document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
-            //     }
-            // }
-        }
-    })
+            if (this.id == 2) {
+                for (let i = 12; i < 24; i++) {
+                    if (typeof countriesC[i] != "undefined") {
+                        if (i == 12) {
+                            result += `<div class="row">`
+                        }
+                        result += `<div class="col-sm-6 col-md-6 col-lg-3">
+                                <a class="aCard" href="../../html/country.html" id="${countriesC[i].name}">
+                                    <div class="card" id="cardCountry">
+                                        <img src="${countriesC[i].flag}" id="imgCountry">
+                                        <hr />
+                                        <div class="card-body">
+                                            <p class="card-text" id="cardText">${countriesC[i].name}</p>
+                                        </div>
+                                        <div class="stars-outer outer1">
+                                            <div class="stars-inner inner1"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>`
+                        if (i == 23) {
+                            result += `</div>`
+                        }
+                    } else {}
+                }
+                document.querySelector("#divCatalog").innerHTML += result
+                for (const country of countries) {
+                    if (country.continent == continentSelected) {
+                        const starPercentage = (country.rating / 5) * 100
+                        const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
+                        document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
+                    }
+                }
+            }
+        })
+    }
 }

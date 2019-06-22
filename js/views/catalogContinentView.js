@@ -1,3 +1,7 @@
+import {
+    renderCatalog
+} from "../controllers/catalogController.js"
+
 /**
  * Função que adiciona um evento ao cards do catalogo para estes adicionarem na session storage o
  * país que o utilizador selecionou
@@ -33,6 +37,7 @@ btnFilter.addEventListener("click", function () {
     //*obter o filtro selecionado pelo utilizador
     //!Adicionar o filtro de rating
     const filter = document.querySelector("#dropdownMenuButton").value
+    let countriesC = []
     //*verifica qual o filtro selecionado e, dependendo desse valor, adiciona os países de ordens diferentes
     if (filter == "upAlfa") {
         //*ordenar o país de ordem alfabética crescente
@@ -41,38 +46,45 @@ btnFilter.addEventListener("click", function () {
         let resultFilter = ""
         //*apagar os card presentes no catálogo
         divCatalog.innerHTML = ""
-        let j = 0
-        for (const country of countriesContinent) {
-            //*num ciclo que faz por todos os países verifica se este pertence ao continente prentendido e se
-            //*o nome do país começa por o que o utilizador introduziu na caixa de texto
-            if (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase())) {
-                //*se ultrapassar as verificações, confirma se j % 3 = 0, se sim adiciona uma nova div para
-                //*assim os cards se encontrarem disposto em 3 por linha
-                if (j == 0) {
-                    resultFilter += `<div class="row">`
-                }
-                //*adicona um país
-                resultFilter += `<div class="col-sm-6 col-md-6 col-lg-3">
-                                    <a class="aCard" href="../../html/country.html" id="${country.name}">
-                                    <div class="card" id="cardCountry">
-                                        <img src="${country.flag}" id="imgCountry">
-                                        <hr />
-                                        <div class="card-body">
-                                            <p class="card-text" id="cardText">${country.name}</p>
-                                        </div>
-                                        <div class="stars-outer outer1">
-                                            <div class="stars-inner inner1"></div>
-                                        </div>
-                                    </div>
-                                    </a>
-                                </div>`
-                j++
-                //*fecha a div que foi criada acima para poder criar uma nova, ou seja, esta linha já tem 3 cards
-                if (j == countriesContinent.length) {
-                    resultFilter += `</div>`
+        // let j = 0
+
+        //*num ciclo que faz por todos os países verifica se este pertence ao continente prentendido e se
+        //*o nome do país começa por o que o utilizador introduziu na caixa de texto
+        // if (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase())) {
+            
+            for (const country of countriesContinent) {
+                if (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase())) {
+                    countriesC.push(country)
                 }
             }
-        }
+            console.log(document.querySelector("#divCatalog"))
+            renderCatalog(countriesC)
+            // //*se ultrapassar as verificações, confirma se j % 3 = 0, se sim adiciona uma nova div para
+            // //*assim os cards se encontrarem disposto em 3 por linha
+            // if (j == 0) {
+            //     resultFilter += `<div class="row">`
+            // }
+            // //*adicona um país
+            // resultFilter += `<div class="col-sm-6 col-md-6 col-lg-3">
+            //                         <a class="aCard" href="../../html/country.html" id="${country.name}">
+            //                         <div class="card" id="cardCountry">
+            //                             <img src="${country.flag}" id="imgCountry">
+            //                             <hr />
+            //                             <div class="card-body">
+            //                                 <p class="card-text" id="cardText">${country.name}</p>
+            //                             </div>
+            //                             <div class="stars-outer outer1">
+            //                                 <div class="stars-inner inner1"></div>
+            //                             </div>
+            //                         </div>
+            //                         </a>
+            //                     </div>`
+            // j++
+            // //*fecha a div que foi criada acima para poder criar uma nova, ou seja, esta linha já tem 3 cards
+            // if (j == countriesContinent.length) {
+            //     resultFilter += `</div>`
+            // }
+        // }
         //*adição do catalogo ordenado ao html
         divCatalog.innerHTML += resultFilter
         for (const country of countriesContinent) {
