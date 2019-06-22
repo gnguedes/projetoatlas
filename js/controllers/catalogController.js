@@ -28,7 +28,7 @@ const divCatalog = document.querySelector("#divCatalog")
 let result = ""
 const countriesContinent = []
 for (const country of countries) {
-    if(country.continent == continentSelected){
+    if (country.continent == continentSelected) {
         countriesContinent.push(country)
     }
 }
@@ -39,10 +39,10 @@ renderCatalog();
  */
 function renderCatalog() {
     for (const country of countriesContinent) {
-            if (i == 0) {
-                result += `<div class="row">`
-            }
-            result += `<div class="col-sm-6 col-md-6 col-lg-3">
+        if (i == 0) {
+            result += `<div class="row">`
+        }
+        result += `<div class="col-sm-6 col-md-6 col-lg-3">
                         <a class="aCard" href="../../html/country.html" id="${country.name}">
                             <div class="card" id="cardCountry">
                                 <img src="${country.flag}" id="imgCountry">
@@ -56,10 +56,10 @@ function renderCatalog() {
                             </div>
                         </a>
                     </div>`
-            i++
-            if (i == countriesContinent.length) {
-                result += `</div>`
-            }
+        i++
+        if (i == countriesContinent.length) {
+            result += `</div>`
+        }
 
     }
     divCatalog.innerHTML += result
@@ -77,4 +77,13 @@ function renderCatalog() {
 
 
 
-
+//funcao que atualiza o rating do país
+export function checkRating(userRating) {
+    const countrySelect = addCountrySelected()
+    for (const countries of country) {
+        if (countrySelect == countries) {
+            country.temprating = Number(country.temprating) + Number(userRating)
+            country.rating = (Number(country.temprating) / country.temprating.length)
+        }
+    }
+}

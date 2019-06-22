@@ -26,16 +26,62 @@
         </nav>
         <div class="container-fluid" id="container-btn">
             <div class="list-group" id="frm-btn">
-                <button type="button" id="btnAddCountry" class="btn btn-dark btn-lg" data-toggle="modal"
-                    data-target="#modalAddCountry">Adicionar Questão</button>
+                <button type="button" id="btnAddQuestion" class="btn btn-dark btn-lg" data-toggle="modal"
+                    data-target="#modalAddQuestion">Adicionar Questão</button>
                 <br>
                 <form action="manageQuestions.html">
                     <button type="submit" id="btn" class="btn btn-dark btn-lg">Gerir Questões</button>
                 </form>
             </div>
         </div>
-           
-            
+        <!--modal adicionar questao-->
+        <div class="modal" id="modalAddQuestion" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Adicionar Questão</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="frmAddQuestion">
+                            <div class="form-group">
+                                <label for="questionLevel">Nivel:</label>
+                                <input type="text" class="form-control" id="questionLevel">
+
+                                <label for="questionContinent">Continente:</label>
+                                <select id="questionContinent" class="form-control">
+                                    <option value="europe">Europa</option>
+                                    <option value="soutAmeria">América do Sul</option>
+                                    <option value="northAmerica">América do Norte</option>
+                                    <option value="asia">Ásia</option>
+                                    <option value="oceania">Oceania</option>
+                                </select>
+
+                                <label for="questionQuestion">Pergunta:</label>
+                                <input type="text" class="form-control" id="questionQuestion">
+
+                                <label for="questionRightAnswer">Resposta correta:</label>
+                                <input type="text" class="form-control" id="questionRightAnswer">
+
+
+                                <label for="questionAnswers">Respostas:</label>
+                                <input type="text" class="form-control" id="questionAnswers1" placeholder="Resposta 1">
+                                <input type="text" class="form-control" id="questionAnswers2" placeholder="Resposta 2">
+                                <input type="text" class="form-control" id="questionAnswers3" placeholder="Resposta 3">
+                                <input type="text" class="form-control" id="questionAnswers4" placeholder="Resposta 4">
+                                <br>
+
+                                <label for="questionImg">Imagem:</label>
+                                <input type="url" class="form-control" id="questionImg" placeholder="URL">
+                                <br>
+
+                                <button type="submit" id="btnSaveQuestion" class="btn btn-primary">Adicionar
+                                    Questão</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--Introdução do footer-->
@@ -61,7 +107,7 @@
         </div>
     </footer>
     <!-- Optional JavaScript -->
-    <script type="module" src="../js/views/adminViewQuestion.js"></script>
+    <script type="module" src="../js/views/adminAddQuestion.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

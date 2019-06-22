@@ -24,7 +24,7 @@ if (localStorage.getItem("countries")) {
     const espanha = new Country("Espanha", "europe", "Madrid", "46 milhões", "Espanhol", "Euro", "Mediterrânico", "1640", "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg", "3.1", [])
     const israel = new Country("Israel", "asia", "Jerusalém", "9 milhões", "Árabe", "Novo Shekel Israelense", "Mediterrânico", "1948", "https://pt.wikipedia.org/wiki/Bandeira_de_Israel#/media/File:Flag_of_Israel.svg", "4.1", [])
     const italia = new Country("Itália", "europe", "Roma", "60 milhões", "Italiano", "Euro", "Mediterrânico", "1949", "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg", "4", [])
-
+    
 
     countries.push(portugal, brasil, alemanha, polonia, espanha, israel, italia)
     localStorage.setItem("countries", JSON.stringify(countries))
