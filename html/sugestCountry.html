@@ -20,16 +20,18 @@
         <nav class="navbar navbar-light fixed-top">
             <div class="container">
                 <!--Ícone do perfil-->
-                
-                    <a class="navbar-brand" href="paginaperfil.html">
-                        <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
-                            alt="">
-                        <div id="navbarUsername">
-                            
-                        </div>
-                    </a>
+
+                <a class="navbar-brand" href="paginaperfil.html">
+                    <img src="../images/pirata_rapaz.png" width="40" height="40" class="d-inline-block align-top"
+                        alt="">
+                    <div id="navbarUsername">
+
+                    </div>
+                </a>
                 <!--Texto no centro da navbar-->
-                <p id="navBarText">O teu perfil</p>
+                <div class="row d-none d-sm-block">
+                    <p id="navBarText">Sugere novos países</p>
+                </div>
                 <!--Menu hamburguer-->
                 <a class="navbar-brand" href="#">
                     <!--Botão caracteristico de um menu hamburguer-->
@@ -62,20 +64,28 @@
         </nav>
         <div class="container" id="sugestCountry">
             <div class="row">
+                <div class="col-md-1 col-lg-1 d-flex justify-content-start">
+                    <a href="../html/homePage.html">
+                        <button id="btnVoltar" type="button" class="btn btn-primary">
+                            <img src="../images/seta retroceder.png" id="setaretroceder">
+                        </button>
+                    </a>
+                </div>
                 <div class="col-lg-6" id="sugestCountry1">
                     <div class="card-body"></div>
                     <h1>Sugerir um novo País</h1>
                     <form id="frmSugestCountry">
                         <div class="form-group">
                             <label for="txtNewCountry">Diz qual é o nome do país que me queres apresentar</label><br>
-                            <input type="text" id="txtNewCountry"  placeholder="Nome do País" required><br>
-                            
+                            <input type="text" id="txtNewCountry" placeholder="Nome do País" required><br>
+
                             <label for="txtNewCountryContinent">A que continente pertence?</label><br>
-                            <input type="text" id="txtNewCountryContinent" placeholder="Nome do Continente" required><br>
+                            <input type="text" id="txtNewCountryContinent" placeholder="Nome do Continente"
+                                required><br>
 
                             <div class="form-group">
-                              <label for="txtReason">Como conheceste este país? Diz-me coisas sobre ele</label>
-                              <textarea class="form-control" id="txtReason" rows="3" required></textarea>
+                                <label for="txtReason">Como conheceste este país? Diz-me coisas sobre ele</label>
+                                <textarea class="form-control" id="txtReason" rows="3" required></textarea>
                             </div>
                             <br>
                             <button type="submit" class="btn btn btn-primary" id="btnSubmit">Submeter</button>
@@ -84,7 +94,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!--Introdução do footer-->
     <footer id="footer">

@@ -18,19 +18,20 @@ export function addUser(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, t
 
     //se o username estiver disponivel, adiciona o utilizador
     if (newPassword != newCheckPassword) {
-        alert("As palavras-passe têm de ser iguais!")
+        swal.fire("As palavras-passe têm de ser iguais!", "", "error")
     }
     else {
         if (existUser === false) {
+            console.log("ola")
+            swal("Criaste a tua conta!", `Utilizador ${txtUsername} adicionado com sucesso!`, "success")
             users.push(new User(txtUsername, txtPassword, txtEmail, valueXp, sltGenre, txtName, answeredQuestions, favCountries))
             localStorage.setItem("users", JSON.stringify(users))
-            alert(`Utilizador ${txtUsername} adicionado com sucesso!`)
             document.querySelector("#register").style.display = "none"
             document.querySelector("#login").style.display = "block"
         }
         //se nao o username nao estiver disponivel, nao atualiza o utilizador
         else {
-            alert(`Utilizador ${txtUsername} já existe!`)
+            swal(`Utilizador ${txtUsername} já existe!`, "", "error")
         }
     }
 }
@@ -45,11 +46,11 @@ export function loginUser(txtLoginUsername, txtLoginPassword) {
     }
     if (stateLogin == true) {
         sessionStorage.setItem("loggedUser", txtLoginUsername)
-        alert("Login efetuado com sucesso!")
+        swal("Login efetuado com sucesso!", "", "success")
         location.href = "/html/homePage.html"
     }
     else {
-        alert("Credenciais inválidas!")
+        swal("Username ou Palavra-passe erradas!", "", "error")
     }
 
 }

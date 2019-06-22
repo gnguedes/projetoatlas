@@ -24,7 +24,9 @@
                         alt="">
                 </a>
                 <!--Texto no centro da navbar-->
-                <p id="navBarText">Vê todos os Países</p>
+                <div class="row d-none d-sm-block">
+                    <p id="navBarText">Vê todos os Países</p>
+                </div>
                 <!--Menu hamburguer-->
                 <a class="navbar-brand" href="#">
                     <!--Botão caracteristico de um menu hamburguer-->
@@ -55,78 +57,90 @@
                 </a>
             </div>
         </nav>
-        <!--Título da página-->
-        <h1 id="titleCatalog">ESCOLHE O CONTINENTE QUE QUERES EXPLORAR!!</h1>
-        <!--Introdução dos cards dos continentes-->
         <div class="row">
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <a class="aCard" href="catalogo_continente.html" id="europe">
-                    <div class="card europe" id="card">
-                        <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Europa</p>
-                        </div>
-                    </div>
+            <div class="col-md-1 col-lg-1 d-flex justify-content-start">
+                <a href="../html/homePage.html">
+                    <button id="btnVoltar" type="button" class="btn btn-primary">
+                        <img src="../images/seta retroceder.png" id="setaretroceder">
+                    </button>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <a class="aCard" href="" id="asia">
-                    <div class="card asia" id="card">
-                        <img src="../images/continents/asian-continent-hi.png" class="imgAsia" id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Ásia</p>
-                        </div>
-                    </div>
-                </a>
+            <div class="col-lg-11 col-md-10 d-flex justify-content-center">
+                <!--Título da página-->
+                <h1 id="titleCatalog">ESCOLHE O CONTINENTE QUE QUERES EXPLORAR!!</h1>
             </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <a class="aCard" href="" id="africa">
-                    <div class="card africa" id="card">
-                        <img src="../images/continents/african-continent-hi.png" class="imgAfrica" id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">África</p>
+            <!--Introdução dos cards dos continentes-->
+            <div class="row">
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                    <a class="aCard" href="catalogo_continente.html" id="europe">
+                        <div class="card europe" id="card">
+                            <img src="../images/continents/montessori-europe-continent-map-hi.png" id="imgContinent">
+                            <hr />
+                            <div class="card-body">
+                                <p class="card-text" id="cardText">Europa</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <a class="aCard" href="" id="northAmerica">
-                    <div class="card northAmerica" id="card">
-                        <img src="../images/continents/continent-of-north-america-hi.png" class="imgNorthAmerica"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">América do Norte</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                    <a class="aCard" href="" id="asia">
+                        <div class="card asia" id="card">
+                            <img src="../images/continents/asian-continent-hi.png" class="imgAsia" id="imgContinent">
+                            <hr />
+                            <div class="card-body">
+                                <p class="card-text" id="cardText">Ásia</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <a class="aCard" href="" id="southAmerica">
-                    <div class="card southAmerica" id="card">
-                        <img src="../images/continents/continent-of-south-america-hi.png" class="imgSouthAmerica"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">América do Sul</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                    <a class="aCard" href="" id="africa">
+                        <div class="card africa" id="card">
+                            <img src="../images/continents/african-continent-hi.png" class="imgAfrica"
+                                id="imgContinent">
+                            <hr />
+                            <div class="card-body">
+                                <p class="card-text" id="cardText">África</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
-                <a class="aCard" href="" id="oceania">
-                    <div class="card oceania" id="card">
-                        <img src="../images/continents/continent-of-oceania-hi.png" class="imgOceania"
-                            id="imgContinent">
-                        <hr />
-                        <div class="card-body">
-                            <p class="card-text" id="cardText">Oceania</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                    <a class="aCard" href="" id="northAmerica">
+                        <div class="card northAmerica" id="card">
+                            <img src="../images/continents/continent-of-north-america-hi.png" class="imgNorthAmerica"
+                                id="imgContinent">
+                            <hr />
+                            <div class="card-body">
+                                <p class="card-text" id="cardText">América do Norte</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                    <a class="aCard" href="" id="southAmerica">
+                        <div class="card southAmerica" id="card">
+                            <img src="../images/continents/continent-of-south-america-hi.png" class="imgSouthAmerica"
+                                id="imgContinent">
+                            <hr />
+                            <div class="card-body">
+                                <p class="card-text" id="cardText">América do Sul</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                    <a class="aCard" href="" id="oceania">
+                        <div class="card oceania" id="card">
+                            <img src="../images/continents/continent-of-oceania-hi.png" class="imgOceania"
+                                id="imgContinent">
+                            <hr />
+                            <div class="card-body">
+                                <p class="card-text" id="cardText">Oceania</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

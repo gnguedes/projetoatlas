@@ -31,6 +31,14 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
 }
 
+#titleCatalog {
+    font-family: Tw Cen MT B;
+    font-size: 30px;
+    position: relative;
+    margin-top: 5px;
+}
+
+
 /*Configuração do texto presente na navbar*/
 #navBarText {
     font-family: blackPearl;
@@ -55,12 +63,13 @@ body {
     position: relative;
     text-align: center;
 }
+
 /*Edição do footer*/
 #footer {
     width: 100%;
     background-color: #FE9221;
     position: relative;
-    bottom: 0%;
+    bottom: -25px;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
@@ -109,6 +118,14 @@ hr {
     border-radius: 30px;
     border: 1px solid #707070;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .1);
+}
+
+#btnVoltar {
+    background-color: #FE9221;
+    color: black;
+    border-color: #FE9201;
+    border-radius: 30px;
+
 }
 
 #cardText {

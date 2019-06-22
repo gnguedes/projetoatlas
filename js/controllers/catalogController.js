@@ -33,7 +33,7 @@ for (const country of countries) {
     }
 }
 
-renderCatalog();
+//renderCatalog();
 /**
  * Função RenderCatalog que coloca os países no catálogo na ordem que estes estão no array, ou seja, sem ordenação
  */
@@ -74,7 +74,9 @@ function renderCatalog() {
     addCountrySelected()
 }
 
+const btnsPagination = document.getElementsByClassName("page-link")
 
+<<<<<<< HEAD
 
 
 //funcao que atualiza o rating do país
@@ -87,3 +89,46 @@ export function checkRating(userRating) {
         }
     }
 }
+=======
+for (const btn of btnsPagination) {
+    btn.addEventListener("click", function () {
+        let result = ""
+        document.querySelector("#divCatalog").innerHTML = ""
+        if (this.id == "1") {
+            for (let i = 0; i < 12; i++) {
+                if (countriesContinent[i].continent == continentSelected) {
+                    if (i == 0) {
+                        result += `<div class="row">`
+                    }
+                    result += `<div class="col-sm-6 col-md-6 col-lg-3">
+                                <a class="aCard" href="../../html/country.html" id="${countriesContinent[i].name}">
+                                    <div class="card" id="cardCountry">
+                                        <img src="${countriesContinent[i].flag}" id="imgCountry">
+                                        <hr />
+                                        <div class="card-body">
+                                            <p class="card-text" id="cardText">${countriesContinent[i].name}</p>
+                                        </div>
+                                        <div class="stars-outer outer1">
+                                            <div class="stars-inner inner1"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>`
+                    if (i == 11) {
+                        result += `</div>`
+                    }
+                }else{}
+            }
+            document.querySelector("#divCatalog").innerHTML += result
+            console.log(document.querySelector("#divCatalog"))
+            // for (const country of countries) {
+            //     if (country.continent == continentSelected) {
+            //         const starPercentage = (country.rating / 5) * 100
+            //         const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
+            //         document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
+            //     }
+            // }
+        }
+    })
+}
+>>>>>>> d3d7f483fe2dcd46fb25c997d76029b935fdcde8

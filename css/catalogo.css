@@ -51,8 +51,8 @@ body {
 #titleCatalog {
     font-family: Tw Cen MT B;
     font-size: 30px;
-    margin: auto;
     position: relative;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -80,7 +80,7 @@ body {
 os países*/
 #cardCountry {
     margin: auto;
-    margin-top: 5%;
+    margin-top: 10%;
     border-radius: 30px;
     width: 250px;
     height: 280px;
@@ -281,6 +281,11 @@ hr {
 #carousel {
     position: relative;
     left: 12%;
+}
+
+#setaretroceder{
+    width: 30px;
+    height: 30px;
 }
 
 #imgCarousel {

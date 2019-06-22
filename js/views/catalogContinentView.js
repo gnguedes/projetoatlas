@@ -42,7 +42,6 @@ btnFilter.addEventListener("click", function () {
         //*apagar os card presentes no catálogo
         divCatalog.innerHTML = ""
         let j = 0
-        console.log(countriesContinent.length)
         for (const country of countriesContinent) {
             //*num ciclo que faz por todos os países verifica se este pertence ao continente prentendido e se
             //*o nome do país começa por o que o utilizador introduziu na caixa de texto

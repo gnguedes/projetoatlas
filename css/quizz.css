@@ -49,8 +49,8 @@ body {
 #titleCatalog {
     font-family: Tw Cen MT B;
     font-size: 30px;
-    margin: auto;
     position: relative;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -93,6 +93,18 @@ a.aCard:link {
     text-decoration: none;
 }
 
+#btnVoltar {
+    background-color: #3384A2;
+    color: black;
+    border-color: #3384A2;
+    border-radius: 30px;
+}
+
+#setaretroceder {
+    width: 30px;
+    height: 30px;
+}
+
 #footer {
     width: 100%;
     background-color: #3384A2;
@@ -102,7 +114,7 @@ a.aCard:link {
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
-#footerLevel{
+#footerLevel {
     width: 100%;
     background-color: #3384A2;
     bottom: 0;
@@ -187,7 +199,7 @@ h1 {
     top: -225%;
 }
 
-#lockLevel{
+#lockLevel {
     width: 145px;
     height: 120px;
     position: absolute;
