@@ -74,9 +74,8 @@ function renderCatalog() {
     addCountrySelected()
 }
 
-const btnsPagination = document.getElementsByClassName("page-link")
 
-<<<<<<< HEAD
+
 
 
 //funcao que atualiza o rating do país
@@ -89,7 +88,8 @@ export function checkRating(userRating) {
         }
     }
 }
-=======
+// paginacao
+const btnsPagination = document.getElementsByClassName("page-link")
 for (const btn of btnsPagination) {
     btn.addEventListener("click", function () {
         let result = ""
@@ -131,4 +131,3 @@ for (const btn of btnsPagination) {
         }
     })
 }
->>>>>>> d3d7f483fe2dcd46fb25c997d76029b935fdcde8
