@@ -9,6 +9,7 @@ if (localStorage.getItem("users")) {
 } else {
     const admin = new User("admin", "admin", "admin@admin.pt", 1000, "Rapaz", "admin", "", [])
     const kid1 = new User("joao12", "123", "joao@gmail.pt", 20, "Rapaz", "joao", ["1"], [])
+    
 
     users.push(admin, kid1)
     localStorage.setItem("users", JSON.stringify(users))

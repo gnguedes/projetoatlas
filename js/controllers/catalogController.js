@@ -75,6 +75,7 @@ export function renderCatalog(countriesC) {
     renderCatalogPag(countriesC)
 }
 
+<<<<<<< HEAD
 /**
  * Função RenderCatalog que coloca os países no catálogo na ordem que estes estão no array, ou seja, sem ordenação
  */
@@ -116,6 +117,33 @@ function renderCatalogPag(countriesC) {
                         const starPercentage = (country.rating / 5) * 100
                         const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
                         document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
+=======
+
+
+
+
+//funcao que atualiza o rating do país
+export function checkRating(userRating) {
+    const countrySelect = addCountrySelected()
+    for (const countries of country) {
+        if (countrySelect == countries) {
+            country.temprating = Number(country.temprating) + Number(userRating)
+            country.rating = (Number(country.temprating) / country.temprating.length)
+        }
+    }
+}
+// paginacao
+const btnsPagination = document.getElementsByClassName("page-link")
+for (const btn of btnsPagination) {
+    btn.addEventListener("click", function () {
+        let result = ""
+        document.querySelector("#divCatalog").innerHTML = ""
+        if (this.id == "1") {
+            for (let i = 0; i < 12; i++) {
+                if (countriesContinent[i].continent == continentSelected) {
+                    if (i == 0) {
+                        result += `<div class="row">`
+>>>>>>> 841bb5ec6f839ebd9d201d8296dfb2116daad9c7
                     }
                 }
             }
@@ -153,6 +181,21 @@ function renderCatalogPag(countriesC) {
                     }
                 }
             }
+<<<<<<< HEAD
         })
     }
 }
+=======
+            document.querySelector("#divCatalog").innerHTML += result
+            console.log(document.querySelector("#divCatalog"))
+            // for (const country of countries) {
+            //     if (country.continent == continentSelected) {
+            //         const starPercentage = (country.rating / 5) * 100
+            //         const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`
+            //         document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded
+            //     }
+            // }
+        }
+    })
+}
+>>>>>>> 841bb5ec6f839ebd9d201d8296dfb2116daad9c7

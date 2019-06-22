@@ -49,10 +49,8 @@ body {
 #titleCatalog {
     font-family: Tw Cen MT B;
     font-size: 30px;
-    margin: auto;
     position: relative;
-    left: -100px;
-    margin-top: 7px; 
+    margin-top: 10px;
     text-align: center;
 }
 

@@ -60,11 +60,9 @@
 }
 
 #userIcon{
-    margin-right: 35px;
-    float: right;
+    margin-top: 20px;
     width: 90px;
     height: 90px;
-    margin-top: 20px;
 }
 
 #btnHome{

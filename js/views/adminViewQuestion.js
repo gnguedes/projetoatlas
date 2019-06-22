@@ -1,7 +1,8 @@
 //importa todas as questoes no storage
 const questions = JSON.parse(localStorage.getItem("questions"))
 //importa a funcao que remove questoes
-import {removeQuestion} from "../controllers/adminController.js"
+import { removeQuestion } from "../controllers/adminController.js"
+
 
 const divQuestion = document.querySelector("#tableQuestion")
 let tableQ = ''
@@ -39,9 +40,15 @@ function renderQuestion() {
     const btnRemove = document.getElementsByClassName("btn btn-danger remove")
     for (const elem of btnRemove) {
         elem.addEventListener("click", function () {
-            let questionId= elem.id
+            let questionId = elem.id
             removeQuestion(questionId)
-            
+
         })
     }
 }
+
+
+
+
+
+
