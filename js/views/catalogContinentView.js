@@ -29,6 +29,7 @@ for (const country of countries) {
         countriesContinent.push(country)
     }
 }
+document.querySelector("#divCatalog").innerHTML = ""
 
 //!adição de evento no click do botão
 btnFilter.addEventListener("click", function () {
@@ -43,9 +44,9 @@ btnFilter.addEventListener("click", function () {
         //*ordenar o país de ordem alfabética crescente
         countriesContinent.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
         //*criação de uma variável vazia para adiconar ao innerHTML do catalogo
-        let resultFilter = ""
+        //let resultFilter = ""
         //*apagar os card presentes no catálogo
-        // divCatalog.innerHTML = ""
+        
         // let j = 0
 
         //*num ciclo que faz por todos os países verifica se este pertence ao continente prentendido e se
@@ -58,17 +59,17 @@ btnFilter.addEventListener("click", function () {
             }
         }
         renderCatalog(countriesC)
-        //*adição do catalogo ordenado ao html
-        divCatalog.innerHTML += resultFilter
-        for (const country of countriesContinent) {
-            if (document.querySelector(`#${country.name} .stars-inner`) != null) {
-                const starPercentage = (country.rating / 5) * 100;
-                const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-                document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
-            }
-        }
-        //*função que permite adicionar à session storage o país selecionado 
-        addCountrySelected()
+        // //*adição do catalogo ordenado ao html
+        // //divCatalog.innerHTML += resultFilter
+        // for (const country of countriesContinent) {
+        //     if (document.querySelector(`#${country.name} .stars-inner`) != null) {
+        //         const starPercentage = (country.rating / 5) * 100;
+        //         const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+        //         document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
+        //     }
+        // }
+        // //*função que permite adicionar à session storage o país selecionado 
+        // addCountrySelected()
     } else if (filter == "downAlfa") {
         //*array ordenado por ordem alfabética decrescente
         countriesContinent.sort((a, b) => (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0));
