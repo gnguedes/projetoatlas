@@ -73,47 +73,58 @@
                 </div>
                 <div class="col-lg-6" id="sugestCountry1">
                     <div class="card-body">
-                    <h1>Sugerir um novo País</h1>
-                    <form id="frmSugestCountry">
-                        <div class="form-group">
-                            <label for="txtNewCountry">Diz qual é o nome do país que me queres apresentar</label><br>
-                            <input type="text" id="txtNewCountry" placeholder="Nome do País" required><br>
-
-                            <label for="txtNewCountryContinent">A que continente pertence?</label><br>
-                            <input type="text" id="txtNewCountryContinent" placeholder="Nome do Continente" required>
-
+                        <h1>Sugerir um novo País</h1>
+                        <form id="frmSugestCountry">
                             <div class="form-group">
-                                <label for="txtReason">Como conheceste este país? Diz-me coisas sobre ele</label>
-                                <textarea class="form-control" id="txtReason" rows="3" required></textarea>
-                            </div>
+                                <label for="txtNewCountry">Diz qual é o nome do país que me queres
+                                    apresentar</label><br>
+                                <input type="text" id="txtNewCountry" placeholder="Nome do País" required><br>
 
-                            <button type="submit" class="btn btn btn-success" id="btnSubmit">Submeter</button>
-                        </div>
-                    </form>
-                </div>
+                                <label for="txtNewCountryContinent">A que continente pertence?</label><br>
+                                <input type="text" id="txtNewCountryContinent" placeholder="Nome do Continente"
+                                    required>
+
+                                <div class="form-group">
+                                    <label for="txtReason">Como conheceste este país? Diz-me coisas sobre ele</label>
+                                    <textarea class="form-control" id="txtReason" rows="3" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn btn-success" id="btnSubmit">Submeter</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <!--Introdução do footer-->
     <footer id="footer">
         <div class="container">
             <div class="row">
+
                 <!--Logo da ESMAD-->
-                <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="col-lg-4 col-xs-12 text-center mt-4 mb-5">
                     <img src="../images/logo_esmad.png" id="logoESMAD" width="200px;" height="130px;">
                 </div>
-                <!--Textos no meio do footer-->
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <p id="footerText">Contacto:<br>atlas@esmad.ipp.pt</p>
+                <div class="col-lg-4 col-xs-12 text-center mt-5 mb-5">
+                    <h1 class="display-5 d-flex text-center" id="atalhos">Atalhos</h1>
+                    <ul class="col-lg-4 list-unstyled">
+                        <li><a href="../projetoatlas/html/homePage.html"><i class="fa fa-angle-double-right"></i>Página
+                                Inicial</a></li>
+                        <li><a href="../projetoatlas/html/paginaperfil.html"><i
+                                    class="fa fa-angle-double-right"></i>Página de perfil</a></li>
+                        <li><a href="../projetoatlas/html/quizz.html"><i class="fa fa-angle-double-right"></i>Joga um
+                                quizz</a></li>
+                        <li><a href="../projetoatlas/html/catalogo.html"><i class="fa fa-angle-double-right"></i>Vê
+                                todos os países</a></li>
+                        <li><a
+                                href="https://www.youtube.com/watch?v=34EJJPbbvdk&fbclid=IwAR0an6OcDDrC1lTXl7vIXTl6mmmN9fle5or6soOrAboiN8yg1QyRoFwe70M"><i
+                                    class="fa fa-angle-double-right"></i>Teaser Promocional</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <p id="footerText">Desenvolvida no âmbito da<br>disciplina de Projeto I<br>TSIW ESMAD © 2019</p>
-                </div>
-                <!--Logo do projeto Atlas-->
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <img src="../images/logo_sem_mar-08.png" width="100px;" height="100px;" id="logoAtlas">
+                <div class="col-lg-4 col-xs-12 text-center text-white mt-5 mb-5 d-flex align-items-end">
+                    <p>Desenvolvida no âmbito da disciplina de Projeto I<br>TSIW ESMAD © 2019</p>
+                    <img src="../images/logo_sem_mar-08.png" id="logoAtlas">
                 </div>
             </div>
         </div>
@@ -124,13 +135,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    </script>
 </body>
 
 </html>
