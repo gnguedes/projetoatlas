@@ -1,7 +1,4 @@
-//* importar o array das questões
-import {
-    questions
-} from "../controllers/questionController.js"
+const questions = JSON.parse(localStorage.getItem("questions"))
 
 //* Obter todos os botões de resposta
 const answerBtns = document.getElementsByClassName("userAnswer")

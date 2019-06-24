@@ -35,7 +35,6 @@ for (const user of users) {
         for (const question of questions) {
             // console.log(question.id)
             if (((question.level == 1) || (question.level == 2)) && (!user.answeredQuestions.includes(question.id)) && (question.continent == continentSelected)) {
-                console.log(!user.answeredQuestions.includes(question.level));
                 questions1.push(question)
             }
         }
