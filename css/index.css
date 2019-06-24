@@ -62,6 +62,11 @@
 #logoESMAD{
     bottom: 10%;
 }
+#atalhos{
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+}
 #footer {
     background: #3384A2;
     position: fixed;
