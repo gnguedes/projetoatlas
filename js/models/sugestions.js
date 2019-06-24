@@ -1,5 +1,7 @@
 /**
-* class que cria as varias sugestoes feitas pelos utilizadores
+* class que guarda as sugestoes feitas, guarda o utilizador que fez a sugestao
+* o novo pais que ele sugere, em que continente ele se encontra e as razoes que o 
+* utilizaodr da para adicionar esse novo pais
  */
 
 export default class Sugestion{
