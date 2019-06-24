@@ -25,8 +25,9 @@ export function addSugestion(loggedUser, newCountry, newCountryContinent, newRea
     sugestions.push(new Sugestion(loggedUser, newCountry, newCountryContinent, newReasons))
 
     localStorage.setItem("sugestions", JSON.stringify(sugestions))
-    location.href = "/html/homePage.html"
-    alert("sugestão adicionada")
+    swal("Obrigado pela tua sugestão", "Sugestão realizada com sucesso", "success").then(value => {
+        location.href = "/html/homePage.html"
+    })
 }
 
 
@@ -60,4 +61,3 @@ export function acceptSugestion(txtSugestionPositive) {
 
     }
 }
-

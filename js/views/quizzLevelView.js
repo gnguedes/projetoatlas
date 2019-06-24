@@ -4,22 +4,29 @@ const users = JSON.parse(localStorage.getItem("users"))
 //*obter o user logado
 const loggedUser = sessionStorage.getItem("loggedUser")
 
+//* Obter os cards de escolha de nível
 const cardsLevel = document.getElementsByClassName("aCard")
 
+//* Obter as questões da localStorage
 const questions = JSON.parse(localStorage.getItem("questions"))
 
+//* Obter o continente que o user escolheu
 const continentSelected = sessionStorage.getItem("continentSelected")
 
+//* Colocar na sessionStorage o numero da questão a 0, para posteriormente poder ser adicionado, o xp total que o utilizador vai receber
+//* quando acabar o quizz e o número de respostas corretas
 sessionStorage.setItem("contQuestions", "0")
 sessionStorage.setItem("totalXp", "0")
 sessionStorage.setItem("rightAnsweredQuestions", "0")
 
+//* Adicionar um evento ao cards dos níveis para poder colocar na sessionStorage o nivel que o utilizador pretende jogar
 for (const card of cardsLevel) {
     card.addEventListener("click", function () {
         sessionStorage.setItem("levelId", this.id)
     })
 }
 
+//* Adicionar as questões ao respetivo nível para poder verificar se o user já respondeu a todas as questões de um nível ou não
 const questions1 = []
 const questions2 = []
 const questions3 = []
@@ -46,16 +53,14 @@ for (const user of users) {
         }
     }
 }
-console.log(questions1)
-console.log(questions2)
-console.log(questions3)
-
 
 verifyUserPossibilityToPlay()
 
 /**
  * Função que verifica se o utilizador tem xp suficiente para liberar os continentes para poder ter
  * acesso às questões acerca deste continente
+ * Verifica também se o utilizador já completou todas as questões de um nível, transformando assim o fundo do
+ * card em verde, como um sinal visual de completo
  */
 function verifyUserPossibilityToPlay() {
     for (const user of users) {

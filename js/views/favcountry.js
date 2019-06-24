@@ -33,7 +33,7 @@ function renderFavCountry() {
                                     </div>
                                 </div>`
                     i++
-                    if (i == favCountries.length) {
+                    if (i == user.favCountries.length) {
                         result += `</div>`
                     }
                 }

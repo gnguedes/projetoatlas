@@ -9,7 +9,6 @@ const divInfo = document.getElementById("divInfo")
 let result = ''
 function renderInfo() {
     for (let i = 0; i < users.length; i++) {
-        console.log(users[i].username == loggedUser);
         if (users[i].username == loggedUser) {
             result += `<label for="username" id="info1">Username:${users[i].username}</label><br>
             <label for="nome" id="info2">Nome:${users[i].name}</label><br>
@@ -43,8 +42,9 @@ saveChanges.addEventListener("click", function () {
             if ((newPassword == confirmNewPassword) && (user.password != newPassword)) {
                 user.password = newPassword
                 localStorage.setItem("users", JSON.stringify(users))
-                alert("Palavra-passe alterada com sucesso!!")
-                location.reload()
+                swal("Palavra-passe alterada com sucesso!!", "", "success").then(value => {
+                    location.reload()
+                })
             }
         }
     }
@@ -63,20 +63,6 @@ function checkTypeUser() {
 
 //coloca nome do utilizador na navbar
 document.querySelector("#navbarUsername").innerHTML = loggedUser
-
-/** teste
-export function checkGenre() {
-    const genreUser = ''
-    for (const user of users) {
-        if (user.username == loggedUser) {
-            genreUser = user.genre
-        }
-
-
-    }
-
-}
-*/
 
 //atua quando o utilizador carrega para fazer logout
 manageLogout()

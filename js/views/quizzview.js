@@ -28,7 +28,7 @@ function verifyUserPossibilityToPlay() {
                 imgAsia.style.opacity = "0.3"
                 asia.innerHTML += `<img src="../images/lock-6.png" id="lock">`
                 asia.addEventListener("click", function(event) {
-                    alert("Ainda não tens nível suficiente para jogares neste continente!")
+                    swal("Ainda não tens nível suficiente para jogar neste continente!", "", "error")
                     //*este event.preventDefault() serve para a página não dar refresh, ou seja, dá uma
                     //*melhor sensação de que o utilizador não tem acesso a esta área
                     event.preventDefault()
@@ -43,7 +43,7 @@ function verifyUserPossibilityToPlay() {
                 imgAfrica.style.opacity = "0.3"
                 africa.innerHTML += `<img src="../images/lock-6.png" id="lock">`
                 africa.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogar neste continente!")
+                    swal("Ainda não tens nível suficiente para jogar neste continente!", "", "error")
                     event.preventDefault()
                 })
             } else {
@@ -56,7 +56,7 @@ function verifyUserPossibilityToPlay() {
                 imgNorthAmerica.style.opacity = "0.3"
                 northAmerica.innerHTML += `<img src="../images/lock-6.png" id="lock">`
                 northAmerica.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogar neste continente!")
+                    swal("Ainda não tens nível suficiente para jogar neste continente!", "", "error")
                     event.preventDefault()
                 })
             } else {
@@ -69,7 +69,7 @@ function verifyUserPossibilityToPlay() {
                 imgSouthAmerica.style.opacity = "0.3"
                 southAmerica.innerHTML += `<img src="../images/lock-6.png" id="lock">`
                 southAmerica.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogar neste continente!")
+                    swal("Ainda não tens nível suficiente para jogar neste continente!", "", "error")
                     event.preventDefault()
                 })
             } else {
@@ -82,7 +82,7 @@ function verifyUserPossibilityToPlay() {
                 imgOceania.style.opacity = "0.3"
                 oceania.innerHTML += `<img src="../images/lock-6.png" id="lock">`
                 oceania.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogar neste continente!")
+                    swal("Ainda não tens nível suficiente para jogar neste continente!", "", "error")
                     event.preventDefault()
                 })
             } else {

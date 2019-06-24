@@ -44,9 +44,11 @@ document.querySelector(".outer2").addEventListener("click", function () {
             if (user.favCountries.includes(countrySelected)) {
                 document.querySelector(`.inner2`).style.width = "0%"
                 user.favCountries.splice(user.favCountries.indexOf(countrySelected), 1)
+                swal("País removido dos favoritos!", "", "info")
             } else {
                 document.querySelector(`.inner2`).style.width = "100%"
                 user.favCountries.push(countrySelected)
+                swal("País adicionado dos favoritos!", "", "info")
             }
 
         }
