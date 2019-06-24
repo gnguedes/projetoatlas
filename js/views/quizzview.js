@@ -112,7 +112,12 @@ if (localStorage.getItem("questions")) {
     const question8 = new Question("8", "2", "europe", "Londres é a capital de que país?", "Inglaterra", ["Holanda", "Inglaterra", "Irlanda", "Escócia"], "", 3)
     const question9 = new Question("9", "2", "europe", "Qual é a capital de Portugal?", "Lisboa", ["Lisboa", "Porto", "Madrid", "Paris"], "", 3)
     const question10 = new Question("10", "1", "europe", "De que país é esta bandeira?", "Holanda", ["França", "Holanda", "Hungria", "Bélgica"], "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg", 2)
+    const question11 = new Question("11", "2", "asia", "Qual a capital da China?", "Pequim", ["Hong Kong", "Tóquio", "Pequim", "Nagasaki"], "", 3)
+    const question12 = new Question("12", "1", "asia", "A que país pertence esta bandeira?", "China", ["Coreia do Sul", "Japão", "Índia", "China"], "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg", 2)
+    const question13 = new Question("13", "3", "europa", "Qual é a bandeira de Inglaterra?", "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_England.svg", ["https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_England.svg", "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg", "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"], "", 5)
+    const question14 = new Question("14", "4", "europe", "Qual o país com mais pessoas?", "França", ["Portugal", "Inglaterra", "França", "Escócia"], "", 10)
 
-    questions.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10)
+
+    questions.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14)
     localStorage.setItem("questions", JSON.stringify(questions))
 }

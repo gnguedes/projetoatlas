@@ -17,8 +17,18 @@ if (localStorage.getItem("countries")) {
     countries = JSON.parse(localStorage.getItem("countries"))
 } else {
     const brasil = new Country("Brasil", "southAmerica", "Brasília", "209 milhões", "Português", "Real", "Tropical", "1821 a 1825", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png", "3.2", [])
+    const argentina = new Country("Argentina", "southAmerica", "Buenos Aires", "43 milhões", "Espanhol", "Peso Argentino", "Temperado", "1863", "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg", "4", [])
+
 
     const israel = new Country("Israel", "asia", "Jerusalém", "9 milhões", "Árabe", "Novo Shekel Israelense", "Mediterrânico", "1948", "https://pt.wikipedia.org/wiki/Bandeira_de_Israel#/media/File:Flag_of_Israel.svg", "4.1", [])
+    const china = new Country("China", "asia", "Pequim", "1 bilhão", "Mandarim", "Renminbi", "Continental", "221 a.C.", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg", "5", [])
+    const japao = new Country("Japão", "asia", "Tóquio", "126 milhões", "Japonês", "Iene", "Continental e Oceânico", "660 a.C.", "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg", "5", [])
+    const india = new Country("Índia", "asia", "Nova Deli", "1 bilhão", "Hindi e Inglês", "Rupia Indiana", "Tropical Húmido", "1947", "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg", "4.2", [])
+
+    const caboVerde = new Country("Cabo Verde", "africa", "Praia", "560 mil", "Português", "Escudo Cabo-verdiano", "Árido", "1975", "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg", "5", [])
+    const angola = new Country("Angola", "africa", "Luanda", "29 milhões", "Português", "Kwanza", "Tropical", "1975", "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg", "3.5", [])
+    const mocambique = new Country("Moçambique", "africa", "Maputo", "27 milhões", "Português", "Metical", "Tropical", "1975", "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Mozambique.svg", "4", [])
+    
     //*caso não haja, cria países, dá push para um array e coloca-os na local storage
 
     const portugal = new Country("Portugal", "europe", "Lisboa", "10 milhões", "Português", "Euro", "Mediterrânico", "1143", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/2000px-Flag_of_Portugal.svg.png", "4.7", ["https://www.almadeviajante.com/wp-content/uploads/azenhas-do-mar-portugal.jpg", "https://advice.macroconsulting.pt/wp-content/uploads/2018/07/turismo-porto-portugal-macro-consulting.jpg", "https://turismodocentro.pt/wp-content/uploads/2017/03/Batalha_1920x1080-1.jpg", "https://cdnimages01.azureedge.net/rfm/torre_de_belem6963bf6b.jpg"])
@@ -41,6 +51,6 @@ if (localStorage.getItem("countries")) {
     const noruega = new Country("Noruega", "europe", "Oslo", "5 milhões", "Norueguês", "Coroa Norueguesa", "Oceânico", "1905", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/800px-Flag_of_Norway.svg.png", "2", [])
 
 
-    countries.push(portugal, brasil, alemanha, polonia, espanha, israel, italia, belgica, hungria, russia, austria, croacia, dinamarca, eslovenia, finlandia, grecia, islandia, luxemburgo, malta, noruega)
+    countries.push(portugal, brasil, alemanha, polonia, espanha, israel, italia, belgica, hungria, russia, austria, croacia, dinamarca, eslovenia, finlandia, grecia, islandia, luxemburgo, malta, noruega, argentina, caboVerde, angola, mocambique, china, japao, india)
     localStorage.setItem("countries", JSON.stringify(countries))
 }
