@@ -46,8 +46,9 @@ export function loginUser(txtLoginUsername, txtLoginPassword) {
     }
     if (stateLogin == true) {
         sessionStorage.setItem("loggedUser", txtLoginUsername)
-        swal("Login efetuado com sucesso!", "", "success")
-        location.href = "/html/homePage.html"
+        swal("Login efetuado com sucesso!", "", "success").then(value => {
+            location.href = "/html/homePage.html"
+        })
     }
     else {
         swal("Username ou Palavra-passe erradas!", "", "error")

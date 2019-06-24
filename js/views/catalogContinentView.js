@@ -43,33 +43,12 @@ btnFilter.addEventListener("click", function () {
     if (filter == "upAlfa") {
         //*ordenar o país de ordem alfabética crescente
         countriesContinent.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-        //*criação de uma variável vazia para adiconar ao innerHTML do catalogo
-        //let resultFilter = ""
-        //*apagar os card presentes no catálogo
-        
-        // let j = 0
-
-        //*num ciclo que faz por todos os países verifica se este pertence ao continente prentendido e se
-        //*o nome do país começa por o que o utilizador introduziu na caixa de texto
-        // if (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase())) {
-
         for (const country of countriesContinent) {
             if (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase())) {
                 countriesC.push(country)
             }
         }
         renderCatalog(countriesC)
-        // //*adição do catalogo ordenado ao html
-        // //divCatalog.innerHTML += resultFilter
-        // for (const country of countriesContinent) {
-        //     if (document.querySelector(`#${country.name} .stars-inner`) != null) {
-        //         const starPercentage = (country.rating / 5) * 100;
-        //         const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-        //         document.querySelector(`#${country.name} .stars-inner`).style.width = starPercentageRounded;
-        //     }
-        // }
-        // //*função que permite adicionar à session storage o país selecionado 
-        // addCountrySelected()
     } else if (filter == "downAlfa") {
         //*array ordenado por ordem alfabética decrescente
         countriesContinent.sort((a, b) => (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0));
@@ -115,7 +94,6 @@ btnFilter.addEventListener("click", function () {
         countriesContinent.sort((a, b) => (a.population > b.population) ? 1 : ((b.population > a.population) ? -1 : 0));
         let resultFilter = ""
         divCatalog.innerHTML = ""
-        let j = 0
         for (const country of countriesContinent) {
             if (txtSearchCountry == "" || country.name.toLowerCase().includes(txtSearchCountry.toLowerCase())) {
                 countriesC.push(country)

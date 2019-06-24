@@ -128,11 +128,7 @@ body {
     border-width: 1px;
     border-color: gray;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
-    float: right;
     margin-top: 50px;
-    margin-right: 50px;
-    position: relative;
-    left: -15px
 }
 
 #divBtnsAnswer {
