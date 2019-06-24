@@ -23,7 +23,7 @@ function renderFavCountry() {
                         result += `<div class="row">`
                     }
                     //*adicona um país
-                    result += `<div class="col-sm-6 col-md-6 col-lg-3">
+                    result += `<div class="col-sm-6 col-md-6 col-lg-4">
                                     <div class="card" id="cardCountry">
                                         <img src="${country.flag}" id="imgCountry">
                                         <hr />
