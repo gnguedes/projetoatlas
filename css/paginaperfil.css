@@ -234,3 +234,12 @@ hr {
     position: relative;
     top: 20px;
 }
+#sugestCountry1 {
+    top: 0px;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 30px;
+    width: 344px;
+    height: 380px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .5);
+}

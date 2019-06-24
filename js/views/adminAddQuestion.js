@@ -5,11 +5,12 @@ function manageNewQuestion() {
     const formQuestion = document.querySelector("#frmAddQuestion")
     //listener quando é submitida a sugestao
     formQuestion.addEventListener("submit", function (event) {
-        const level = document.querySelector("#questionLevel").value
+        var questionLevel = document.querySelector("#questionLevel")
+        const level = questionLevel.options[questionLevel.selectedIndex].value
         var questionContinentMenu = document.querySelector("#questionContinent")
         const questionContinent = questionContinentMenu.options[questionContinentMenu.selectedIndex].value
         const questionQuestion = document.querySelector("#questionQuestion").value
-        const questionRightAnswer = document.querySelector("#questionQuestion").value
+        const questionRightAnswer = document.querySelector("#questionRightAnswer").value
         const questionAnswers1 = document.querySelector("#questionAnswers1").value
         const questionAnswers2 = document.querySelector("#questionAnswers2").value
         const questionAnswers3 = document.querySelector("#questionAnswers3").value

@@ -31,7 +31,7 @@ function renderComments() {
                         <td>${comment.comment}</td>
                         <td>${comment.date}</td>
                         <td><button id="${comment.loggedUser}" class="btn btn-success">Dar 5 XP</button><td>
-                        <td><button id="${comment.loggedUser}" class="btn btn-danger remove">Remover</button><td>
+                        <td><button id="${comment.loggedUser}" class="btn btn-danger">Remover</button><td>
                         <br>
                     </tr>
                 </tbody>
@@ -43,7 +43,7 @@ function renderComments() {
     divComment.innerHTML = tableC
 
     //elimina o comentario seleccionado
-    const btnRemove = document.getElementsByClassName("btn btn-danger remove")
+    const btnRemove = document.getElementsByClassName("btn btn-danger")
     for (const elem of btnRemove) {
         elem.addEventListener("click", function () {
             let txtCommentUser = elem.id
