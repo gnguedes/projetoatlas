@@ -20,8 +20,11 @@ if (localStorage.getItem("questions")) {
     const question5 = new Question("5", "4", "europe", "Qual o país com mais pessoas?", "Alemanha", ["Portugal", "Espanha", "Alemanha", "Polónia"], "", 10)
     const question6 = new Question("6", "5", "europe", "Qual a língua falada em Portugal?", "Português", ["Português", "Alemão", "Francês", "Espanhol"], "", 15)
     const question7 = new Question("7", "6", "europe", "Qual o clima de Portugal?", "Mediterrânico", ["Continental", "Mediterrânico", "Húmido", "Tropical"], "", 20)
+    const question8 = new Question("8", "2", "europe", "Londres é a capital de que país?", "Inglaterra", ["Holanda", "Inglaterra", "Irlanda", "Escócia"], "", 3)
+    const question9 = new Question("9", "2", "europe", "Qual é a capital de Portugal?", "Lisboa", ["Lisboa", "Porto", "Madrid", "Paris"], "", 3)
+    const question10 = new Question("10", "1", "europe", "De que país é esta bandeira?", "Holanda", ["França", "Holanda", "Hungria", "Bélgica"], "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg", 2)
 
-    questions.push(question1, question2, question3, question4, question5, question6, question7)
+    questions.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10)
     localStorage.setItem("questions", JSON.stringify(questions))
 }
 
@@ -150,14 +153,20 @@ function generateQuestion() {
                 createQuestion(questionsLevel[random])
             }
             if (questionsLevel.length == k) {
-                alert("Ja respondeste a todas as questoes deste nivel. Parabens")
-                location.href = "quizzLevel.html"
+                swal({
+                    title: "Parabéns!", 
+                    text: "Respondeste a todas as questões deste nível", 
+                    icon: "success"
+                }).then(value => {
+                    if(value){
+                        location.href = "quizzLevel.html"
+                    }
+                })
             }
         }
     }
 }
 
-//!CONTINUAR A FAZER A INTRODUÇÃO DA QUESTÃO
 function createQuestion(question) {
     sessionStorage.setItem("idQuestion", question.id)
     const txtQuestion = document.querySelector("#txtQuestion")

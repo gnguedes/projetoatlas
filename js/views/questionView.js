@@ -12,6 +12,7 @@ const loggedUser = sessionStorage.getItem("loggedUser")
 
 const levelId = sessionStorage.getItem("levelId")
 
+
 for (const btn of answerBtns) {
     btn.addEventListener("click", function (event) {
         for (const question of questions) {
@@ -24,11 +25,19 @@ for (const btn of answerBtns) {
                                 user.answeredQuestions.push(question.id)
                                 localStorage.setItem("users", JSON.stringify(users))
                             }
-                            location.reload()
+                            swal({
+                                title: "Parabéns!",
+                                text: "Resposta Correta",
+                                icon: "success",
+                            }).then(value => {
+                                if (value) {
+                                    location.reload()
+                                }
+                            })
                         }
                     }
                 } else {
-                    alert("resposta errada")
+                    swal("Resposta Errada", "", "error")
                 }
             }
         }

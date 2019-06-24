@@ -59,8 +59,9 @@ function verifyUserPossibilityToPlay() {
             if (questions1.length == 0) {
                 document.querySelector(".level1").style.backgroundColor = "rgb(51, 204, 51)"
                 document.querySelector("#level1").href = ""
-                document.querySelector("#level1").addEventListener("click", function () {
-                    alert("Já completaste todas as questoes deste nivel")
+                document.querySelector("#level1").addEventListener("click", function (event) {
+                    swal("Já respondeste a todas as questões deste nível!", "", "warning")
+                    event.preventDefault()
                 })
             }
             if (user.xp < 75) {
@@ -68,7 +69,7 @@ function verifyUserPossibilityToPlay() {
                 level2.style.backgroundColor = "#9D9D9D"
                 level2.innerHTML += `<img src="../images/lock-6.png" id="lockLevel">`
                 level2.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogares este nível!")
+                    swal("Ainda não tens nível suficiente para jogar este nível!", "", "error")
                     //*este event.preventDefault() serve para a página não dar refresh, ou seja, dá uma
                     //*melhor sensação de que o utilizador não tem acesso a esta área
                     event.preventDefault()
@@ -77,8 +78,9 @@ function verifyUserPossibilityToPlay() {
                 if (questions2.length == 0) {
                     document.querySelector(".level2").style.backgroundColor = "rgb(51, 204, 51)"
                     document.querySelector("#level2").href = ""
-                    document.querySelector("#level2").addEventListener("click", function () {
-                        alert("Já completaste todas as questoes deste nivel")
+                    document.querySelector("#level2").addEventListener("click", function (event) {
+                        swal("Já respondeste a todas as questões deste nível!", "", "warning")
+                        event.preventDefault()
                     })
                 } else {
                     document.querySelector("#level2").href = "question.html"
@@ -89,15 +91,16 @@ function verifyUserPossibilityToPlay() {
                 level3.style.backgroundColor = "#9D9D9D"
                 level3.innerHTML += `<img src="../images/lock-6.png" id="lockLevel">`
                 level3.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogar este nível!")
+                    swal("Ainda não tens nível suficiente para jogar este nível!", "", "error")
                     event.preventDefault()
                 })
             } else {
                 if (questions3.length == 0) {
                     document.querySelector(".level3").style.backgroundColor = "rgb(51, 204, 51)"
                     document.querySelector("#level3").href = ""
-                    document.querySelector("#level3").addEventListener("click", function () {
-                        alert("Já completaste todas as questoes deste nivel")
+                    document.querySelector("#level3").addEventListener("click", function (event) {
+                        swal("Já respondeste a todas as questões deste nível!", "", "warning")
+                        event.preventDefault()
                     })
                 } else {
                     document.querySelector("#level3").href = "question.html"
@@ -108,7 +111,7 @@ function verifyUserPossibilityToPlay() {
                 level4.style.backgroundColor = "#9D9D9D"
                 level4.innerHTML += `<img src="../images/lock-6.png" id="lockLevel">`
                 level4.addEventListener("click", function (event) {
-                    alert("Ainda não tens nível suficiente para jogar este nível!")
+                    swal("Ainda não tens nível suficiente para jogar este nível!", "", "error")
                     event.preventDefault()
                 })
             } else {
