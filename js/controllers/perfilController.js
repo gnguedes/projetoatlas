@@ -61,9 +61,6 @@ function checkTypeUser() {
     }
 }
 
-//coloca nome do utilizador na navbar
-document.querySelector("#navbarUsername").innerHTML = loggedUser
-
 //atua quando o utilizador carrega para fazer logout
 manageLogout()
 function manageLogout() {
