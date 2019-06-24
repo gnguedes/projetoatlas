@@ -64,20 +64,6 @@ function checkTypeUser() {
 //coloca nome do utilizador na navbar
 document.querySelector("#navbarUsername").innerHTML = loggedUser
 
-/** teste
-export function checkGenre() {
-    const genreUser = ''
-    for (const user of users) {
-        if (user.username == loggedUser) {
-            genreUser = user.genre
-        }
-
-
-    }
-
-}
-*/
-
 //atua quando o utilizador carrega para fazer logout
 manageLogout()
 function manageLogout() {
