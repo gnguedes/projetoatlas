@@ -9,6 +9,9 @@
     font-family: Tw Cen MT B;
     src: url(../font/TCB_____.TTF)
 }
+body{
+    overflow-x: hidden;
+}
 /*Ajustes nos cards para igualar o design pretendido*/
 #login {
     top: 20px;
