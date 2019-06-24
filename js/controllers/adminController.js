@@ -90,25 +90,16 @@ export function addCountry(name, continent, capital, population, language, coin,
 }
 //funcao que adiciona uma nova questao à lista
 export function addQuestion(id, level, continent, question, rightAnswer, answers, image, xp) {
-    
-    let clearAnswer = true
-    //verifica o nivel da questao
-    if (Number(level) > 6) {
-        clearAnswer = false
+
+    //utiliza o id da ultima pergunta registada para adicionar um novo
+    for (let i = 0; i < questions.length; i++) {
+        let lastId = Number(questions[i].id)
+        let tempId = lastId + 1
+        id = tempId.toString()
     }
-    if (clearAnswer == true) {
-        //utiliza o id da ultima pergunta registada para adicionar um novo
-        for (let i = 0; i < questions.length; i++) {
-            let lastId = Number(questions[i].id)
-            let tempId = lastId + 1
-            id = tempId.toString()
-        }
-        questions.push(new Question(id, level, continent, question, rightAnswer, answers, image, xp))
-        localStorage.setItem("questions", JSON.stringify(questions))
-        alert("questão adicionada")
-    }
-    else{
-        alert("nivel da questão tem de ser entre 1-6")
-    }
+    questions.push(new Question(id, level, continent, question, rightAnswer, answers, image, xp))
+    localStorage.setItem("questions", JSON.stringify(questions))
+    alert("questão adicionada")
+
 
 }
