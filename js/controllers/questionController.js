@@ -8,6 +8,10 @@ const continentSelected = sessionStorage.getItem("continentSelected")
 
 const levelId = sessionStorage.getItem("levelId")
 
+const totalXp = sessionStorage.getItem("totalXp")
+
+const rightAnsweredQuestions = sessionStorage.getItem("rightAnsweredQuestions")
+
 export let questions = []
 
 if (localStorage.getItem("questions")) {
@@ -28,142 +32,116 @@ if (localStorage.getItem("questions")) {
     localStorage.setItem("questions", JSON.stringify(questions))
 }
 
+const contQuestions = sessionStorage.getItem("contQuestions")
+
 generateQuestion()
 
 function generateQuestion() {
     const questionsLevel = []
-    for (const user of users) {
-        if (user.username == loggedUser) {
-            let k = 0
-            if (levelId == "level1") {
-                if (user.xp <= 10) {
+    if (contQuestions < 5) {
+        for (const user of users) {
+            if (user.username == loggedUser) {
+                if (levelId == "level1") {
                     for (const question of questions) {
                         if (question.continent == continentSelected) {
-                            if (question.level == 1) {
+                            if ((question.level == 1 || question.level == 2) && (!user.answeredQuestions.includes(question.id))) {
                                 questionsLevel.push(question)
                             }
                         }
                     }
-                    for (let i = 0; i < questionsLevel.length; i++) {
-                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                            k++
-                            continue
-                        } else {
-                            createQuestion(questionsLevel[i])
-                            break
+                    if (questionsLevel.length == 0) {
+                        swal({
+                            title: "Parabéns!",
+                            text: "Respondeste a todas as questões deste nível",
+                            icon: "success"
+                        }).then(value => {
+                            if (value) {
+                                location.href = "quizzLevel.html"
+                            }
+                        })
+                    }
+                    let random = Math.floor((Math.random() * questionsLevel.length))
+                    createQuestion(questionsLevel[random])
+                } else if (levelId == "level2") {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if ((question.level == 3 || question.level == 4) && (!user.answeredQuestions.includes(question.id))) {
+                                questionsLevel.push(question)
+                            }
                         }
                     }
+                    if (questionsLevel.length == 0) {
+                        swal({
+                            title: "Parabéns!",
+                            text: "Respondeste a todas as questões deste nível",
+                            icon: "success"
+                        }).then(value => {
+                            if (value) {
+                                location.href = "quizzLevel.html"
+                            }
+                        })
+                    }
+                    let random = Math.floor((Math.random() * questionsLevel.length))
+                    createQuestion(questionsLevel[random])
+                } else if (levelId == "level3") {
+                    for (const question of questions) {
+                        if (question.continent == continentSelected) {
+                            if ((question.level == 5 || question.level == 6) && (!user.answeredQuestions.includes(question.id))) {
+                                questionsLevel.push(question)
+                            }
+                        }
+                    }
+                    if (questionsLevel.length == 0) {
+                        swal({
+                            title: "Parabéns!",
+                            text: "Respondeste a todas as questões deste nível",
+                            icon: "success"
+                        }).then(value => {
+                            if (value) {
+                                location.href = "quizzLevel.html"
+                            }
+                        })
+                    }
+                    let random = Math.floor((Math.random() * questionsLevel.length))
+                    createQuestion(questionsLevel[random])
                 } else {
                     for (const question of questions) {
                         if (question.continent == continentSelected) {
-                            if (question.level == 1 || question.level == 2) {
-                                questionsLevel.push(question)
+                            questionsLevel.push(question)
+                        }
+                    }
+                    if (questionsLevel.length == 0) {
+                        swal({
+                            title: "Parabéns!",
+                            text: "Respondeste a todas as questões deste nível",
+                            icon: "success"
+                        }).then(value => {
+                            if (value) {
+                                location.href = "quizzLevel.html"
                             }
-                        }
+                        })
                     }
-                    for (let i = 0; i < questionsLevel.length; i++) {
-                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                            k++
-                            continue
-                        } else {
-                            createQuestion(questionsLevel[i])
-                            break
-                        }
-                    }
+                    let random = Math.floor((Math.random() * questionsLevel.length))
+                    createQuestion(questionsLevel[random])
                 }
-            } else if (levelId == "level2") {
-                if (user.xp <= 75) {
-                    for (const question of questions) {
-                        if (question.continent == continentSelected) {
-                            if (question.level == 3) {
-                                questionsLevel.push(question)
-                            }
-                        }
-                    }
-                    for (let i = 0; i < questionsLevel.length; i++) {
-                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                            k++
-                            continue
-                        } else {
-                            createQuestion(questionsLevel[i])
-                            break
-                        }
-                    }
-                } else {
-                    for (const question of questions) {
-                        if (question.continent == continentSelected) {
-                            if (question.level == 3 || question.level == 4) {
-                                questionsLevel.push(question)
-                            }
-                        }
-                    }
-                    for (let i = 0; i < questionsLevel.length; i++) {
-                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                            k++
-                            continue
-                        } else {
-                            createQuestion(questionsLevel[i])
-                            break
-                        }
-                    }
-                }
-            } else if (levelId == "level3") {
-                if (user.xp < 225) {
-                    for (const question of questions) {
-                        if (question.continent == continentSelected) {
-                            if (question.level == 5) {
-                                questionsLevel.push(question)
-                            }
-                        }
-                    }
-                    for (let i = 0; i < questionsLevel.length; i++) {
-                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                            k++
-                            continue
-                        } else {
-                            createQuestion(questionsLevel[i])
-                            break
-                        }
-                    }
-                } else {
-                    for (const question of questions) {
-                        if (question.continent == continentSelected) {
-                            if (question.level == 5 || question.level == 6) {
-                                questionsLevel.push(question)
-                            }
-                        }
-                    }
-                    for (let i = 0; i < questionsLevel.length; i++) {
-                        if (user.answeredQuestions.includes(questionsLevel[i].id)) {
-                            k++
-                            continue
-                        } else {
-                            createQuestion(questionsLevel[i])
-                            break
-                        }
-                    }
-                }
-            } else {
-                for (const question of questions) {
-                    if (question.continent == continentSelected) {
-                        questionsLevel.push(question)
-                    }
-                }
-                let random = Math.floor((Math.random() * questionsLevel.length))
-                createQuestion(questionsLevel[random])
-            }
-            if (questionsLevel.length == k) {
-                swal({
-                    title: "Parabéns!", 
-                    text: "Respondeste a todas as questões deste nível", 
-                    icon: "success"
-                }).then(value => {
-                    if(value){
-                        location.href = "quizzLevel.html"
-                    }
-                })
             }
         }
+        const cont = Number(contQuestions) + 1
+        sessionStorage.setItem("contQuestions", cont)
+    } else {
+        swal({
+            title: `Parabéns! Completaste um quizz.`,
+            text: `Acertaste ${rightAnsweredQuestions} perguntas e recebeste ${totalXp} de XP!`,
+            icon: "info"
+        }).then(value => {
+            for (const user of users) {
+                if (user.username == loggedUser) {
+                    user.xp = Number(user.xp) + Number(totalXp)
+                }
+            }
+            localStorage.setItem("users", JSON.stringify(users))
+            location.href = "quizzLevel.html"
+        })
     }
 }
 
@@ -172,6 +150,7 @@ function createQuestion(question) {
     const txtQuestion = document.querySelector("#txtQuestion")
     let result = ""
     let divAnswers = document.querySelector("#divAnswers")
+    divAnswers.innerHTML = ""
     txtQuestion.innerHTML += question.question
     if (question.level == 1) {
         result += `<div class="row">

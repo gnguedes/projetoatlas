@@ -10,6 +10,10 @@ const questions = JSON.parse(localStorage.getItem("questions"))
 
 const continentSelected = sessionStorage.getItem("continentSelected")
 
+sessionStorage.setItem("contQuestions", "0")
+sessionStorage.setItem("totalXp", "0")
+sessionStorage.setItem("rightAnsweredQuestions", "0")
+
 for (const card of cardsLevel) {
     card.addEventListener("click", function () {
         sessionStorage.setItem("levelId", this.id)
