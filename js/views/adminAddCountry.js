@@ -13,11 +13,11 @@ frmAddCountry.addEventListener("submit", function (event) {
     const climate = document.querySelector("#newClimate").value
     const independanceDate = document.querySelector("#newIndepDate").value
     const flag = document.querySelector("#newFlag").value
-    const images = document.querySelector("#newImage").value
-
-    console.log(continent)
+    const image1 = document.querySelector("#newImage1").value
+    const image2 = document.querySelector("#newImage2").value
+    const image3 = document.querySelector("#newImage3").value
     let rating = "0"
-    addCountry(name, continent, capital, population, language, coin, climate, independanceDate, flag, rating, images)
+    addCountry(name, continent, capital, population, language, coin, climate, independanceDate, flag, rating, [image1,image2,image3])
     event.preventDefault()
 })
 

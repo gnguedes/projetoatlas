@@ -24,7 +24,7 @@ function renderCountry() {
                         <td scope="row">${country.continent}</td>
                         <td>${country.name}</td>
                         <td>${country.rating}</td>
-                        <td><button id="${country.name}" class="btn btn-danger remove">Remover</button><td>
+                        <td><button id="${country.name}" class="btn btn-danger remove">Remover</button></td>
                         <br>
                     </tr>
                 </tbody>

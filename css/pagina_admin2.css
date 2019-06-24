@@ -56,8 +56,8 @@ body {
     width: 100%;
     background-color:#3B3B3B;
     bottom: 0;
-    margin-top: 10%;
-    position: absolute;
+    margin-top: 20%;
+    position: relative;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, .5);
 }
 
@@ -89,15 +89,3 @@ hr {
     position: relative;
     align-self: center;
 }
-
-.btn {
-    position: relative;
-    background-color: beige;
-    font-family: Tw Cen MT B;
-    font-size: 26px;
-    text-align: center;
-    color: black;
-    width: 100%;
-}
-
-
